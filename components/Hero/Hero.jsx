@@ -4,7 +4,7 @@ function Hero(props) {
   const { title, description } = props;
 
   return (
-    <main className='py-24 px-0 sm:py-15 overflow-hidden flex-auto items-center flex my-0 mx-auto sm:w-[800px]'>
+    <main className='py-24 px-0 sm:py-15 overflow-hidden flex-auto items-center flex my-0 mx-auto'>
       <div className='text-base leading-8 text-secondary bg-background relative z-10 h-full py-5 px-0'>
         <div className='my-0 mx-auto max-w-3xl py-0 px-5'>
           <div>

@@ -16,7 +16,6 @@ export default function Home(props) {
         <meta content={APP_URL} property='og:url' />
         <meta content={`${APP_URL}${image}`} property='og:image' />
       </Head>
-
       <Navbar />
       <Hero {...props} />
     </div>
