@@ -13,8 +13,8 @@
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+      Helvetica Neue, sans-serif;
     background-color: var(--color-background);
     color: var(--color-primary);
   }
@@ -31,5 +31,12 @@
 @layer components {
   .btn-header {
     @apply appearance-none bg-transparent border-0 rounded-base text-white cursor-pointer px-2.5 transition duration-md ease-base hover:bg-hover;
+  }
+  .heading-h1 {
+    @apply text-5xl m-0 mb-5 text-primary;
+    line-height: 50px;
+  }
+  .external-link {
+    @apply border-b-[0.5px] border-secondary text-primary no-underline transition-opacity duration-md ease-base hover:opacity-80;
   }
 }

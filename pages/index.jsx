@@ -1,13 +1,13 @@
 import Head from 'next/head';
 
-import { Navbar } from '../components';
+import { Navbar, Hero } from '../components';
 import { APP_URL } from '../utils/constants';
 
 export default function Home(props) {
   const { title, description, image } = props;
 
   return (
-    <div className='dark flex flex-col relative min-h-screen z-0'>
+    <div className='flex flex-col relative min-h-screen z-0'>
       <Head>
         <title>{title}</title>
         <meta content={title} property='og:title' />
@@ -18,10 +18,7 @@ export default function Home(props) {
       </Head>
 
       <Navbar />
-
-      <main className='mt-64'>
-        <p>Work in progress</p>
-      </main>
+      <Hero {...props} />
     </div>
   );
 }
