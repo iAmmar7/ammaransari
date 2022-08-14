@@ -14,4 +14,9 @@ export const links = [
     url: 'https://linkedin.com/in/iammar7',
     icon: 'ri-linkedin-line',
   },
+  {
+    title: 'StackOverflow',
+    url: 'https://stackoverflow.com/u/16401056',
+    icon: 'ri-stack-overflow-line',
+  },
 ];
