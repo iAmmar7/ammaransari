@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import { Navbar, Hero } from '../components';
+import { Navbar, Hero, Footer } from '../components';
 import { APP_URL } from '../utils/constants';
 
 export default function Home(props) {
@@ -18,6 +18,7 @@ export default function Home(props) {
       </Head>
       <Navbar />
       <Hero {...props} />
+      <Footer />
     </div>
   );
 }

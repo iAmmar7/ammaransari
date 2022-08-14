@@ -13,15 +13,16 @@ function NavItem(props) {
       <Link href={path} passHref>
         <a className='border-0 relative hover:opacity-100 focus:opacity-100'>
           <motion.span
-            // className="text-secondary cursor-pointer inline-block text-xs font-medium tracking-base p-5 no-underline uppercase transition-colors duration-md ease-base hover:text-primary after:content-[''] after:absolute after:my-0 after:mx-auto after:top-[18px] after:inset-x-0 after:h-px after:w-5 after:bg-white after:opacity-0 after:transition-opacity after:duration-md after:ease-base"
             className='text-secondary cursor-pointer inline-block text-xs font-medium p-5 no-underline uppercase transition-colors duration-md ease-base hover:text-primary'
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             css={
-              pathname === path && {
-                color: '$primary',
-                '&::after': { opacity: 1 },
-              }
+              pathname === path
+                ? {
+                    color: '$primary',
+                    '&::after': { opacity: 1 },
+                  }
+                : undefined
             }
           >
             {isHovered && (
