@@ -34,7 +34,7 @@ function Hero(props) {
               <span className='text-secondary'>{description}.</span>
             </p>
             <Link href='/about'>
-              <a className='inline-flex items-center gap-x-1 border-0 px-4 -ml-4 rounded-base transition duration-md ease-base hover:bg-hover'>
+              <a className='inline-flex items-center gap-x-1 border-0 px-4 -ml-4 rounded-base transition duration-md ease-base hover:bg-hover hover:text-primary'>
                 <span>More</span>
                 <Icon icon='ri-arrow-right-line' className='animate-pulse mt-[2px]' />
               </a>
