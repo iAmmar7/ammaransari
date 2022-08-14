@@ -3,7 +3,7 @@ function Icon(props) {
 
   if (!icon) return null;
 
-  return <i className={`${icon} text-${color} opacity-100 text-2xl sm:text-base `.concat(className)} />;
+  return <i className={`${icon} text-${color} opacity-100 `.concat(className)} />;
 }
 
 export default Icon;

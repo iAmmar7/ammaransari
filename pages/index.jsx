@@ -16,6 +16,7 @@ export default function Home(props) {
         <meta content={APP_URL} property='og:url' />
         <meta content={`${APP_URL}${image}`} property='og:image' />
       </Head>
+      <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <Navbar />
       <Hero {...props} />
       <Footer />
