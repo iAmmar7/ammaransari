@@ -6,7 +6,7 @@ function Hero(props) {
 
   return (
     <main className='py-24 px-0 sm:py-15 overflow-hidden flex-auto items-center flex my-0 mx-auto'>
-      <div className='text-base leading-8 text-secondary relative z-10 h-full py-5 px-0'>
+      <div className='text-base leading-8 text-muted relative z-10 h-full py-5 px-0'>
         <div className='my-0 mx-auto max-w-3xl py-0 px-5'>
           <div>
             <h1 className='heading-h1'>{title}</h1>
@@ -31,10 +31,10 @@ function Hero(props) {
                 ).
               </strong>
               <br />
-              <span className='text-secondary'>{description}.</span>
+              <span className='text-muted'>{description}.</span>
             </p>
             <Link href='/about'>
-              <a className='inline-flex items-center gap-x-1 border-0 px-4 -ml-4 rounded-base transition duration-md ease-base hover:bg-hover hover:text-primary'>
+              <a className='inline-flex items-center gap-x-1 border-0 px-4 -ml-4 rounded-base transition duration-md ease-base hover:bg-muted hover:text-primary'>
                 <span>More</span>
                 <Icon icon='ri-arrow-right-line' className='animate-pulse mt-[2px]' />
               </a>

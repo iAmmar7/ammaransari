@@ -9,7 +9,7 @@ function Footer() {
           <a
             key={title}
             href={url}
-            className='text-secondary items-center flex text-sm border-0 ml-4 no-underline lowercase transition-colors duration-md ease-base hover:text-primary focus:text-primary opacity-100 first:m-0 cursor-pointer group'
+            className='text-muted items-center flex text-sm border-0 ml-4 no-underline lowercase transition-colors duration-md ease-base hover:text-primary focus:text-primary opacity-100 first:m-0 cursor-pointer group'
             target='_blank'
             rel='noreferrer'
           >

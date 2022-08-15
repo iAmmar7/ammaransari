@@ -3,11 +3,18 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {
-        primary: '#f2f2f2',
-        secondary: '#8f9ba8',
-        background: '#08070b',
-        hover: '#212024',
+      textColor: {
+        primary: 'var(--color-primary)',
+        muted: 'var(--color-muted)',
+        secondary: 'var(--color-secondary)',
+      },
+      backgroundColor: {
+        primary: 'var(--color-background-primary)',
+        muted: 'var(--color-background-muted)',
+        secondary: 'var(--color-background-secondary)',
+      },
+      borderColor: {
+        muted: 'var(--color-muted)',
       },
       borderRadius: {
         base: '8px',
