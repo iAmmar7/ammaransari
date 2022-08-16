@@ -13,7 +13,7 @@ function NavItem(props) {
       <Link href={path} passHref>
         <a className='border-0 relative hover:opacity-100 focus:opacity-100'>
           <motion.span
-            className='text-muted cursor-pointer inline-block text-xs font-medium p-5 no-underline uppercase transition-colors duration-md ease-base hover:text-primary'
+            className='text-muted cursor-pointer inline-block text-xs font-medium p-5 no-underline uppercase transition-colors duration-md ease-base hover:text-secondary'
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             css={
@@ -27,7 +27,7 @@ function NavItem(props) {
           >
             {isHovered && (
               <motion.span
-                className='absolute top-[-13px] inset-x-0 bg-muted p-5 rounded-base z-[-1]'
+                className='absolute top-[-13px] inset-x-0 bg-secondary p-5 rounded-base z-[-1]'
                 layoutId='nav'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

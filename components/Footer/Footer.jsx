@@ -13,10 +13,10 @@ function Footer() {
             target='_blank'
             rel='noreferrer'
           >
-            <span className='hidden sm:block'>{title}</span>
+            <span className='hidden sm:block group-hover:text-secondary'>{title}</span>
             <Icon
               icon={icon}
-              className={`text-2xl sm:text-base group-hover:md:animate-pulse ml-[2px] sm:opacity-0 group-hover:opacity-100 group-hover:transition-opacity group-hover:duration-md group-hover:ease-base`}
+              className={`text-2xl sm:text-base group-hover:md:animate-pulse ml-[2px] sm:opacity-0 group-hover:opacity-100 group-hover:transition-opacity group-hover:duration-md group-hover:ease-base group-hover:text-secondary`}
             />
           </a>
         );

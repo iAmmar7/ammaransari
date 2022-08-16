@@ -7,11 +7,13 @@ module.exports = {
         primary: 'var(--color-primary)',
         muted: 'var(--color-muted)',
         secondary: 'var(--color-secondary)',
+        tertiary: 'var(--color-tertiary)',
       },
       backgroundColor: {
         primary: 'var(--color-background-primary)',
         muted: 'var(--color-background-muted)',
         secondary: 'var(--color-background-secondary)',
+        tertiary: 'var(--color-background-tertiary)',
       },
       borderColor: {
         muted: 'var(--color-muted)',
