@@ -50,7 +50,7 @@ module.exports = {
           },
           '50%': {
             left: '100%',
-            transform: 'translateX(-100%)',
+            transform: 'translateX(-20%)',
           },
         },
       },
