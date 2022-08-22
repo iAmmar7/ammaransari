@@ -11,6 +11,7 @@ module.exports = {
       },
       backgroundColor: {
         primary: 'var(--color-background-primary)',
+        'text-secondary': 'var(--color-secondary)',
         muted: 'var(--color-background-muted)',
         secondary: 'var(--color-background-secondary)',
         tertiary: 'var(--color-background-tertiary)',
