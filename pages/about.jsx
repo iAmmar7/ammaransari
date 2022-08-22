@@ -18,13 +18,13 @@ function About(props) {
   return (
     <div>
       <Meta {...props} />
-      <div className='flex flex-col sm:flex-row-reverse sm:gap-x-0'>
+      <div className='flex flex-col sm:flex-row-reverse gap-x-0 sm:gap-x-2'>
         <div className='mt-0 w-auto sm:w-1/2 text-center sm:text-inherit'>
           <Image
             alt='Ammar'
             src='/images/ammar.jpg'
-            width='340'
-            height='400'
+            width='320'
+            height='380'
             quality={100}
             placeholder='blur'
             blurDataURL={blurryDataProfile}
