@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { APP_URL } from '../../utils/constants';
+import { APP_URL } from '../../lib/constants';
 
 function Meta(props) {
   const { title, description, image, route = '/' } = props;

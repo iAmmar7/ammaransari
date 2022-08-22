@@ -1,10 +1,10 @@
-import { links } from './constants';
-import { Icon } from '../Icon';
+import { socialLinks } from '../../lib/socialMedia';
+import Icon from '../Icon/Icon';
 
 function Footer() {
   return (
     <footer className='flex items-center justify-center py-5 px-0'>
-      {links.map(({ title, url, icon }) => {
+      {socialLinks.map(({ title, url, icon }) => {
         return (
           <a
             key={title}
