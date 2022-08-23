@@ -15,7 +15,6 @@ function Hero(props) {
                 <a className='external-link text-red-500' href='https://venturedive.com' target='blank'>
                   VentureDive
                 </a>
-                .
               </strong>
               <br />
               <strong>
@@ -27,7 +26,7 @@ function Hero(props) {
                 <a className='external-link text-gray-500' href='https://uber.com' target='blank'>
                   Uber
                 </a>
-                ).
+                )
               </strong>
               <br />
               <span className='text-muted'>{description}.</span>

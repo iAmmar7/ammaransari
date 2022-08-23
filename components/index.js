@@ -6,3 +6,4 @@ export { default as Meta } from './Meta/Meta';
 export { default as Icon } from './Icon/Icon';
 export { default as AboutMe } from './AboutMe/AboutMe';
 export { default as SocialLinks } from './SocialLinks/SocialLinks';
+export { default as HomeSection } from './Sections/HomeSection';
