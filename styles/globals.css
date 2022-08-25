@@ -24,6 +24,8 @@
   }
   html {
     color-scheme: dark;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
   }
   ul {
     padding: 0;

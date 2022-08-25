@@ -7,6 +7,7 @@ import Section from './Section';
 function HomeSection(props) {
   return (
     <Section
+      id='home'
       footer={
         <div className='absolute inset-x-0 top-auto bottom-10 w-full justify-between text-center text-muted'>
           <Link href='#about-me' scroll={false}>

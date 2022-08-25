@@ -6,7 +6,7 @@ import NavItem from './NavItem';
 import { pages } from './constants';
 
 function Navbar() {
-  const { scrollYProgress, scrollY } = useScroll();
+  const { scrollY } = useScroll();
   const [scroll, setscroll] = useState(0);
 
   useEffect(() => {
@@ -14,8 +14,6 @@ function Navbar() {
       if (latest < 110) setscroll(latest);
     });
   }, [scrollY]);
-
-  console.log('scrollYProgress', scrollYProgress, scrollY);
 
   return (
     <LayoutGroup className='relative'>

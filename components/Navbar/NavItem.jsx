@@ -23,7 +23,7 @@ function NavItem(props) {
           >
             {isHovered && (
               <motion.span
-                className='absolute top-[-13px] inset-x-0 bg-secondary p-5 rounded-base z-[-1]'
+                className='absolute top-[-13px] inset-x-0 bg-secondary p-5 rounded-base z-20'
                 layoutId='nav'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

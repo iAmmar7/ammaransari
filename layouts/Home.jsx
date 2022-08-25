@@ -6,7 +6,7 @@ function Home(props) {
   return (
     <div className='flex flex-col relative z-0'>
       <Navbar />
-      <main className='p-0 overflow-hidden'>{children}</main>
+      <main className='p-0'>{children}</main>
     </div>
   );
 }
