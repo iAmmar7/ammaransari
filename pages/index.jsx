@@ -1,5 +1,5 @@
 import { Meta, HomeSection, AboutSection } from '../components';
-import { Home as HomeLayout } from '../layouts';
+import { HomeLayout } from '../layouts';
 
 function Home(props) {
   return (

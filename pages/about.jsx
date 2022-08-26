@@ -1,5 +1,5 @@
 import { Meta, AboutMe } from '../components';
-import Base from '../layouts/Base';
+import { BaseLayout } from '../layouts';
 
 function About(props) {
   return (
@@ -10,7 +10,7 @@ function About(props) {
   );
 }
 
-About.Layout = Base;
+About.Layout = BaseLayout;
 
 export default About;
 
