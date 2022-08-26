@@ -10,7 +10,7 @@ function HomeSection(props) {
       id='home'
       footer={
         <div className='absolute inset-x-0 top-auto bottom-10 w-full justify-between text-center text-muted'>
-          <Link href='#about-me' scroll={false}>
+          <Link href='#about' scroll={false}>
             <a className='inline-flex flex-row-reverse gap-x-2 cursor-pointer group'>
               <span className='group-hover:text-secondary'>More</span>
               <Icon icon='ri-arrow-down-line' className='animate-bounce mt-[2px] group-hover:text-secondary' />

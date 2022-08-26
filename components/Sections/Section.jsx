@@ -4,9 +4,9 @@ import { motion, useInView } from 'framer-motion';
 import Navbar from '../Navbar/Navbar';
 
 function Section(props) {
-  const { children, footer, id } = props;
+  const { children, footer, id, navViewAmount = 1 } = props;
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 1 });
+  const isInView = useInView(ref, { amount: navViewAmount });
 
   return (
     <section
