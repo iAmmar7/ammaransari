@@ -1,4 +1,4 @@
-export const pages = [
+export const PAGES = [
   { name: 'About', path: '/about' },
   { name: 'Career', path: '/career' },
   { name: 'Skills', path: '/skills' },
