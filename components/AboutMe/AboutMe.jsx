@@ -38,7 +38,7 @@ function AboutMe() {
             initial={{ y: -200 }}
             whileInView={{ y: 0, transition: { duration: 1 } }}
             exit={{ y: -200 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className='z-0'
           >
             <h2 className='text-center text-3xl text-primary font-bold'>Ammar Ansari</h2>
