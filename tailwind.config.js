@@ -20,6 +20,13 @@ module.exports = {
         secondary: 'var(--color-secondary)',
         tertiary: 'var(--color-tertiary)',
         muted: 'var(--color-muted)',
+        venturedive: '#ED2736',
+        careem: '#47A23F',
+        uber: 'var(--color-muted)',
+        carecloud: '#009CDD',
+        planz: '#F0542E',
+        sudofy: '#3277DB',
+        adres: '#225294',
       },
       borderRadius: {
         base: '8px',
@@ -59,6 +66,9 @@ module.exports = {
       },
       animation: {
         'ping-right': 'ping-right 1s theme(transitionTimingFunction.base) infinite',
+      },
+      listStyleType: {
+        circle: 'circle',
       },
     },
   },

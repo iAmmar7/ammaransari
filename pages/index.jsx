@@ -1,4 +1,4 @@
-import { Meta, HomeSection, AboutSection } from '../components';
+import { Meta, HomeSection, AboutSection, CareerSection } from '../components';
 import { HomeLayout } from '../layouts';
 
 function Home(props) {
@@ -7,6 +7,7 @@ function Home(props) {
       <Meta {...props} />
       <HomeSection {...props} />
       <AboutSection />
+      <CareerSection />
     </div>
   );
 }
