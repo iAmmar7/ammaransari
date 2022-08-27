@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { blurryDataProfile } from '../../lib/blurryData';
 import { socialLinks } from '../../lib/socialMedia';
@@ -31,41 +32,49 @@ function AboutMe() {
             placeholder='blur'
             blurDataURL={blurryDataProfile}
             priority
-            className='rounded-base'
+            className='rounded-base z-10'
           />
-          <h2 className='text-center text-3xl text-primary font-bold'>Ammar Ansari</h2>
-          <p className='text-center text-base'>Software Engineer</p>
-          <div className='flex justify-center gap-x-2'>
-            <strong>
-              <a className='text-green-500 no-underline' href='https://careem.com' target='blank'>
-                Careem
-              </a>
-            </strong>
-            <span>-</span>
-            <strong>
-              <a className='text-red-500 no-underline' href='https://venturedive.com' target='blank'>
-                VentureDive
-              </a>
-            </strong>
-          </div>
-          <div className='flex items-center justify-center gap-x-3 mt-2'>
-            {socialLinks.map(({ title, url, icon }) => {
-              return (
-                <a
-                  key={title}
-                  href={url}
-                  className='text-muted no-underline transition-colors duration-md ease-base focus:text-primary cursor-pointer group'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <Icon
-                    icon={icon}
-                    className={`text-2xl text-primary group-hover:md:animate-pulse group-hover:text-secondary`}
-                  />
+          <motion.div
+            initial={{ y: -200 }}
+            whileInView={{ y: 0, transition: { duration: 1 } }}
+            exit={{ y: -200 }}
+            viewport={{ once: false }}
+            className='z-0'
+          >
+            <h2 className='text-center text-3xl text-primary font-bold'>Ammar Ansari</h2>
+            <p className='text-center text-base'>Software Engineer</p>
+            <div className='flex justify-center gap-x-2'>
+              <strong>
+                <a className='text-green-500 no-underline' href='https://careem.com' target='blank'>
+                  Careem
                 </a>
-              );
-            })}
-          </div>
+              </strong>
+              <span>-</span>
+              <strong>
+                <a className='text-red-500 no-underline' href='https://venturedive.com' target='blank'>
+                  VentureDive
+                </a>
+              </strong>
+            </div>
+            <div className='flex items-center justify-center gap-x-3 mt-2'>
+              {socialLinks.map(({ title, url, icon }) => {
+                return (
+                  <a
+                    key={title}
+                    href={url}
+                    className='text-muted no-underline transition-colors duration-md ease-base focus:text-primary cursor-pointer group'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <Icon
+                      icon={icon}
+                      className={`text-2xl text-primary group-hover:md:animate-pulse group-hover:text-secondary`}
+                    />
+                  </a>
+                );
+              })}
+            </div>
+          </motion.div>
         </div>
         <div className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
           <p className=''>
