@@ -1,5 +1,3 @@
-import React from 'react';
-
 import AboutMe from '../AboutMe/AboutMe';
 import Section from './Section';
 import { useBreakpoints } from '../../hooks';

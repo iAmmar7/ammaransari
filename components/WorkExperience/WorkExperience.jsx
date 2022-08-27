@@ -6,7 +6,7 @@ import CompanyLink from './CompanyLink';
 function WorkExperience() {
   return (
     <div>
-      <h1 className='text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-secondary to-tertiary mb-5 text-center sm:text-left'>
+      <h1 className='text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-secondary to-tertiary mb-5 text-left sm:text-left'>
         Work Experience
       </h1>
       {EXPERIENCE.map((exp) => {

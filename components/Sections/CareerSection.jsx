@@ -1,9 +1,12 @@
 import Section from './Section';
 import WorkExperience from '../WorkExperience/WorkExperience';
+import { useBreakpoints } from '../../hooks';
 
 function CareerSection() {
+  const { sm } = useBreakpoints();
+
   return (
-    <Section id='experience' navViewAmount={0.5}>
+    <Section id='experience' navViewAmount={!sm ? 0.3 : 0.1}>
       <WorkExperience />
     </Section>
   );
