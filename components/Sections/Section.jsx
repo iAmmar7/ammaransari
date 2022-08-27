@@ -21,7 +21,9 @@ function Section(props) {
       <div className='my-0 mx-auto max-w-4xl py-0 px-5 relative' ref={ref}>
         {children}
       </div>
-      {footer}
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: inView ? 1 : 0 }} viewport={{ once: false }}>
+        {footer}
+      </motion.div>
     </section>
   );
 }
