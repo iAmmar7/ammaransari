@@ -36,6 +36,7 @@ module.exports = {
       },
       transitionDuration: {
         md: '0.2s',
+        lg: '0.6s',
       },
       fontSize: {
         32: ['32px', { lineHeight: '38px' }],
