@@ -6,7 +6,7 @@ function CareerSection() {
   const { sm } = useBreakpoints();
 
   return (
-    <Section id='experience' navViewAmount={!sm ? 0.3 : 0.1}>
+    <Section id='experience' title='Work Experience' navViewAmount={!sm ? 0.3 : 0.1}>
       <WorkExperience />
     </Section>
   );

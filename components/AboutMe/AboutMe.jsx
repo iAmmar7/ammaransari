@@ -18,9 +18,6 @@ function AboutMe() {
 
   return (
     <Fragment>
-      <h1 className='text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-secondary to-tertiary mb-5 text-center sm:text-left'>
-        About me
-      </h1>
       <div className='flex flex-col sm:flex-row-reverse gap-x-0 sm:gap-x-2'>
         <div className='mt-0 w-auto sm:w-1/2 text-center sm:text-inherit'>
           <Image

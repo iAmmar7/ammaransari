@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import Navbar from '../Navbar/Navbar';
 
 function Section(props) {
-  const { children, footer, id, navViewAmount = 1 } = props;
+  const { title, children, footer, id, navViewAmount = 1 } = props;
   const { ref, inView } = useInView({
     threshold: navViewAmount,
   });
@@ -19,6 +19,11 @@ function Section(props) {
       </motion.div>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <div className='my-0 mx-auto max-w-4xl py-0 px-5 relative' ref={ref}>
+        {title && (
+          <h1 className='text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-secondary to-tertiary mb-5 text-center sm:text-left'>
+            {title}
+          </h1>
+        )}
         {children}
       </div>
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: inView ? 1 : 0 }} viewport={{ once: false }}>

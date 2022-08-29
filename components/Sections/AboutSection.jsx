@@ -6,7 +6,7 @@ function AboutSection() {
   const { sm } = useBreakpoints();
 
   return (
-    <Section id='about' navViewAmount={!sm ? 0.8 : 0.4}>
+    <Section id='about' title='About me' navViewAmount={!sm ? 0.8 : 0.4}>
       <AboutMe />
     </Section>
   );
