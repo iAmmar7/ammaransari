@@ -64,9 +64,20 @@ module.exports = {
             transform: 'translateX(-20%)',
           },
         },
+        'left-to-right': {
+          '0%, 100%': {
+            left: 0,
+            transform: 'translateX(0)',
+          },
+          '50%': {
+            left: '100%',
+            transform: 'translateX(100%)',
+          },
+        },
       },
       animation: {
         'ping-right': 'ping-right 1s theme(transitionTimingFunction.base) infinite',
+        'left-to-right': 'left-to-right 3s theme(transitionTimingFunction.base)',
       },
       listStyleType: {
         circle: 'circle',

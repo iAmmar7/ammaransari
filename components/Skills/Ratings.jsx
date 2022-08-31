@@ -1,5 +1,3 @@
-// import { motion } from 'framer-motion';
-
 import { useMemo } from 'react';
 import Star from '../Star/Star';
 
@@ -23,11 +21,9 @@ const Ratings = (props) => {
 
   return (
     <div className='w-full h-full'>
-      <div className='flex text-2xl text-secondary'>
+      <div className='flex text-xl text-secondary'>
         {stars.map(({ id, fill, half }) => (
-          // <motion.div className='relative w-14 my-0 mx-4 grid place-items-center' key={i}>
           <Star key={id} delay={id} fill={fill} half={half} />
-          // </motion.div>
         ))}
       </div>
     </div>
