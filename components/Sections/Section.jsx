@@ -30,7 +30,7 @@ function Section(props) {
             {title}
           </h1>
         )}
-        {description && <p className='text-muted text-sm text-left mb-5 sm:text-left'>{description}</p>}
+        {description && <p className='text-muted text-sm text-center mb-5 sm:text-left'>{description}</p>}
         {children}
       </div>
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: inView ? 1 : 0 }} viewport={{ once: false }}>

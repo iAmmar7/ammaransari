@@ -36,7 +36,7 @@ function Star(props) {
       whileInView='animate'
       exit='exit'
       variants={starVariants}
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       custom={delay}
     />
   );
