@@ -31,7 +31,9 @@ function Hero(props) {
               <br />
               <span className='text-muted'>{description}.</span>
             </p>
-            <SocialLinks />
+            <div className='min-h-[50px]'>
+              <SocialLinks />
+            </div>
           </div>
         </div>
       </div>
