@@ -1,7 +1,11 @@
-import React from 'react';
+import Filters from './Filters';
 
 function Projects() {
-  return <div>Projects</div>;
+  return (
+    <div>
+      <Filters />
+    </div>
+  );
 }
 
 export default Projects;
