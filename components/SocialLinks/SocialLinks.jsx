@@ -15,7 +15,7 @@ function SocialLinks() {
           <div key={title} className='relative'>
             <motion.a
               href={url}
-              className='transition duration-md ease-base relative text-muted no-underline focus:text-primary cursor-pointer group'
+              className='transition duration-sm ease-base relative text-muted no-underline focus:text-primary cursor-pointer group'
               target='_blank'
               rel='noreferrer'
               onHoverStart={() => setHoveredLink(title)}

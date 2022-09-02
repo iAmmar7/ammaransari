@@ -36,13 +36,13 @@
 
 @layer components {
   .btn-header {
-    @apply appearance-none bg-transparent border-0 rounded-base text-primary cursor-pointer px-2.5 transition duration-md ease-base;
+    @apply appearance-none bg-transparent border-0 rounded-base text-primary cursor-pointer px-2.5 transition duration-sm ease-base;
   }
   .heading-h1 {
     @apply text-5xl m-0 mb-5 text-primary font-extrabold;
     line-height: 50px;
   }
   .external-link {
-    @apply border-b-[0.5px] border-muted text-primary no-underline transition-opacity duration-md ease-base hover:opacity-80;
+    @apply border-b-[0.5px] border-muted text-primary no-underline transition-opacity duration-sm ease-base hover:opacity-80;
   }
 }

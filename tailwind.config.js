@@ -35,8 +35,8 @@ module.exports = {
         base: 'ease-in-out',
       },
       transitionDuration: {
-        md: '0.2s',
-        lg: '0.6s',
+        sm: '0.2s',
+        md: '0.5s',
       },
       fontSize: {
         32: ['32px', { lineHeight: '38px' }],

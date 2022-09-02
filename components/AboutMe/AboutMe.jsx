@@ -59,7 +59,7 @@ function AboutMe() {
                   <a
                     key={title}
                     href={url}
-                    className='text-muted no-underline transition-colors duration-md ease-base focus:text-primary cursor-pointer group'
+                    className='text-muted no-underline transition-colors duration-sm ease-base focus:text-primary cursor-pointer group'
                     target='_blank'
                     rel='noreferrer'
                   >
