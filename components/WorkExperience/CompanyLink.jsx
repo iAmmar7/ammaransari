@@ -5,7 +5,7 @@ function CompanyLink(props) {
   const { name, url, tag } = props;
 
   return (
-    <a className='group transition-all duration-md ease-base flex items-center gap-x-1' href={url}>
+    <a className='group transition-all duration-sm ease-base flex items-center gap-x-1' href={url}>
       <span
         className={clsx(
           'bg-left-bottom bg-gradient-to-r to-muted bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out',
