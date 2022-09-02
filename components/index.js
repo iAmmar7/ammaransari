@@ -11,3 +11,4 @@ export { default as HomeSection } from './Sections/HomeSection';
 export { default as AboutSection } from './Sections/AboutSection';
 export { default as CareerSection } from './Sections/CareerSection';
 export { default as SkillSection } from './Sections/SkillSection';
+export { default as ProjectSection } from './Sections/ProjectSection';
