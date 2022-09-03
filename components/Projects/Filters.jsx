@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Collapse from '../Collapse/Collapse';
 import skills from '../../data/skills';
-import { take, takeRight } from '../../lib/utils';
+import { isEmpty, take, takeRight } from '../../lib/utils';
 
 const skillsName = skills
   .reduce((ctx, skill) => {
@@ -27,7 +27,7 @@ function Filters(props) {
   const handleCollapse = () => setCollapsed(!collapsed);
 
   const handleFilter = (val) => {
-    const newSkill = updateFilters(val);
+    const newSkill = !isEmpty(val) ? updateFilters(val) : [];
     replace(
       {
         pathname: '/',
@@ -47,7 +47,10 @@ function Filters(props) {
     <div className='min-h-[200px] min-w-[856px]'>
       <div className='flex items-center flex-wrap'>
         <div className='flex flex-wrap gap-2'>
-          {take(skillsName, 8).map((skill) => (
+          <Button type={isEmpty(filters) ? 'primary' : 'secondary'} onClick={handleFilter}>
+            All
+          </Button>
+          {take(skillsName, 7).map((skill) => (
             <Button
               key={skill.id}
               type={filters.includes(skill.name) ? 'primary' : 'secondary'}
@@ -73,7 +76,7 @@ function Filters(props) {
       </div>
       <Collapse show={!collapsed} id='skill-extended-filters'>
         <div className='flex flex-wrap gap-2 mt-2 '>
-          {takeRight(skillsName, skillsName.length - 8).map((skill) => (
+          {takeRight(skillsName, skillsName.length - 7).map((skill) => (
             <Button
               key={skill.id}
               type={filters.includes(skill.name) ? 'primary' : 'secondary'}
