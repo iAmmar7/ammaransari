@@ -1,6 +1,11 @@
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+
 import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
+import Collapse from '../Collapse/Collapse';
 import skills from '../../data/skills';
-import { take } from '../../lib/utils';
+import { take, takeRight } from '../../lib/utils';
 
 const skillsName = skills
   .reduce((ctx, skill) => {
@@ -14,16 +19,71 @@ const skillsName = skills
   }, [])
   .sort((a, b) => a.priority - b.priority);
 
-const topSkills = take(skillsName, 5);
+function Filters(props) {
+  const { filters, updateFilters } = props;
+  const [collapsed, setCollapsed] = useState(true);
+  const { replace } = useRouter();
 
-console.log('topSkills', skillsName, topSkills);
+  const handleCollapse = () => setCollapsed(!collapsed);
 
-function Filters() {
+  const handleFilter = (val) => {
+    const newSkill = updateFilters(val);
+    replace(
+      {
+        pathname: '/',
+        hash: 'projects',
+        query: {
+          skill: newSkill,
+        },
+      },
+      undefined,
+      {
+        shallow: true,
+      }
+    );
+  };
+
   return (
-    <div className='flex flex-wrap gap-x-2 gap-y-2'>
-      {topSkills.map((skill) => (
-        <Button key={skill.id}>{skill.name}</Button>
-      ))}
+    <div className='min-h-[200px] min-w-[856px]'>
+      <div className='flex items-center flex-wrap'>
+        <div className='flex flex-wrap gap-2'>
+          {take(skillsName, 8).map((skill) => (
+            <Button
+              key={skill.id}
+              type={filters.includes(skill.name) ? 'primary' : 'secondary'}
+              onClick={() => handleFilter(skill.name)}
+            >
+              {skill.name}
+            </Button>
+          ))}
+        </div>
+        <Button
+          type='tertiary'
+          role='button'
+          aria-expanded={!collapsed}
+          aria-controls='skill-extended-filters'
+          className='ml-[51px]'
+          onClick={handleCollapse}
+        >
+          <span className='flex items-center gap-x-1'>
+            More
+            <Icon icon={collapsed ? 'ri-arrow-down-s-line' : 'ri-arrow-up-s-line'} className='min-w-[14px]' />
+          </span>
+        </Button>
+      </div>
+      <Collapse show={!collapsed} id='skill-extended-filters'>
+        <div className='flex flex-wrap gap-2 mt-2 '>
+          {takeRight(skillsName, skillsName.length - 8).map((skill) => (
+            <Button
+              key={skill.id}
+              type={filters.includes(skill.name) ? 'primary' : 'secondary'}
+              onClick={() => handleFilter(skill.name)}
+            >
+              {skill.name}
+            </Button>
+          ))}
+        </div>
+      </Collapse>
     </div>
   );
 }
