@@ -7,17 +7,7 @@ import Collapse from '../Collapse/Collapse';
 import skills from '../../data/skills';
 import { isEmpty, take, takeRight } from '../../lib/utils';
 
-const skillsName = skills
-  .reduce((ctx, skill) => {
-    const domainSkills = skill.skills.reduce((c, s) => {
-      if (!s.major) return c;
-      c.push({ id: `${skill.domain}-${s.id}`, name: s.name, priority: s.priority ?? Number.MAX_SAFE_INTEGER });
-      return c;
-    }, []);
-    ctx.push(...domainSkills);
-    return ctx;
-  }, [])
-  .sort((a, b) => a.priority - b.priority);
+const skillsName = skills.filter((skill) => skill.major).sort((a, b) => a.priority - b.priority);
 
 function Filters(props) {
   const { filters, updateFilters } = props;
@@ -52,7 +42,7 @@ function Filters(props) {
           </Button>
           {take(skillsName, 7).map((skill) => (
             <Button
-              key={skill.id}
+              key={`${skill.domain}-${skill.name}`}
               type={filters.includes(skill.name) ? 'primary' : 'secondary'}
               onClick={() => handleFilter(skill.name)}
             >
@@ -78,7 +68,7 @@ function Filters(props) {
         <div className='flex flex-wrap gap-2 mt-2 '>
           {takeRight(skillsName, skillsName.length - 7).map((skill) => (
             <Button
-              key={skill.id}
+              key={`${skill.domain}-${skill.name}`}
               type={filters.includes(skill.name) ? 'primary' : 'secondary'}
               onClick={() => handleFilter(skill.name)}
             >
