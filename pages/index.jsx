@@ -9,7 +9,7 @@ function Home(props) {
       <AboutSection />
       <CareerSection />
       <SkillSection />
-      <ProjectSection />
+      {/* <ProjectSection /> */}
     </div>
   );
 }
