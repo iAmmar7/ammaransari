@@ -82,6 +82,9 @@ module.exports = {
       listStyleType: {
         circle: 'circle',
       },
+      transformOrigin: {
+        'top-center': 'transform-origin: top center',
+      },
     },
   },
   plugins: [],
