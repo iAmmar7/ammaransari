@@ -45,7 +45,7 @@ const skills = [
   { name: 'MySQL', ratings: 3, major: true, domain: 'databases' },
   { name: 'MongoDB', ratings: 2.5, major: true, domain: 'databases' },
   { name: 'Redis', ratings: 2, major: true, domain: 'databases' },
-  { name: 'Firebase DB', ratings: 3.5, major: true, domain: 'databases' },
+  { name: 'Firebase', ratings: 3.5, major: true, domain: 'databases' },
   { name: 'React Native', ratings: 3, major: true, domain: 'mobile' },
   { name: 'Expo', ratings: 3, domain: 'mobile' },
   { name: 'React Native Paper', ratings: 3.5, domain: 'mobile' },
