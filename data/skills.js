@@ -68,12 +68,12 @@ const skills = [
   { name: 'JavaScript', ratings: 4, domain: 'languages' },
   { name: 'C++', ratings: 2, domain: 'languages' },
   { name: 'Python', ratings: 1.5, domain: 'languages' },
-  { name: 'VSCode', ratings: 4, domain: 'softwares' },
-  { name: 'Postman', ratings: 3, domain: 'softwares' },
-  { name: 'Jira', ratings: 2, domain: 'softwares' },
-  { name: 'Microsoft Office', ratings: 2.5, domain: 'softwares' },
-  { name: 'Google Docs', ratings: 2, domain: 'softwares' },
-  { name: 'Confluence', ratings: 1.5, domain: 'softwares' },
+  // { name: 'VSCode', ratings: 4, domain: 'softwares' },
+  // { name: 'Postman', ratings: 3, domain: 'softwares' },
+  // { name: 'Jira', ratings: 2, domain: 'softwares' },
+  // { name: 'Microsoft Office', ratings: 2.5, domain: 'softwares' },
+  // { name: 'Google Docs', ratings: 2, domain: 'softwares' },
+  // { name: 'Confluence', ratings: 1.5, domain: 'softwares' },
 ];
 
 export default skills;
