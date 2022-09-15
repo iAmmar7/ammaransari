@@ -13,21 +13,25 @@ const SkillTitle = ({ title }) => (
   </div>
 );
 
-const DomainSection = ({ domain }) => (
-  <div className='mb-10'>
-    <SkillTitle title={capitalize(domain)} />
-    <div className='flex flex-wrap items-center gap-y-2 gap-x-4'>
-      {groupedSkills[domain].map(({ name, ratings }) => {
-        return (
-          <div key={name} className='md:min-w-[9rem]'>
-            <p className='text-sm'>{name}</p>
-            <StarRating ratings={ratings} />
-          </div>
-        );
-      })}
+const DomainSection = ({ domain }) => {
+  if (!groupedSkills[domain]) return null;
+
+  return (
+    <div className='mb-10'>
+      <SkillTitle title={capitalize(domain)} />
+      <div className='flex flex-wrap items-center gap-y-2 gap-x-4'>
+        {groupedSkills[domain].map(({ name, ratings }) => {
+          return (
+            <div key={name} className='md:min-w-[9rem]'>
+              <p className='text-sm'>{name}</p>
+              <StarRating ratings={ratings} />
+            </div>
+          );
+        })}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 function Skills() {
   return (
