@@ -13,3 +13,4 @@ export { default as AboutSection } from './Sections/AboutSection';
 export { default as ExperienceSection } from './Sections/ExperienceSection';
 export { default as SkillSection } from './Sections/SkillSection';
 export { default as ProjectSection } from './Sections/ProjectSection';
+export { default as ContactSection } from './Sections/ContactSection';
