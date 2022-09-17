@@ -1,8 +1,19 @@
 import { useMemo } from 'react';
 import clsx from 'clsx';
+import { isValidElement } from 'react';
 
 function Button(props) {
-  const { type = 'primary', rounded = false, size = 'md', className = '', as, children, ...otherProps } = props;
+  const {
+    type = 'primary',
+    rounded = false,
+    size = 'md',
+    className = '',
+    as,
+    startEnhancer,
+    endEnhancer,
+    children,
+    ...otherProps
+  } = props;
 
   const Component = as ?? 'button';
 
@@ -28,7 +39,11 @@ function Button(props) {
       )}
       {...otherProps}
     >
-      <span className='z-10 text-inherit transition-none relative'>{children}</span>
+      <span className='z-10 text-inherit transition-none relative flex items-center justify-center'>
+        {isValidElement(startEnhancer) && startEnhancer}
+        {children}
+        {isValidElement(endEnhancer) && endEnhancer}
+      </span>
     </Component>
   );
 }
