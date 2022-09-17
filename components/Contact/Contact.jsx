@@ -45,8 +45,8 @@ function Contact() {
         <p className='text-primary'>fill this form,</p>
         <p>
           send me an email directly on my email address{' '}
-          <a href='mailto:iammar7@gmail.com' target='_blank' rel='noreferrer' className='text-secondary'>
-            iammar7@gmail.com
+          <a href='mailto:iammar7@yahoo.com' target='_blank' rel='noreferrer' className='text-secondary'>
+            iammar7@yahoo.com
           </a>
           ,
         </p>
@@ -86,8 +86,8 @@ function Contact() {
         <Collapse show={sendFailed}>
           <p className='text-sm text-red-400 mb-2'>
             Unable to send email! Try sending it manually{' '}
-            <a href='mailto:iammar7@gmail.com' target='_blank' rel='noreferrer' className='text-secondary'>
-              iammar7@gmail.com
+            <a href='mailto:iammar7@yahoo.com' target='_blank' rel='noreferrer' className='text-secondary'>
+              iammar7@yahoo.com
             </a>
           </p>
         </Collapse>
