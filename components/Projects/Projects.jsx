@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 import { useSkillFilter } from '../../hooks';
-import { take } from '../../lib/utils';
+import { isEmpty, take } from '../../lib/utils';
 import PROJECTS from '../../data/projects';
 import Button from '../Button/Button';
 import Filters from './Filters';
@@ -11,27 +12,35 @@ function Projects() {
   const { filters, updateFilters } = useSkillFilter();
   const [count, setCount] = useState(6);
 
+  const projects = useMemo(() => {
+    if (isEmpty(filters)) return PROJECTS;
+    const filteredProjects = PROJECTS.filter((proj) => filters.some((filter) => proj.technologies.includes(filter)));
+    return filteredProjects;
+  }, [filters]);
+
   return (
     <div>
       <Filters filters={filters} updateFilters={updateFilters} />
       <ul className='mt-12 grid grid-cols-6 gap-7' style={{ transform: 'none', transformOrigin: '50% 50% 0px' }}>
-        {take(PROJECTS, count).map((proj) => {
-          return (
-            <Card
-              key={proj.id}
-              id={proj.id}
-              name={proj.name}
-              summary={proj.summary}
-              image={proj.thumbnail}
-              url={proj.url}
-              code={proj.code}
-              domain={proj.domain}
-              tech={take(proj.technologies, 2)}
-            />
-          );
-        })}
+        <AnimatePresence>
+          {take(projects, count).map((proj) => {
+            return (
+              <Card
+                key={proj.id}
+                id={proj.id}
+                name={proj.name}
+                summary={proj.summary}
+                image={proj.thumbnail}
+                url={proj.url}
+                code={proj.code}
+                domain={proj.domain}
+                tech={take(proj.technologies, 2)}
+              />
+            );
+          })}
+        </AnimatePresence>
       </ul>
-      {count !== PROJECTS.length && (
+      {count <= projects.length && (
         <div className='text-center mt-10'>
           <Button type='primary' className='ml-[51px]' onClick={() => setCount(count + 3)}>
             Load More
