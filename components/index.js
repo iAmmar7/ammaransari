@@ -10,6 +10,6 @@ export { default as Button } from './Button/Button';
 export { default as SocialLinks } from './SocialLinks/SocialLinks';
 export { default as HomeSection } from './Sections/HomeSection';
 export { default as AboutSection } from './Sections/AboutSection';
-export { default as CareerSection } from './Sections/CareerSection';
+export { default as ExperienceSection } from './Sections/ExperienceSection';
 export { default as SkillSection } from './Sections/SkillSection';
 export { default as ProjectSection } from './Sections/ProjectSection';
