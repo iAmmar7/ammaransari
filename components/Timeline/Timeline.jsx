@@ -7,7 +7,7 @@ function Timeline(props) {
     <div className='relative block items-start rounded-full border-white border-opacity-20 first:mt-0 md:flex'>
       <motion.span
         initial={{ x: -200, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+        whileInView={{ x: 0, opacity: 1, transition: { ease: 'easeInOut', duration: 0.5 } }}
         exit={{ x: -200, opacity: 0 }}
         viewport={{ once: true }}
         className='absolute top-0 left-12 mt-7 mr-12 min-w-[160px] rounded-full bg-secondary bg-opacity-10 p-1 text-center text-sm leading-none md:relative md:left-0'
