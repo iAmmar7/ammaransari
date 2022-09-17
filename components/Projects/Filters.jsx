@@ -14,7 +14,7 @@ function Filters(props) {
   const { filters, updateFilters } = props;
   const [collapsed, setCollapsed] = useState(true);
   const { replace } = useRouter();
-  const { xs, sm, md, lg, xl } = useBreakpoints();
+  const { sm, md, lg, xl, ...breakpoints } = useBreakpoints();
 
   const handleCollapse = () => setCollapsed(!collapsed);
 
@@ -36,13 +36,13 @@ function Filters(props) {
   };
 
   const topFiltersCount = useMemo(() => {
-    if (xs) return 2;
-    if (sm) return 4;
+    if (sm) return 3;
     if (md) return 5;
-    if (lg) return 7;
-    if (xl) return 10;
-    return 11;
-  }, [xs, sm, md, lg, xl]);
+    if (lg) return 6;
+    if (xl) return 9;
+    if (breakpoints['2xl'] || breakpoints['3xl']) return 10;
+    return 2;
+  }, [sm, md, lg, xl, breakpoints]);
 
   return (
     <div className='w-full'>

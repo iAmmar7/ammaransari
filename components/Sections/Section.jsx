@@ -20,7 +20,7 @@ function Section(props) {
       </motion.div>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <div className='mx-auto container relative' ref={ref}>
-        <div className={clsx('mx-auto', maxWidth ?? 'max-w-none')}>
+        <div className={clsx('mx-auto px-5 md:px-0', maxWidth ?? 'max-w-none')}>
           {title && (
             <h1
               className={clsx(
