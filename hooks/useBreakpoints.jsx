@@ -10,8 +10,8 @@ function useBreakpoints() {
     md: width && width > THEME_BREAKPOINTS.sm && width <= THEME_BREAKPOINTS.md,
     lg: width && width > THEME_BREAKPOINTS.md && width <= THEME_BREAKPOINTS.lg,
     xl: width && width > THEME_BREAKPOINTS.lg && width <= THEME_BREAKPOINTS.xl,
-    '2xl': width && width > THEME_BREAKPOINTS.xl && width < THEME_BREAKPOINTS['2xl'],
-    '3xl': width && width > THEME_BREAKPOINTS.xl,
+    '2xl': width && width > THEME_BREAKPOINTS.xl && width <= THEME_BREAKPOINTS['2xl'],
+    '3xl': width && width > THEME_BREAKPOINTS['2xl'],
   };
 }
 
