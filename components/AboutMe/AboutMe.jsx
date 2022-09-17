@@ -33,7 +33,7 @@ function AboutMe() {
           />
           <motion.div
             initial={{ y: -200 }}
-            whileInView={{ y: 0, transition: { duration: 1 } }}
+            whileInView={{ y: 0, transition: { ease: 'easeInOut', duration: 0.5 } }}
             exit={{ y: -200 }}
             viewport={{ once: true }}
             className='z-0'
