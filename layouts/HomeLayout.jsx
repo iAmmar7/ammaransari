@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Icon, Button } from '../components';
+import { Icon, Button, Footer } from '../components';
 
 function Home(props) {
   const { children } = props;
@@ -40,6 +40,7 @@ function Home(props) {
           </Link>
         )}
       </AnimatePresence>
+      <Footer className='absolute bottom-0 w-full' />
     </div>
   );
 }
