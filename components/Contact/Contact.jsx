@@ -37,7 +37,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div className='mb-4 md:mb-0 flex flex-col items-center md:items-start'>
       <div className='flex flex-col text-muted'>
         <p>
           How can you connect with me? Well... I can think of three options; <br />
@@ -60,11 +60,15 @@ function Contact() {
           >
             this
           </a>{' '}
-          amazing question on quora. I&#39;ll try my best to respond in a timely manner
+          amazing question on quora. I&#39;ll try my best to respond in a timely manner.
         </p>
       </div>
       <h2 className='mt-10 text-xl font-bold'>Send an email</h2>
-      <form className='flex flex-col max-w-md mt-4 gap-y-2' onSubmit={handleSendEmail} onBlur={handleResetError}>
+      <form
+        className='flex flex-col mt-4 gap-y-2 w-full md:max-w-md'
+        onSubmit={handleSendEmail}
+        onBlur={handleResetError}
+      >
         {[
           { id: 'name', type: 'text', placeholder: 'John Doe', component: 'input' },
           { id: 'email', type: 'email', placeholder: 'john@doe.com', component: 'input' },
