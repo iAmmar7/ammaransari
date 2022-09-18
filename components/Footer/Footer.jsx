@@ -9,7 +9,7 @@ function Footer(props) {
   return (
     <footer
       className={clsx(
-        'border-t border-white border-opacity-10 bg-grey bg-opacity-95 backdrop-blur backdrop-filter',
+        'border-t border-white border-opacity-10 bg-grey bg-opacity-95 backdrop-blur backdrop-filter px-4',
         className
       )}
     >
