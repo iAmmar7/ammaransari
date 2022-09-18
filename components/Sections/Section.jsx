@@ -11,10 +11,7 @@ function Section(props) {
   });
 
   return (
-    <section
-      id={id}
-      className='min-h-screen overflow-hidden flex flex-col justify-center relative z-0 snap-start py-32 md:py-28'
-    >
+    <section id={id} className='min-h-screen overflow-hidden flex flex-col justify-center relative z-0 py-32 md:py-28'>
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: inView ? 1 : 0 }} viewport={{ once: false }}>
         <Navbar />
       </motion.div>
