@@ -10,8 +10,8 @@ function AboutMe() {
   const funFact = (
     <div className='bg-muted border-l-4 border-secondary p-2 rounded-r-base text-center sm:text-left'>
       <p>
-        Fun fact about me: I`ve been the team`s <span className='text-primary'>youngest engineer</span> in most of the
-        companies where I`ve worked.
+        Fun fact about me: I`ve been the team`s <strong className='font-normal text-primary'>youngest engineer</strong>{' '}
+        in most of the companies where I`ve worked.
       </p>
     </div>
   );
@@ -75,22 +75,29 @@ function AboutMe() {
         </div>
         <div className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
           <p className=''>
-            Hi, I`m <span className='text-primary'>Ammar</span>, currently working as a Software Engineer at Careem in
-            the CareemPay team.
+            Hi, I`m <strong className='font-normal text-primary'>Ammar</strong>, currently working as a Software
+            Engineer at Careem in the CareemPay team.
           </p>
           <p className='mt-2'>
             I am proud to have a unique background that combines system engineering, computer networking, and software
-            development. From <span className='text-primary'>small-scale startups</span> to{' '}
-            <span className='text-primary'>well-established organizations</span>, I have worked in various teams using
-            multiple technologies and working in different domains. In my various roles, I have found myself regularly
-            called upon to tackle technical challenges, resolve coding issues and engage with different teams working on
-            different projects. <span className='text-primary'>My love of coding</span> drives me internally and I
-            relish every opportunity to tackle the deepest technical challenges.
+            development. From <strong className='font-normal text-primary'>small-scale startups</strong> to{' '}
+            <strong className='font-normal text-primary'>well-established organizations</strong>, I have worked in
+            various teams using multiple technologies and working in different domains. In my various roles, I have
+            found myself regularly called upon to tackle technical challenges, resolve coding issues and engage with
+            different teams working on different projects.{' '}
+            <strong className='font-normal text-primary'>My love of coding</strong> drives me internally and I relish
+            every opportunity to tackle the deepest technical challenges.
           </p>
           <div className='hidden md:block mt-6'>{funFact}</div>
         </div>
       </div>
       <div className='block md:hidden mt-6'>{funFact}</div>
+      <div className='mt-6 text-center sm:text-left'>
+        On the academic side, I graduated from NED University with a Bachelor`s degree in{' '}
+        <strong className='font-normal text-primary'>Computer Systems Engineering</strong>. I have a high degree of{' '}
+        <strong className='font-normal text-primary'>adaptability</strong> and am constantly eager to learn new things
+        and impart my knowledge to others.
+      </div>
     </Fragment>
   );
 }
