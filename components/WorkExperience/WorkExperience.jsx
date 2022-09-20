@@ -5,7 +5,7 @@ import { isObject, isString } from '../../lib/utils';
 
 function WorkExperience() {
   return (
-    <div>
+    <div className='text-primary'>
       {EXPERIENCE.map((exp) => {
         return (
           <Timeline
