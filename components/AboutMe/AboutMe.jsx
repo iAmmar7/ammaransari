@@ -3,9 +3,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import { blurryDataProfile } from '../../lib/blurryData';
-import { socialLinks } from '../../lib/socialMedia';
-import Icon from '../Icon/Icon';
 import ExternalLink from '../ExternalLink/ExternalLink';
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 function AboutMe() {
   const funFact = (
@@ -37,11 +36,10 @@ function AboutMe() {
             whileInView={{ y: 0, transition: { ease: 'easeInOut', duration: 0.5 } }}
             exit={{ y: -200 }}
             viewport={{ once: true }}
-            className='z-0'
           >
             <h2 className='text-center text-3xl text-primary font-bold'>Ammar Ansari</h2>
             <p className='text-center text-base'>Software Engineer</p>
-            <div className='flex justify-center gap-x-2'>
+            <div className='flex justify-center gap-x-2 leading-6'>
               <strong>
                 <ExternalLink color='careem' href='https://careem.com' underline>
                   Careem
@@ -54,24 +52,7 @@ function AboutMe() {
                 </ExternalLink>
               </strong>
             </div>
-            <div className='flex items-center justify-center gap-x-3 mt-2'>
-              {socialLinks.map(({ title, url, icon }) => {
-                return (
-                  <a
-                    key={title}
-                    href={url}
-                    className='text-muted no-underline transition-colors duration-sm ease-base focus:text-primary cursor-pointer group'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <Icon
-                      icon={icon}
-                      className={`text-2xl text-primary group-hover:md:animate-pulse group-hover:text-secondary`}
-                    />
-                  </a>
-                );
-              })}
-            </div>
+            <SocialLinks className='justify-center mt-1' />
           </motion.div>
         </div>
         <div className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
