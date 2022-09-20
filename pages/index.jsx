@@ -9,7 +9,7 @@ import {
 } from '../components';
 import { HomeLayout } from '../layouts';
 
-function Home(props) {
+function HomePage(props) {
   return (
     <div>
       <Meta {...props} />
@@ -23,7 +23,7 @@ function Home(props) {
   );
 }
 
-Home.Layout = HomeLayout;
+HomePage.Layout = HomeLayout;
 
 export async function getStaticProps() {
   return {
@@ -35,4 +35,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Home;
+export default HomePage;

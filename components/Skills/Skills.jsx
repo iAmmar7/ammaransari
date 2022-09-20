@@ -6,7 +6,7 @@ const groupedSkills = groupBy(skills, 'domain');
 
 const SkillTitle = ({ title }) => (
   <div className='mb-4'>
-    <h4 className='text-xl font-bold mb-1'>{title}</h4>
+    <h4 className='font-bold mb-1 text-lg sm:text-xl'>{title}</h4>
     <span className='relative block m-0 h-1.5 w-10 overflow-hidden rounded-full bg-secondary bg-opacity-100'>
       <span className='absolute left-0 top-0 inline-block h-full w-1.5  rounded-full bg-text-secondary' />
     </span>

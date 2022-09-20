@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Meta, AboutMe } from '../components';
 import { BaseLayout } from '../layouts';
 
-function About(props) {
+function AboutPage(props) {
   return (
     <Fragment>
       <Meta {...props} />
@@ -11,9 +11,9 @@ function About(props) {
   );
 }
 
-About.Layout = BaseLayout;
+AboutPage.Layout = BaseLayout;
 
-export default About;
+export default AboutPage;
 
 export async function getStaticProps() {
   const meta = {

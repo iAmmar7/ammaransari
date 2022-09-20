@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Meta, WorkExperience } from '../components';
 import { BaseLayout } from '../layouts';
 
-function Experience(props) {
+function ExperiencePage(props) {
   return (
     <Fragment>
       <Meta {...props} />
@@ -11,9 +11,9 @@ function Experience(props) {
   );
 }
 
-Experience.Layout = BaseLayout;
+ExperiencePage.Layout = BaseLayout;
 
-export default Experience;
+export default ExperiencePage;
 
 export async function getStaticProps() {
   const meta = {
