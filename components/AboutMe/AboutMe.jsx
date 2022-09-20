@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { blurryDataProfile } from '../../lib/blurryData';
 import { socialLinks } from '../../lib/socialMedia';
 import Icon from '../Icon/Icon';
+import ExternalLink from '../ExternalLink/ExternalLink';
 
 function AboutMe() {
   const funFact = (
@@ -42,15 +43,15 @@ function AboutMe() {
             <p className='text-center text-base'>Software Engineer</p>
             <div className='flex justify-center gap-x-2'>
               <strong>
-                <a className='text-green-500 no-underline' href='https://careem.com' target='blank'>
+                <ExternalLink color='careem' href='https://careem.com' underline>
                   Careem
-                </a>
+                </ExternalLink>
               </strong>
               <span>-</span>
               <strong>
-                <a className='text-red-500 no-underline' href='https://venturedive.com' target='blank'>
+                <ExternalLink color='venturedive' href='https://venturedive.com' underline>
                   VentureDive
-                </a>
+                </ExternalLink>
               </strong>
             </div>
             <div className='flex items-center justify-center gap-x-3 mt-2'>
