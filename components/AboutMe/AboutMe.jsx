@@ -16,7 +16,7 @@ function AboutMe() {
   );
 
   return (
-    <div className='leading-8'>
+    <div className='text-muted leading-8'>
       <div className='flex flex-col sm:flex-row-reverse gap-x-0 sm:gap-x-2'>
         <div className='mt-0 w-auto sm:w-1/2 text-center sm:text-inherit'>
           <Image

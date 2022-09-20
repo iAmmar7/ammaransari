@@ -15,3 +15,4 @@ export { default as SkillSection } from './Sections/SkillSection';
 export { default as ProjectSection } from './Sections/ProjectSection';
 export { default as ContactSection } from './Sections/ContactSection';
 export { default as WorkExperience } from './WorkExperience/WorkExperience';
+export { default as Skills } from './Skills/Skills';
