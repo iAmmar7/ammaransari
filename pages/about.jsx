@@ -1,12 +1,13 @@
+import { Fragment } from 'react';
 import { Meta, AboutMe } from '../components';
 import { BaseLayout } from '../layouts';
 
 function About(props) {
   return (
-    <div>
+    <Fragment>
       <Meta {...props} />
       <AboutMe />
-    </div>
+    </Fragment>
   );
 }
 

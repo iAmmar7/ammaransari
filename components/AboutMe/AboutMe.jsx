@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -17,7 +16,7 @@ function AboutMe() {
   );
 
   return (
-    <Fragment>
+    <div className='leading-8'>
       <div className='flex flex-col sm:flex-row-reverse gap-x-0 sm:gap-x-2'>
         <div className='mt-0 w-auto sm:w-1/2 text-center sm:text-inherit'>
           <Image
@@ -80,7 +79,7 @@ function AboutMe() {
         <strong className='font-normal text-primary'>adaptability</strong> and am constantly eager to learn new things
         and impart my knowledge to others.
       </div>
-    </Fragment>
+    </div>
   );
 }
 
