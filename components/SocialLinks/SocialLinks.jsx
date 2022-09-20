@@ -1,15 +1,17 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import clsx from 'clsx';
 
 import { socialLinks } from '../../lib/socialMedia';
 import Icon from '../Icon/Icon';
 import Badge from '../Badge/Badge';
 
-function SocialLinks() {
+function SocialLinks(props) {
+  const { className } = props;
   const [hoveredLink, setHoveredLink] = useState(null);
 
   return (
-    <div className='flex items-left gap-x-3 pb-2'>
+    <div className={clsx('flex items-center gap-x-3 pb-2', className)}>
       {socialLinks.map(({ title, url, icon }) => {
         return (
           <div key={title} className='relative'>
@@ -26,19 +28,21 @@ function SocialLinks() {
                 className={`text-2xl text-primary group-hover:md:animate-pulse group-hover:text-secondary`}
               />
             </motion.a>
-            {hoveredLink === title && (
-              <motion.span
-                layoutId={title}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className='absolute top-9 right-1/2 translate-x-1/2 text-sm'
-              >
-                <Badge type='secondary'>
-                  <p>{title}</p>
-                </Badge>
-              </motion.span>
-            )}
+            <AnimatePresence>
+              {hoveredLink === title && (
+                <motion.span
+                  layoutId={title}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className='absolute top-9 right-1/2 translate-x-1/2 text-sm'
+                >
+                  <Badge type='secondary'>
+                    <p>{title}</p>
+                  </Badge>
+                </motion.span>
+              )}
+            </AnimatePresence>
           </div>
         );
       })}
