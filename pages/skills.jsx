@@ -23,7 +23,7 @@ export async function getStaticProps() {
       'Having worked in diverse group of people, I have had a chance to collaborate on multiple projects where I contributed using various tech-stack.',
     tagline: 'Skills',
     image: '/images/meta-bw.jpeg',
-    route: '/about',
+    route: '/skills',
   };
 
   return { props: meta };

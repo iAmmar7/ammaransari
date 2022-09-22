@@ -22,7 +22,7 @@ export async function getStaticProps() {
       'From small-scale startups to well-established teams, I have been fortunate enough to have experience working in both.',
     tagline: 'Work Experience',
     image: '/images/meta-bw.jpeg',
-    route: '/about',
+    route: '/experience',
   };
 
   return { props: meta };
