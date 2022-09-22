@@ -22,8 +22,7 @@ function Filters(props) {
     const newSkill = !isEmpty(val) ? updateFilters(val) : [];
     replace(
       {
-        pathname: '/',
-        hash: 'projects',
+        pathname: '/projects',
         query: {
           skill: newSkill,
         },
