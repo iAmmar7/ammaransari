@@ -39,7 +39,7 @@
     @apply appearance-none bg-transparent border-0 rounded-base text-primary cursor-pointer px-2.5 transition duration-sm ease-base;
   }
   .heading-h1 {
-    @apply text-5xl m-0 mb-5 text-primary font-extrabold;
+    @apply text-4xl sm:text-5xl m-0 mb-5 text-primary font-extrabold;
     line-height: 50px;
   }
   .external-link {

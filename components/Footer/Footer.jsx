@@ -31,7 +31,7 @@ function Footer(props) {
                       </span>
                       <Icon
                         icon={icon}
-                        className='text-2xl sm:text-base group-hover:md:animate-pulse ml-[2px] sm:opacity-0 group-hover:opacity-100 group-hover:transition-opacity group-hover:duration-sm group-hover:ease-base group-hover:text-secondary'
+                        className='text-2xl sm:text-base group-hover:md:animate-pulse ml-[2px] sm:opacity-0 group-hover:opacity-100 group-hover:transition-opacity group-hover:duration-sm group-hover:ease-base group-hover:text-secondary text-primary'
                       />
                     </a>
                   </li>
