@@ -41,7 +41,7 @@ function Hero(props) {
           endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
           className='-ml-2 mt-2'
         >
-          More about me
+          About me
         </Button>
       </Link>
     </div>
