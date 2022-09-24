@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Timeline from '../Timeline/Timeline';
 import ExternalLink from '../ExternalLink/ExternalLink';
 import Button from '../Button/Button';
@@ -58,14 +60,16 @@ function ExperienceSection() {
       </Timeline>
       <Timeline
         title={
-          <Button
-            type='default'
-            size='sm'
-            className='-ml-4'
-            endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
-          >
-            Employment history
-          </Button>
+          <Link href='/experience' passHref>
+            <Button
+              type='default'
+              size='sm'
+              className='-ml-4'
+              endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+            >
+              Employment history
+            </Button>
+          </Link>
         }
       />
     </Section>
