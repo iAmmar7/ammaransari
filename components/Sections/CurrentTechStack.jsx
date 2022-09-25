@@ -24,7 +24,7 @@ const skillToSVGMapper = (skill) => {
 function SkillSection() {
   return (
     <Section id='skills' title='Current tech-stack' next='projects'>
-      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0'>
+      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 mt-6'>
         {CURRENT_TECH_STACK.map((tech) => {
           const SVG = skillToSVGMapper(tech.name);
           return (
