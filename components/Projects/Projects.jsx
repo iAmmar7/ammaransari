@@ -1,12 +1,11 @@
 import { useMemo, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
 
 import { useSkillFilter } from '../../hooks';
-import { isEmpty, take } from '../../lib/utils';
+import { isEmpty } from '../../lib/utils';
 import PROJECTS from '../../data/projects';
 import Button from '../Button/Button';
 import Filters from './Filters';
-import Card from './Card';
+import List from './List';
 
 function Projects() {
   const { filters, updateFilters } = useSkillFilter();
@@ -21,28 +20,7 @@ function Projects() {
   return (
     <div>
       <Filters filters={filters} updateFilters={updateFilters} />
-      <ul
-        className='mt-6 sm:mt-12 grid grid-cols-6 gap-4 sm:gap-7'
-        style={{ transform: 'none', transformOrigin: '50% 50% 0px' }}
-      >
-        <AnimatePresence>
-          {take(projects, count).map((proj) => {
-            return (
-              <Card
-                key={proj.id}
-                id={proj.id}
-                name={proj.name}
-                summary={proj.summary}
-                image={proj.thumbnail}
-                url={proj.url}
-                code={proj.code}
-                domain={proj.domain}
-                tech={take(proj.technologies, 2)}
-              />
-            );
-          })}
-        </AnimatePresence>
-      </ul>
+      <List projects={projects} count={count} />
       {count <= projects.length && (
         <div className='text-center mt-10'>
           <Button type='primary' className='ml-[51px]' onClick={() => setCount(count + 3)}>

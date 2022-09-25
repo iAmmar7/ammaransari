@@ -1,10 +1,29 @@
+import Link from 'next/link';
+
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 import Section from './Section';
-import Projects from '../Projects/Projects';
+import CURRENT_PROJECTS from '../../data/currentProjects';
+import ProjectList from '../Projects/List';
+import { useBreakpoints } from '../../hooks';
 
 function CurrentProject() {
+  const { xs, sm } = useBreakpoints();
+
   return (
-    <Section id='projects' title='Projects' navViewAmount={0.1} maxWidth='max-w-6xl'>
-      <Projects />
+    <Section id='projects' title='Current projects' next='contact'>
+      <ProjectList projects={CURRENT_PROJECTS} count={sm || xs ? 1 : 2} className='mt-0 lg:grid-cols-4' />
+      <Link href='/projects' passHref>
+        <Button
+          as='a'
+          type='default'
+          size='sm'
+          className='mt-4'
+          endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+        >
+          Other projects
+        </Button>
+      </Link>
     </Section>
   );
 }
