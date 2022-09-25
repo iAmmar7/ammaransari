@@ -13,14 +13,32 @@ function Section(props) {
   });
 
   return (
-    <section id={id} className='min-h-screen overflow-hidden flex flex-col justify-center relative z-0 py-32 md:py-28'>
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: inView ? 1 : 0 }} viewport={{ once: false }}>
+    <section
+      id={id}
+      className='min-h-screen overflow-hidden flex flex-col justify-center relative z-0 py-32 md:py-28 snap-always snap-start'
+    >
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: inView ? 1 : 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         <Navbar />
       </motion.div>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <div className='mx-auto container relative' ref={ref}>
         <div className='px-0 my-0 overflow-hidden flex flex-col items-center'>
-          <div className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'>
+          <motion.div
+            className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'
+            initial={{ opacity: 0.2, y: 20 }}
+            whileInView={{
+              opacity: inView ? 1 : 0.2,
+              y: inView ? 0 : 20,
+              transition: { ease: 'easeInOut', duration: 0.5 },
+            }}
+            exit={{ opacity: 0, transition: { ease: 'easeInOut', duration: 0.5 } }}
+            viewport={{ once: false }}
+          >
             {title && (
               <h1
                 className={clsx(
@@ -33,7 +51,7 @@ function Section(props) {
             )}
             {description && <p className='text-muted text-sm text-center mb-5 sm:text-left'>{description}</p>}
             {children}
-          </div>
+          </motion.div>
         </div>
       </div>
       {next && (

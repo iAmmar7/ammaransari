@@ -1,4 +1,6 @@
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
+
 import { socialLinks } from '../../lib/socialMedia';
 import { APP_URL } from '../../lib/constants';
 import Icon from '../Icon/Icon';
@@ -7,7 +9,11 @@ function Footer(props) {
   const { className } = props;
 
   return (
-    <footer
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
       className={clsx(
         'border-t border-white border-opacity-10 bg-grey bg-opacity-95 backdrop-blur backdrop-filter px-4',
         className
@@ -47,7 +53,7 @@ function Footer(props) {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 
