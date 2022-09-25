@@ -38,7 +38,7 @@ function Contact() {
 
   return (
     <div className='mb-4 md:mb-0 flex flex-col items-center md:items-start'>
-      <div className='flex flex-col text-muted'>
+      <div className='hidden sm:flex flex-col text-muted'>
         <p>
           How can you connect with me? Well... I can think of three options; <br />
         </p>
@@ -63,9 +63,9 @@ function Contact() {
           amazing question on quora. I&#39;ll try my best to respond in a timely manner.
         </p>
       </div>
-      <h2 className='mt-10 text-xl font-bold'>Send an email</h2>
+      <h2 className='hidden sm:block mt-10 text-xl font-bold'>Send an email</h2>
       <form
-        className='flex flex-col mt-4 gap-y-2 w-full md:max-w-md'
+        className='flex flex-col mt-0 sm:mt-4 gap-y-2 w-full md:max-w-md'
         onSubmit={handleSendEmail}
         onBlur={handleResetError}
       >
@@ -74,7 +74,7 @@ function Contact() {
           { id: 'email', type: 'email', placeholder: 'john@doe.com', component: 'input' },
           { id: 'message', type: 'text', placeholder: 'How can I help you?', component: 'textarea' },
         ].map((field) => (
-          <div className='flex flex-col mb-3 gap-y-2' key={field.id}>
+          <div className='flex flex-col mb-3 gap-y-2 min-w-[300px]' key={field.id}>
             <label htmlFor={field.id} className='text-muted uppercase text-xs font-bold'>
               {field.id}
             </label>
