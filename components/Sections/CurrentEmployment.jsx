@@ -10,7 +10,7 @@ import Section from './Section';
 
 function ExperienceSection() {
   return (
-    <Section id='experience' title='Current employment'>
+    <Section id='experience' title='Current employment' next='skills'>
       <Timeline
         date={`${CURRENT_EMPLOYEMT.startDate} - ${CURRENT_EMPLOYEMT.endDate ?? 'Present'}`}
         title={CURRENT_EMPLOYEMT.title}

@@ -23,7 +23,7 @@ const skillToSVGMapper = (skill) => {
 
 function SkillSection() {
   return (
-    <Section id='skills' title='Current Tech-Stack'>
+    <Section id='skills' title='Current Tech-Stack' next='projects'>
       <div className=''>
         <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0'>
           {CURRENT_TECH_STACK.map((tech) => {

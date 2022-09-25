@@ -3,7 +3,7 @@ import Section from './Section';
 
 function HomeSection(props) {
   return (
-    <Section id='home'>
+    <Section id='home' next='experience'>
       <Hero {...props} />
     </Section>
   );
