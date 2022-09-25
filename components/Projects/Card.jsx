@@ -20,7 +20,7 @@ function Card(props) {
     <motion.li
       className='col-span-6 sm:col-span-3 lg:col-span-2 list-none'
       initial={{ scale: 0 }}
-      whileInView={{ scale: 1, transition: { ease: 'easeInOut', duration: 0.5 } }}
+      animate={{ scale: 1, transition: { ease: 'easeInOut', duration: 0.5 } }}
       exit={{ scale: 0, transition: { ease: 'easeInOut', duration: 0.5 } }}
       viewport={{ once: true }}
       layout
