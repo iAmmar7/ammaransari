@@ -21,7 +21,10 @@ function Projects() {
   return (
     <div>
       <Filters filters={filters} updateFilters={updateFilters} />
-      <ul className='mt-12 grid grid-cols-6 gap-7' style={{ transform: 'none', transformOrigin: '50% 50% 0px' }}>
+      <ul
+        className='mt-6 sm:mt-12 grid grid-cols-6 gap-4 sm:gap-7'
+        style={{ transform: 'none', transformOrigin: '50% 50% 0px' }}
+      >
         <AnimatePresence>
           {take(projects, count).map((proj) => {
             return (
