@@ -36,6 +36,7 @@ function Hero(props) {
       </div>
       <Link href='/about' passHref>
         <Button
+          as='a'
           size='sm'
           type='default'
           endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
