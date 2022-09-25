@@ -53,6 +53,7 @@ function SkillSection() {
         </ul>
         <Link href='/skills' passHref>
           <Button
+            as='a'
             type='default'
             size='sm'
             className='mt-4'

@@ -12,7 +12,7 @@ export { default as HomeSection } from './Sections/HomeSection';
 export { default as AboutSection } from './Sections/AboutSection';
 export { default as CurrentEmployment } from './Sections/CurrentEmployment';
 export { default as CurrentTechStack } from './Sections/CurrentTechStack';
-export { default as ProjectSection } from './Sections/ProjectSection';
+export { default as CurrentProject } from './Sections/CurrentProject';
 export { default as ContactSection } from './Sections/ContactSection';
 export { default as WorkExperience } from './WorkExperience/WorkExperience';
 export { default as Skills } from './Skills/Skills';

@@ -62,6 +62,7 @@ function ExperienceSection() {
         title={
           <Link href='/experience' passHref>
             <Button
+              as='a'
               type='default'
               size='sm'
               className='-ml-4'
