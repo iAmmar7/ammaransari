@@ -13,7 +13,7 @@ function Projects() {
   const [count, setCount] = useState(6);
 
   const projects = useMemo(() => {
-    if (isEmpty(filters)) return PROJECTS;
+    if (isEmpty(filters) || isEmpty(filters[0])) return PROJECTS;
     const filteredProjects = PROJECTS.filter((proj) => filters.some((filter) => proj.technologies.includes(filter)));
     return filteredProjects;
   }, [filters]);
