@@ -1,16 +1,12 @@
 import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 import Navbar from '../Navbar/Navbar';
 import Icon from '../Icon/Icon';
 
 function Section(props) {
-  const { title, description, children, id, navViewAmount = 1, next } = props;
-  const { ref, inView } = useInView({
-    threshold: navViewAmount,
-  });
+  const { title, description, children, id, next } = props;
 
   return (
     <section
@@ -19,24 +15,23 @@ function Section(props) {
     >
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: inView ? 1 : 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         <Navbar />
       </motion.div>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
-      <div className='mx-auto container relative' ref={ref}>
+      <div className='mx-auto container relative'>
         <div className='px-0 my-0 overflow-hidden flex flex-col items-center'>
           <motion.div
             className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'
-            initial={{ opacity: 0.2, y: 20 }}
+            initial={{ opacity: 0.5, y: 20 }}
             whileInView={{
-              opacity: inView ? 1 : 0.2,
-              y: inView ? 0 : 20,
+              opacity: 1,
+              y: 0,
               transition: { ease: 'easeInOut', duration: 0.5 },
             }}
-            exit={{ opacity: 0, transition: { ease: 'easeInOut', duration: 0.5 } }}
             viewport={{ once: false }}
           >
             {title && (
@@ -55,7 +50,7 @@ function Section(props) {
         </div>
       </div>
       {next && (
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: inView ? 1 : 0 }} viewport={{ once: false }}>
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false }}>
           <div className='absolute inset-x-0 top-auto bottom-4 sm:bottom-8 w-full justify-between text-center text-muted'>
             <Link href={`#${next}`} scroll={false}>
               <a className='inline-flex flex-row-reverse gap-x-2 cursor-pointer group'>
