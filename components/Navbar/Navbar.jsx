@@ -21,7 +21,7 @@ function Navbar() {
             ))}
           </ul>
         </nav>
-        <div className='flex item-center ml-auto mr-2 sm:mr-3 sm:order-3'>
+        <div className='flex item-center ml-auto mr-1 sm:mr-3 sm:order-3'>
           <a
             className='appearance-none bg-transparent rounded-base text-muted text-sm outline-0 py-2 px-3 no-underline cursor-pointer transition-all duration-md ease-base hover:bg-muted hover:text-primary hover:opacity-100 inline-flex items-center justify-center'
             download

@@ -20,7 +20,7 @@ function Section(props) {
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <div className='mx-auto container relative' ref={ref}>
         <div className='px-0 my-0 overflow-hidden flex flex-col items-center'>
-          <div className='my-0 mx-auto max-w-3xl py-0 px-0 sm:px-5'>
+          <div className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'>
             {title && (
               <h1
                 className={clsx(
