@@ -11,7 +11,7 @@ export { default as SocialLinks } from './SocialLinks/SocialLinks';
 export { default as HomeSection } from './Sections/HomeSection';
 export { default as AboutSection } from './Sections/AboutSection';
 export { default as CurrentEmployment } from './Sections/CurrentEmployment';
-export { default as SkillSection } from './Sections/SkillSection';
+export { default as CurrentTechStack } from './Sections/CurrentTechStack';
 export { default as ProjectSection } from './Sections/ProjectSection';
 export { default as ContactSection } from './Sections/ContactSection';
 export { default as WorkExperience } from './WorkExperience/WorkExperience';
