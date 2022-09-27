@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { LayoutGroup } from 'framer-motion';
+import { motion, LayoutGroup } from 'framer-motion';
 import Lottie from 'lottie-react';
 
 import Logo from '../Logo/Logo';
@@ -12,7 +12,13 @@ function Navbar() {
 
   return (
     <LayoutGroup className='relative'>
-      <header className='flex items-center justify-center text-xs min-h-[60px] w-full flex-wrap absolute top-0 z-20 mt-2 sm:mt-0'>
+      <motion.header
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        className='flex items-center justify-center text-xs min-h-[60px] w-full flex-wrap absolute top-0 z-20 mt-2 sm:mt-0'
+      >
         <Logo />
         <nav className='text-center flex-1 order-2 basis-full sm:basis-auto overflow-x-scroll overflow-y-hidden lg:overflow-hidden'>
           <ul className='inline-flex relative md:justify-around'>
@@ -40,7 +46,7 @@ function Navbar() {
             Resume
           </a>
         </div>
-      </header>
+      </motion.header>
     </LayoutGroup>
   );
 }
