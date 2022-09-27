@@ -25,7 +25,6 @@ function Section(props) {
       <div className='mx-auto container relative'>
         <div className='px-0 my-0 overflow-hidden flex flex-col items-center'>
           <motion.div
-            className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'
             initial={{ opacity: 0.5, y: 20 }}
             whileInView={{
               opacity: 1,
@@ -33,6 +32,7 @@ function Section(props) {
               transition: { ease: 'easeInOut', duration: 0.5 },
             }}
             viewport={{ once: false }}
+            className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'
           >
             {title && (
               <h1
@@ -53,10 +53,16 @@ function Section(props) {
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false }}>
           <div className='absolute inset-x-0 top-auto bottom-4 sm:bottom-8 w-full justify-between text-center text-muted'>
             <Link href={`#${next}`} scroll={false}>
-              <a className='inline-flex flex-row-reverse gap-x-2 cursor-pointer group'>
+              <motion.a
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                className='inline-flex flex-row-reverse gap-x-2 cursor-pointer group'
+              >
                 <span className='group-hover:text-secondary'>More</span>
                 <Icon icon='ri-arrow-down-line' className='animate-bounce mt-[2px] group-hover:text-secondary' />
-              </a>
+              </motion.a>
             </Link>
           </div>
         </motion.div>
