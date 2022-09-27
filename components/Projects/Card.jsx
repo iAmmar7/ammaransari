@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
 import Icon from '../Icon/Icon';
@@ -10,11 +9,6 @@ import { isEmpty, toLowerCase } from '../../lib/utils';
 
 function Card(props) {
   const { id, name, summary, image, url, code, domain, tech } = props;
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push(`/projects/${id}`);
-  };
 
   return (
     <motion.li
@@ -24,7 +18,6 @@ function Card(props) {
       exit={{ scale: 0, transition: { ease: 'easeInOut', duration: 0.5 } }}
       viewport={{ once: true }}
       layout
-      onClick={handleClick}
     >
       <div className='bg-muted opacity-100 rounded-base shadow-md backdrop-blur-md transition-all ease-base duration-md p-4 md:p-5 group hover:translate-x-0 hover:-translate-y-1.5 hover:rotate-0 hover:skew-x-0 hover:skew-y-0 hover:scale-x-100 hover:scale-y-100'>
         <div className='relative overflow-hidden'>
