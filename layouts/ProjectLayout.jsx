@@ -43,7 +43,7 @@ function Project(props) {
 
             {/* Thumbnail */}
             <div className='bg-muted opacity-100 rounded-base shadow-md backdrop-blur-md transition-all ease-base duration-md p-0 group hover:translate-x-0 hover:-translate-y-1.5 hover:rotate-0 hover:skew-x-0 hover:skew-y-0 hover:scale-x-100 hover:scale-y-100'>
-              <div className='relative overflow-hidden'>
+              <div className='relative overflow-hidden rounded-base'>
                 <div className='blur-none transition-all duration-md group-hover:blur'>
                   <Image
                     alt={name}
@@ -55,7 +55,6 @@ function Project(props) {
                     height={xs || sm ? 40 : 30}
                     objectFit='cover'
                     layout='responsive'
-                    className='rounded-base'
                   />
                 </div>
                 <div className='absolute left-0 top-0 z-10 flex h-full w-full -translate-x-full transform items-center justify-center gap-4 overflow-hidden bg-muted/80 transition-all duration-md group-hover:translate-x-0'>
