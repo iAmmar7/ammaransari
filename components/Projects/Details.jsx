@@ -1,6 +1,10 @@
+import { useMemo } from 'react';
 import Link from 'next/link';
-import { isArray } from '../../lib/utils';
+
+import { isArray, isEmpty, take } from '../../lib/utils';
+import PROJECTS from '../../data/projects';
 import Badge from '../Badge/Badge';
+import List from './List';
 
 const Title = ({ text }) => (
   <h2 className='text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-tertiary to-secondary'>
@@ -9,28 +13,38 @@ const Title = ({ text }) => (
 );
 
 function ProjectDetails(props) {
-  const { features, technologies, description, contribution } = props;
+  const { id, features, technologies, description, contribution } = props;
+
+  const relatedProjects = useMemo(() => {
+    const projects = PROJECTS.reduce((acc, proj) => {
+      if (proj.id === id) return acc;
+      const techCount = technologies.filter((tech) => proj.technologies.includes(tech)).length;
+      if (techCount > 0) acc.push({ ...proj, count: techCount });
+      return acc;
+    }, []);
+    return projects.sort((a, b) => b.count - a.count);
+  }, [id, technologies]);
 
   return (
     <div className='mt-8 flex flex-col gap-y-5'>
       {description && (
-        <div>
+        <section>
           <Title text='Description' />
           <div className='leading-8 mt-2' dangerouslySetInnerHTML={{ __html: description }}></div>
-        </div>
+        </section>
       )}
       {features && (
-        <div>
+        <section>
           <Title text='Features' />
           <ul className='list-circle ml-4'>
             {features.map((feat) => (
               <li key={feat} dangerouslySetInnerHTML={{ __html: feat }} className='my-2'></li>
             ))}
           </ul>
-        </div>
+        </section>
       )}
       {contribution && (
-        <div>
+        <section>
           <Title text='Contribution' />
           {isArray(contribution) ? (
             <ul className='list-circle ml-4'>
@@ -41,10 +55,10 @@ function ProjectDetails(props) {
           ) : (
             <div className='leading-8 mt-2' dangerouslySetInnerHTML={{ __html: contribution }}></div>
           )}
-        </div>
+        </section>
       )}
       {technologies && (
-        <div>
+        <section>
           <Title text='Tech-Stack' />
           <div className='flex flex-wrap mt-4 gap-2'>
             {technologies.map((tech) => (
@@ -60,7 +74,13 @@ function ProjectDetails(props) {
               </Link>
             ))}
           </div>
-        </div>
+        </section>
+      )}
+      {!isEmpty(relatedProjects) && (
+        <section className='border-t mt-10 pt-10'>
+          <Title text='Related projects' />
+          <List projects={take(relatedProjects, 3)} count={3} className='mt-4' />
+        </section>
       )}
     </div>
   );

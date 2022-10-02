@@ -21,7 +21,7 @@ function CurrentProject() {
           className='mt-4'
           endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
         >
-          Other projects
+          Past projects
         </Button>
       </Link>
     </Section>
