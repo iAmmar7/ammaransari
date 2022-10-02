@@ -85,7 +85,7 @@ function Project(props) {
               <Badge className='text-xs md:text-sm'>{capitalize(domain)}</Badge>
               <WavyText
                 as='h1'
-                className='mt-1 text-4xl lg:text-6xl font-display font-bold leading-[1.1] lg:leading-[1.1] mb-5 text-tertiary'
+                className='text-3xl sm:text-5xl font-display font-bold leading-[1.1] mt-4 sm:mt-2 mb-2 sm:mb-5 text-tertiary'
                 text={name}
                 delay={0.6}
               />
@@ -130,7 +130,7 @@ function Project(props) {
             transition: { ease: 'easeInOut', duration: 0.5, delay: 0.6 },
           }}
           viewport={{ once: false }}
-          className='w-full flex justify-center items-center transition-all duration-md'
+          className='mx-auto w-full px-4 md:px-0 md:w-10/12 max-w-6xl relative'
         >
           {children}
         </motion.section>

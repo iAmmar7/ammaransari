@@ -17,6 +17,7 @@ export { default as ContactSection } from './Sections/ContactSection';
 export { default as WorkExperience } from './WorkExperience/WorkExperience';
 export { default as Skills } from './Skills/Skills';
 export { default as Projects } from './Projects/Projects';
+export { default as ProjectDetails } from './Projects/Details';
 export { default as WavyText } from './WavyText/WavyText';
 export { default as Badge } from './Badge/Badge';
 export { default as ExternalLink } from './ExternalLink/ExternalLink';
