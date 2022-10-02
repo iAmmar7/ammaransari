@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { forwardRef, useMemo } from 'react';
 import clsx from 'clsx';
 
 const bgColorMapper = (type) => {
@@ -17,7 +17,7 @@ const textColorMapper = (type) => {
   return textColor;
 };
 
-function Badge(props) {
+const Badge = forwardRef((props) => {
   const { type, as, className, children, ...otherProps } = props;
 
   const Component = as ?? 'span';
@@ -30,6 +30,8 @@ function Badge(props) {
       {children}
     </Component>
   );
-}
+});
+
+Badge.displayName = 'Badge';
 
 export default Badge;
