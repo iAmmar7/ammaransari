@@ -118,7 +118,7 @@ const projects = [
     name: 'Board Game',
     summary: '💥 3 day challenge to build and deploy the board game. 💥',
     description:
-      '<p>You’ve been selected as the new knight from King Arthur himself. Some bandits raided the local towns and stole some valuable items from the people. You need to collect those items and bring them back to the town folks. You will have to sneak into their base and collect all items without being detected, so stealth is your best friend.</p><br /><p>Rules:</p><br /><ol><li>Create a board of 20x20 cells.</li><li>The player will always spawn on (0,0) location of the board. (top left corner)</li><li>Enemies can spawn randomly on different locations of the board.</li><li>Items should also be spawn randomly on different locations of the board.</li><li>The player will move to the item location using keyboard (up,down,left,right) arrow keys.</li><li>You need to pick all items by moving to the cell block of the items.</li><li>Avoid touch enemies, because if you do, you’ll die immediately.</li><li>Complete the challenge in shortest amount of time.</li></ol><br /><p>Goal: Player needs to collect all items in shortest amount of time.</p>',
+      '<p>You’ve been selected as the new knight from King Arthur himself. Some bandits raided the local towns and stole some valuable items from the people. You need to collect those items and bring them back to the town folks. You will have to sneak into their base and collect all items without being detected, so stealth is your best friend.</p><p>Rules:</p><ol><li>Create a board of 20x20 cells.</li><li>The player will always spawn on (0,0) location of the board. (top left corner)</li><li>Enemies can spawn randomly on different locations of the board.</li><li>Items should also be spawn randomly on different locations of the board.</li><li>The player will move to the item location using keyboard (up,down,left,right) arrow keys.</li><li>You need to pick all items by moving to the cell block of the items.</li><li>Avoid touch enemies, because if you do, you’ll die immediately.</li><li>Complete the challenge in shortest amount of time.</li></ol><p>Goal: Player needs to collect all items in shortest amount of time.</p>',
     domain: 'challenge',
     technologies: [
       'React JS',
@@ -457,7 +457,6 @@ const projects = [
       'React Native',
       'Node JS',
       'Express JS',
-      'GraphQL Yoga',
       'Cron Jobs',
       'MongoDB',
       'Redis',

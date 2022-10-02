@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
-import { Meta } from '../../components';
+
+import { Meta, ProjectDetails } from '../../components';
 import { ProjectLayout } from '../../layouts';
 import PROJECTS from '../../data/projects';
 
@@ -7,7 +8,7 @@ function ProjectPage(props) {
   return (
     <Fragment>
       <Meta {...props} />
-      <p>Project id page</p>
+      <ProjectDetails {...props.project} />
     </Fragment>
   );
 }

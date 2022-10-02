@@ -34,7 +34,7 @@ const skills = [
   { name: 'GraphQL', ratings: 3, domain: 'server' },
   // { name: 'Sessions and OAuth', ratings: 3, domain: 'server' },
   // { name: 'Apollo Server', ratings: 2, domain: 'server' },
-  { name: 'GraphQL Yoga', ratings: 2.5, domain: 'server' },
+  // { name: 'GraphQL Yoga', ratings: 2.5, domain: 'server' },
   { name: 'Cron Jobs', ratings: 3, major: true, domain: 'server' },
   { name: 'Nodemailer', ratings: 2, domain: 'server' },
   { name: 'Stripe APIs', ratings: 2.5, major: true, domain: 'server' },

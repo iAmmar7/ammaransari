@@ -18,12 +18,18 @@ const textColorMapper = (type) => {
 };
 
 function Badge(props) {
-  const { type, className, children } = props;
+  const { type, as, className, children, ...otherProps } = props;
+
+  const Component = as ?? 'span';
 
   const bgColor = useMemo(() => bgColorMapper(type), [type]);
   const textColor = useMemo(() => textColorMapper(type), [type]);
 
-  return <span className={clsx('py-1 px-2 rounded-base', bgColor, textColor, className)}>{children}</span>;
+  return (
+    <Component className={clsx('py-1 px-2 rounded-base', bgColor, textColor, className)} {...otherProps}>
+      {children}
+    </Component>
+  );
 }
 
 export default Badge;
