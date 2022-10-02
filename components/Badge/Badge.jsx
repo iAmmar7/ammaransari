@@ -17,7 +17,7 @@ const textColorMapper = (type) => {
   return textColor;
 };
 
-const Badge = forwardRef((props) => {
+const Badge = forwardRef((props, _ref) => {
   const { type, as, className, children, ...otherProps } = props;
 
   const Component = as ?? 'span';

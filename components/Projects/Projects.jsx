@@ -20,7 +20,7 @@ function Projects() {
   return (
     <div>
       <Filters filters={filters} updateFilters={updateFilters} />
-      <List projects={projects} count={count} />
+      <List projects={projects} count={count} className='mt-6 sm:mt-12' />
       {count <= projects.length && (
         <div className='text-center mt-10'>
           <Button type='primary' className='ml-[51px]' onClick={() => setCount(count + 3)}>

@@ -8,7 +8,7 @@ function List(props) {
   const { projects, count, className } = props;
 
   return (
-    <ul className={clsx('mt-6 sm:mt-12 grid grid-cols-6 gap-4 sm:gap-7', className)}>
+    <ul className={clsx('grid grid-cols-6 gap-4 sm:gap-7', className)}>
       <AnimatePresence>
         {take(projects, count).map((proj) => {
           return (
