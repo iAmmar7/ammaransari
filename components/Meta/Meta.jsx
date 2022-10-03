@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { APP_URL } from '../../lib/constants';
 
 function Meta(props) {
-  const { title, description, image, route = '/' } = props;
+  const { title, description, image, route = '' } = props;
 
   return (
     <Head>
