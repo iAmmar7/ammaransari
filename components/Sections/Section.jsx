@@ -25,9 +25,8 @@ function Section(props) {
       <div className='mx-auto container relative'>
         <div className='px-0 my-0 overflow-hidden flex flex-col items-center'>
           <motion.div
-            initial={{ opacity: 0.5, y: 20 }}
+            initial={{ y: 20 }}
             whileInView={{
-              opacity: 1,
               y: 0,
               transition: { ease: 'easeInOut', duration: 0.5 },
             }}
