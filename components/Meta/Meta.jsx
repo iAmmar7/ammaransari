@@ -12,7 +12,7 @@ function Meta(props) {
       <meta content={description} property='og:description' />
       <meta content={`${APP_URL}${route}`} property='og:url' />
       <meta content={`${APP_URL}${image}`} itemProp='image' property='og:image' />
-      <meta content={`${APP_URL}${image}`} property='og:image:secure_url' />
+      <meta property='og:image:type' content='image/jpeg' />
     </Head>
   );
 }

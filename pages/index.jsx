@@ -21,7 +21,7 @@ export async function getStaticProps() {
     props: {
       title: 'Ammar Ansari',
       description: 'A constant learner striving for perfection',
-      image: '/images/home-meta.jpeg',
+      image: '/images/about-meta.jpeg',
     },
   };
 }
