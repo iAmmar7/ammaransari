@@ -13,7 +13,7 @@ function WorkExperience() {
             date={`${exp.startDate} - ${exp.endDate ?? 'Present'}`}
             title={exp.title}
             subHeading={
-              <ExternalLink underline href={exp.companyUrl} color={exp.companyTag} showIcon>
+              <ExternalLink underline href={exp.companyUrl} color={exp.companyTag} showIcon title={exp.company}>
                 {exp.company}
               </ExternalLink>
             }
@@ -26,7 +26,7 @@ function WorkExperience() {
                     <div className='mt-2' key={sum.clientId}>
                       <span className='flex items-center gap-x-1 flex-wrap'>
                         <p>Client</p>
-                        <ExternalLink underline href={sum.clientUrl} color={sum.clientTag} showIcon>
+                        <ExternalLink underline href={sum.clientUrl} color={sum.clientTag} showIcon title={sum.client}>
                           {sum.client}
                         </ExternalLink>
                         {sum.clientSubsidiary && (
@@ -39,6 +39,7 @@ function WorkExperience() {
                                 href={sum.clientSubsidiaryUrl}
                                 color={sum.clientSubsidiaryTag}
                                 showIcon
+                                title={sum.clientSubsidiary}
                               >
                                 {sum.clientSubsidiary}
                               </ExternalLink>

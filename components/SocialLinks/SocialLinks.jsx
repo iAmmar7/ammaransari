@@ -22,6 +22,7 @@ function SocialLinks(props) {
               rel='noreferrer'
               onHoverStart={() => setHoveredLink(title)}
               onHoverEnd={() => setHoveredLink(null)}
+              title={`${title} - Ammar Ansari`}
             >
               <Icon
                 icon={icon}
@@ -37,9 +38,7 @@ function SocialLinks(props) {
                   exit={{ opacity: 0 }}
                   className='absolute top-9 right-1/2 translate-x-1/2 text-sm'
                 >
-                  <Badge type='secondary'>
-                    <p>{title}</p>
-                  </Badge>
+                  <Badge type='secondary'>{title}</Badge>
                 </motion.span>
               )}
             </AnimatePresence>

@@ -40,13 +40,23 @@ function AboutMe() {
             <p className='text-center'>Software Engineer</p>
             <div className='flex justify-center gap-x-2 leading-6'>
               <strong>
-                <ExternalLink color='careem' href='https://careem.com' underline>
+                <ExternalLink
+                  color='careem'
+                  href='https://careem.com'
+                  underline
+                  title='Get a ride, drive, order food and pay with Careem'
+                >
                   Careem
                 </ExternalLink>
               </strong>
               <span>-</span>
               <strong>
-                <ExternalLink color='venturedive' href='https://venturedive.com' underline>
+                <ExternalLink
+                  color='venturedive'
+                  href='https://venturedive.com'
+                  underline
+                  title='VentureDive: Software Development &amp; Product Design Partner'
+                >
                   VentureDive
                 </ExternalLink>
               </strong>

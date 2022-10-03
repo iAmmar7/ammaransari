@@ -19,7 +19,7 @@ function NavItem(props) {
   return (
     <li>
       <Link href={path} passHref scroll={false}>
-        <a className='border-0 relative hover:opacity-100 focus:opacity-100'>
+        <a className='border-0 relative hover:opacity-100 focus:opacity-100' title={`${name} - Ammar Ansari`}>
           <motion.span className={css} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
             {isHovered && (
               <motion.span

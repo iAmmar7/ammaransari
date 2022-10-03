@@ -38,7 +38,10 @@ function Card(props) {
           </div>
           <div className='absolute left-0 top-0 z-10 flex h-full w-full -translate-x-full transform items-center justify-center gap-4 overflow-hidden bg-muted/80 transition-all duration-md group-hover:translate-x-0'>
             <Link href={`/projects/${id}`}>
-              <a className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0'>
+              <a
+                className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0'
+                title='Project details'
+              >
                 <Icon icon='ri-information-line' className='text-xl' />
               </a>
             </Link>
@@ -47,6 +50,7 @@ function Card(props) {
                 className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0'
                 href={code}
                 target='blank'
+                title='Project code'
               >
                 <Icon icon='ri-code-s-slash-line' className='text-xl' />
               </a>
@@ -56,6 +60,7 @@ function Card(props) {
                 className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0'
                 href={url}
                 target='blank'
+                title='Project live'
               >
                 <Icon icon='ri-external-link-line' className='text-xl' />
               </a>
@@ -63,7 +68,7 @@ function Card(props) {
           </div>
         </div>
         <Link href={`/projects/${id}`}>
-          <a className=''>
+          <a title={`${name} details`}>
             <div className='mt-4'>
               <h5 className='mb-0 font-bold'>{name}</h5>
               <p className='truncate'>{summary}</p>

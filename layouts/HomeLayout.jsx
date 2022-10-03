@@ -26,17 +26,18 @@ function Home(props) {
       <AnimatePresence>
         {showScrollToTop && (
           <Link href='#home' passHref scroll={false}>
-            <motion.div
+            <motion.a
               key='top-navigator'
               className='fixed bottom-5 right-5 z-20'
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
               exit={{ x: 100, opacity: 0, transition: { duration: 0.6 } }}
+              title='Scroll to top'
             >
               <Button type='secondary' rounded={true} size='sm'>
                 <Icon icon='ri-arrow-up-s-line' className='text-inherit text-xl md:text-2xl' />
               </Button>
-            </motion.div>
+            </motion.a>
           </Link>
         )}
       </AnimatePresence>

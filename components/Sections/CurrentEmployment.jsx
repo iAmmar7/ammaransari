@@ -15,7 +15,13 @@ function ExperienceSection() {
         date={`${CURRENT_EMPLOYEMT.startDate} - ${CURRENT_EMPLOYEMT.endDate ?? 'Present'}`}
         title={CURRENT_EMPLOYEMT.title}
         subHeading={
-          <ExternalLink underline href={CURRENT_EMPLOYEMT.companyUrl} color={CURRENT_EMPLOYEMT.companyTag} showIcon>
+          <ExternalLink
+            underline
+            href={CURRENT_EMPLOYEMT.companyUrl}
+            color={CURRENT_EMPLOYEMT.companyTag}
+            showIcon
+            title={CURRENT_EMPLOYEMT.company}
+          >
             {CURRENT_EMPLOYEMT.company}
           </ExternalLink>
         }
@@ -28,7 +34,7 @@ function ExperienceSection() {
                 <div className='mt-2' key={sum.clientId}>
                   <span className='flex items-center gap-x-1 flex-wrap'>
                     <p>Client</p>
-                    <ExternalLink underline href={sum.clientUrl} color={sum.clientTag} showIcon>
+                    <ExternalLink underline href={sum.clientUrl} color={sum.clientTag} showIcon title={sum.client}>
                       {sum.client}
                     </ExternalLink>
                     {sum.clientSubsidiary && (
@@ -41,6 +47,7 @@ function ExperienceSection() {
                             href={sum.clientSubsidiaryUrl}
                             color={sum.clientSubsidiaryTag}
                             showIcon
+                            title={sum.clientSubsidiary}
                           >
                             {sum.clientSubsidiary}
                           </ExternalLink>
@@ -67,6 +74,7 @@ function ExperienceSection() {
               size='sm'
               className='-ml-4'
               endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+              title='Got to experience page'
             >
               Employment history
             </Button>

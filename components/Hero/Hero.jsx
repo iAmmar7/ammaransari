@@ -14,17 +14,27 @@ function Hero(props) {
       <div className='mb-3 mx-0 text-primary flex flex-col gap-y-1'>
         <p>
           Software Engineer at{' '}
-          <ExternalLink underline color='venturedive' href='https://venturedive.com'>
+          <ExternalLink
+            underline
+            color='venturedive'
+            href='https://venturedive.com'
+            title='VentureDive: Software Development &amp; Product Design Partner'
+          >
             VentureDive
           </ExternalLink>
         </p>
         <p>
           Software Engineer at{' '}
-          <ExternalLink underline color='careem' href='https://careem.com'>
+          <ExternalLink
+            underline
+            color='careem'
+            href='https://careem.com'
+            title='Get a ride, drive, order food and pay with Careem'
+          >
             Careem
           </ExternalLink>{' '}
           (a subsidiary of{' '}
-          <ExternalLink underline color='uber' href='https://uber.com'>
+          <ExternalLink underline color='uber' href='https://uber.com' title='Earn Money by Driving or Get a Ride Now'>
             Uber
           </ExternalLink>
           )
@@ -41,6 +51,7 @@ function Hero(props) {
           type='default'
           endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
           className='-ml-2 mt-2'
+          title='Go to about page'
         >
           About me
         </Button>

@@ -31,6 +31,7 @@ function Footer(props) {
                       className='text-muted items-center flex text-sm border-0 ml-4 no-underline lowercase hover:text-primary transition duration-sm ease-base focus:text-primary opacity-100 first:m-0 cursor-pointer group'
                       target='_blank'
                       rel='noreferrer'
+                      title={`${title} - Ammar Ansari`}
                     >
                       <span className='hidden sm:block group-hover:text-secondary transition duration-sm ease-base'>
                         {title}
@@ -47,7 +48,11 @@ function Footer(props) {
           </div>
           <p className='mb-0 w-full md:w-auto text-muted text-sm'>
             &copy; {new Date().getFullYear()}, 🤙{' '}
-            <a href={APP_URL} className='font-bold hover:text-secondary transition duration-sm ease-base'>
+            <a
+              href={APP_URL}
+              className='font-bold hover:text-secondary transition duration-sm ease-base'
+              title='Ammar Ansari'
+            >
               AmmarAnsari
             </a>
           </p>

@@ -20,6 +20,7 @@ function CurrentProject() {
           size='sm'
           className='mt-4'
           endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+          title='Go to skills page'
         >
           Past projects
         </Button>

@@ -35,6 +35,7 @@ function Navbar() {
             href='/doc/AmmarAnsari_Resume.pdf'
             onMouseEnter={() => resumeRef.current?.play()}
             onMouseLeave={() => resumeRef.current?.stop()}
+            title='Download resume'
           >
             <Lottie
               lottieRef={resumeRef}
