@@ -21,7 +21,7 @@ export async function getStaticProps() {
     description:
       'From small-scale startups to well-established teams, I have been fortunate enough to have experience working in both.',
     tagline: 'Work Experience',
-    image: '/images/meta-bw.jpeg',
+    image: '/images/code-meta.jpeg',
     route: '/experience',
   };
 

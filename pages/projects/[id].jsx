@@ -24,7 +24,7 @@ export function getStaticProps(props) {
     title: `${project.name} - Ammar Ansari`,
     description: project.summary,
     project,
-    image: '/images/meta-bw.jpeg',
+    image: project.thumbnail,
     route: `/projects/${project.id}`,
   };
 

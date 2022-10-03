@@ -22,7 +22,7 @@ export async function getStaticProps() {
     description:
       'Projects based on various tech-stack including front-end, back-end, server-side development and a few mobile apps.',
     tagline: 'Projects',
-    image: '/images/meta-bw.jpeg',
+    image: '/images/code-meta.jpeg',
     route: '/projects',
   };
 
