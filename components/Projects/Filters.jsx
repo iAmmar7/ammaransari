@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import Button from '../Button/Button';
@@ -8,7 +8,9 @@ import skills from '../../data/skills';
 import { useBreakpoints } from '../../hooks';
 import { isEmpty, take, takeRight } from '../../lib/utils';
 
-const skillsName = skills.filter((skill) => skill.major).sort((a, b) => a.priority - b.priority);
+const skillsName = skills
+  .filter((skill) => skill.major)
+  .sort((a, b) => (a.priority || Number.MAX_SAFE_INTEGER) - (b.priority || Number.MAX_SAFE_INTEGER));
 
 function Filters(props) {
   const { filters, updateFilters } = props;
@@ -18,21 +20,24 @@ function Filters(props) {
 
   const handleCollapse = () => setCollapsed(!collapsed);
 
-  const handleFilter = (val) => {
-    const newSkill = !isEmpty(val) ? updateFilters(val) : [];
-    replace(
-      {
-        pathname: '/projects',
-        query: {
-          skill: newSkill,
+  const handleFilter = useCallback(
+    (val) => {
+      const newSkill = !isEmpty(val) ? updateFilters(val) : [];
+      replace(
+        {
+          pathname: '/projects',
+          query: {
+            skill: newSkill,
+          },
         },
-      },
-      undefined,
-      {
-        shallow: true,
-      }
-    );
-  };
+        undefined,
+        {
+          shallow: true,
+        }
+      );
+    },
+    [replace, updateFilters]
+  );
 
   const topFiltersCount = useMemo(() => {
     if (sm) return 3;
