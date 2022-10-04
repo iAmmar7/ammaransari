@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { useSkillFilter } from '../../hooks';
 import { isEmpty } from '../../lib/utils';
@@ -10,6 +10,16 @@ import List from './List';
 function Projects() {
   const { filters, updateFilters } = useSkillFilter();
   const [count, setCount] = useState(6);
+
+  useEffect(() => {
+    const COUNT_FROM_STORAGE = parseInt(sessionStorage.getItem('count') || 6);
+    setCount(COUNT_FROM_STORAGE);
+  }, []);
+
+  const handleSetCount = () => {
+    sessionStorage.setItem('count', count + 3);
+    setCount(count + 3);
+  };
 
   const projects = useMemo(() => {
     if (isEmpty(filters) || isEmpty(filters[0])) return PROJECTS;
@@ -23,7 +33,7 @@ function Projects() {
       <List projects={projects} count={count} className='mt-6 sm:mt-12' />
       {count <= projects.length && (
         <div className='text-center mt-10'>
-          <Button type='primary' className='ml-[51px]' onClick={() => setCount(count + 3)}>
+          <Button type='primary' className='ml-[51px]' onClick={handleSetCount}>
             Load More
           </Button>
         </div>
