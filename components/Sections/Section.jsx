@@ -57,10 +57,10 @@ function Section(props) {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className='inline-flex flex-row-reverse gap-x-2 cursor-pointer group'
+                className='inline-flex flex-row-reverse gap-x-1 cursor-pointer group'
                 title='Move to next section'
               >
-                <span className='group-hover:text-secondary'>More</span>
+                <span className='group-hover:text-secondary text-sm'>More</span>
                 <Icon icon='ri-arrow-down-line' className='animate-bounce mt-[2px] group-hover:text-secondary' />
               </motion.a>
             </Link>
