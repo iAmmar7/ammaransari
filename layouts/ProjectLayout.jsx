@@ -4,17 +4,19 @@ import Link from 'next/link';
 
 import { Navbar, Footer, WavyText, Icon, Badge, ExternalLink } from '../components';
 import { useBreakpoints } from '../hooks';
-import { capitalize, take, isEmpty } from '../lib/utils';
+import { capitalize, take, isEmpty, isArray, last } from '../lib/utils';
 import { blurryDataProfile } from '../lib/blurryData';
 
 function Project(props) {
   const { children } = props;
+  const { xs, sm } = useBreakpoints();
+
+  const component = isArray(children) ? last(children) : children;
   const {
     props: {
       project: { name, summary, domain, technologies, code, url, thumbnail },
     },
-  } = children;
-  const { xs, sm } = useBreakpoints();
+  } = component;
 
   return (
     <div className='flex flex-col min-h-screen relative z-0'>
