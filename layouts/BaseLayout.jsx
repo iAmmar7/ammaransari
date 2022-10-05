@@ -1,15 +1,18 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 import { Navbar, Footer } from '../components';
+import { isArray, last } from '../lib/utils';
 
 function Base(props) {
   const { children } = props;
-  const {
-    props: { tagline, summary, route },
-  } = children;
+  const router = useRouter();
 
-  const maxWidth = route === '/projects' ? 'max-w-6xl' : 'max-w-4xl';
+  const component = isArray(children) ? last(children) : children;
+  const { props: { tagline, summary } = {} } = component;
+
+  const maxWidth = router.asPath.includes('projects') ? 'max-w-6xl' : 'max-w-4xl';
 
   return (
     <div className='flex flex-col min-h-screen relative z-0'>
