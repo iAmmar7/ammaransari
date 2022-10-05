@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
-import { Meta, WorkExperience } from '../components';
-import { BaseLayout } from '../layouts';
+
+import BaseLayout from '../layouts/BaseLayout';
+import Meta from '../components/Meta';
+import WorkExperience from '../components/WorkExperience';
 
 function ExperiencePage(props) {
   return (

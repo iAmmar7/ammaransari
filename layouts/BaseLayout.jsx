@@ -2,8 +2,9 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
-import { Navbar, Footer } from '../components';
 import { isArray, last } from '../lib/utils';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function Base(props) {
   const { children } = props;
@@ -23,9 +24,8 @@ function Base(props) {
       <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto'>
         <div className='text-sm sm:text-base relative z-10 h-full py-5 px-0'>
           <motion.div
-            initial={{ opacity: 0.5, y: 20 }}
+            initial={{ y: 20 }}
             whileInView={{
-              opacity: 1,
               y: 0,
               transition: { ease: 'easeInOut', duration: 0.5 },
             }}
