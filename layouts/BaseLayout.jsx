@@ -10,7 +10,9 @@ function Base(props) {
   const router = useRouter();
 
   const component = isArray(children) ? last(children) : children;
-  const { props: { tagline, summary } = {} } = component;
+  const {
+    props: { tagline, summary },
+  } = component;
 
   const maxWidth = router.asPath.includes('projects') ? 'max-w-6xl' : 'max-w-4xl';
 

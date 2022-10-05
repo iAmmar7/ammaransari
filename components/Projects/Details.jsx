@@ -77,7 +77,7 @@ function ProjectDetails(props) {
         </section>
       )}
       {!isEmpty(relatedProjects) && (
-        <section className='border-t mt-10 pt-10'>
+        <section className='border-t-[0.5px] border-muted mt-10 pt-10'>
           <Title text='Related projects' />
           <List projects={take(relatedProjects, 3)} count={3} className='mt-4' />
         </section>
