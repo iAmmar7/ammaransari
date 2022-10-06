@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 import ProjectDetails from '../../components/Projects/Details';
 import Meta from '../../components/Meta';
-import { ProjectLayout } from '../../layouts';
+import ProjectLayout from '../../layouts/ProjectLayout';
 import PROJECTS from '../../data/projects';
 
 function ProjectPage(props) {
