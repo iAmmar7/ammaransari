@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import Button from '../Button/Button';
+import Button from '../Button';
 import Icon from '../Icon';
-import Collapse from '../Collapse/Collapse';
+import Collapse from '../Collapse';
 
 function Contact() {
   const [sendFailed, setSendFailed] = useState(false);

@@ -1,5 +1,10 @@
-import { Meta, HomeSection, CurrentEmployment, CurrentTechStack, CurrentProject, ContactSection } from '../components';
-import { HomeLayout } from '../layouts';
+import HomeLayout from '../layouts/HomeLayout';
+import Meta from '../components/Meta';
+import HomeSection from '../components/Sections/HomeSection';
+import CurrentEmployment from '../components/Sections/CurrentEmployment';
+import CurrentTechStack from '../components/Sections/CurrentTechStack';
+import CurrentProject from '../components/Sections/CurrentProject';
+import ContactSection from '../components/Sections/ContactSection';
 
 function HomePage(props) {
   return (

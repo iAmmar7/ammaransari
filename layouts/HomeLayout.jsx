@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Button, Footer } from '../components';
 import Icon from '../components/Icon';
+import Button from '../components/Button';
+import Footer from '../components/Footer';
 
 function HomeLayout(props) {
   const { children } = props;

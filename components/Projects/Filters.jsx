@@ -1,9 +1,9 @@
 import { useCallback, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
-import Button from '../Button/Button';
+import Button from '../Button';
 import Icon from '../Icon';
-import Collapse from '../Collapse/Collapse';
+import Collapse from '../Collapse';
 import skills from '../../data/skills';
 import { useBreakpoints } from '../../hooks';
 import { isEmpty, take, takeRight } from '../../lib/utils';

@@ -1,5 +1,5 @@
 import Timeline from '../Timeline/Timeline';
-import ExternalLink from '../ExternalLink/ExternalLink';
+import ExternalLink from '../ExternalLink';
 import EXPERIENCE from '../../data/experience';
 import { isObject, isString } from '../../lib/utils';
 

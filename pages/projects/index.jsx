@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
-import { Meta, Projects } from '../../components';
-import { BaseLayout } from '../../layouts';
+
+import Meta from '../../components/Meta';
+import Projects from '../../components/Projects';
+import BaseLayout from '../../layouts/BaseLayout';
 
 function ProjectsPage(props) {
   return (

@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useSkillFilter } from '../../hooks';
 import { isEmpty } from '../../lib/utils';
 import PROJECTS from '../../data/projects';
-import Button from '../Button/Button';
+import Button from '../Button';
 import Filters from './Filters';
 import List from './List';
 

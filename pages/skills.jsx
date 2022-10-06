@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
-import { Meta, Skills } from '../components';
-import { BaseLayout } from '../layouts';
+
+import Skills from '../components/Skills';
+import Meta from '../components/Meta';
+import BaseLayout from '../layouts/BaseLayout';
 
 function SkillsPage(props) {
   return (

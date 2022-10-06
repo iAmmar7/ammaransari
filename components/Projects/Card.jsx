@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import Icon from '../Icon';
-import Badge from '../Badge/Badge';
+import Badge from '../Badge';
 import { blurryDataProfile } from '../../lib/blurryData';
 import { isEmpty, toLowerCase } from '../../lib/utils';
 

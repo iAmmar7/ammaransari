@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
-import { Meta, AboutMe } from '../components';
-import { BaseLayout } from '../layouts';
+
+import AboutMe from '../components/AboutMe';
+import Meta from '../components/Meta';
+import BaseLayout from '../layouts/BaseLayout';
 
 function AboutPage(props) {
   return (

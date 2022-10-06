@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-import SocialLinks from '../SocialLinks/SocialLinks';
-import ExternalLink from '../ExternalLink/ExternalLink';
+import SocialLinks from '../SocialLinks';
+import ExternalLink from '../ExternalLink';
 import Icon from '../Icon';
-import Button from '../Button/Button';
+import Button from '../Button';
 
 function Hero(props) {
   const { title, description } = props;

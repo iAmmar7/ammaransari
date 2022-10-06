@@ -1,4 +1,4 @@
-import AboutMe from '../AboutMe/AboutMe';
+import AboutMe from '../AboutMe';
 import Section from './Section';
 import { useBreakpoints } from '../../hooks';
 

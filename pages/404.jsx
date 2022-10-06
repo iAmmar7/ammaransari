@@ -2,7 +2,10 @@ import Lottie from 'lottie-react';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-import { Meta, Footer, Navbar, Button } from '../components';
+import Meta from '../components/Meta';
+import Button from '../components/Button';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import icon404 from '../public/icons/404.json';
 
 function Custom404(props) {

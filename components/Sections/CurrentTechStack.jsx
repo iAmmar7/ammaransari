@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Button from '../Button/Button';
+import Button from '../Button';
 import Icon from '../Icon';
 import Section from './Section';
 import CURRENT_TECH_STACK from '../../data/currentTechStack';

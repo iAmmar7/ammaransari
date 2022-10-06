@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 import Timeline from '../Timeline/Timeline';
-import ExternalLink from '../ExternalLink/ExternalLink';
-import Button from '../Button/Button';
+import ExternalLink from '../ExternalLink';
+import Button from '../Button';
 import Icon from '../Icon';
 import CURRENT_EMPLOYEMT from '../../data/currentEmployment';
 import { isObject, isString } from '../../lib/utils';

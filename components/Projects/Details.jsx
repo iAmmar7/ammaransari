@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { isArray, isEmpty, take } from '../../lib/utils';
 import PROJECTS from '../../data/projects';
-import Badge from '../Badge/Badge';
+import Badge from '../Badge';
 import List from './List';
 
 const Title = ({ text }) => (

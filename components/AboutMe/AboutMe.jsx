@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import { blurryDataProfile } from '../../lib/blurryData';
-import ExternalLink from '../ExternalLink/ExternalLink';
-import SocialLinks from '../SocialLinks/SocialLinks';
+import ExternalLink from '../ExternalLink';
+import SocialLinks from '../SocialLinks';
 
 function AboutMe() {
   const funFact = (

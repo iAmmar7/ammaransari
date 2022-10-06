@@ -1,4 +1,4 @@
-import Hero from '../Hero/Hero';
+import Hero from '../Hero';
 import Section from './Section';
 
 function HomeSection(props) {

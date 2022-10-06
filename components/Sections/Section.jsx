@@ -2,7 +2,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar';
 import Icon from '../Icon';
 
 function Section(props) {

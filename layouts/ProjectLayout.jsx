@@ -2,7 +2,12 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Navbar, Footer, WavyText, Icon, Badge, ExternalLink } from '../components';
+import Icon from '../components/Icon';
+import ExternalLink from '../components/ExternalLink';
+import WavyText from '../components/WavyText';
+import Badge from '../components/Badge';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { useBreakpoints } from '../hooks';
 import { capitalize, take, isEmpty, isArray, last } from '../lib/utils';
 import { blurryDataProfile } from '../lib/blurryData';

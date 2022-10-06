@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 
-import { Meta, ProjectDetails } from '../../components';
+import ProjectDetails from '../../components/Projects/Details';
+import Meta from '../../components/Meta';
 import { ProjectLayout } from '../../layouts';
 import PROJECTS from '../../data/projects';
 

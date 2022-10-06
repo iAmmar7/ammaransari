@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import { socialLinks } from '../../lib/socialMedia';
 import Icon from '../Icon';
-import Badge from '../Badge/Badge';
+import Badge from '../Badge';
 
 function SocialLinks(props) {
   const { className } = props;
