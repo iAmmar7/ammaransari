@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import Section from './Section';
 import CURRENT_TECH_STACK from '../../data/currentTechStack';
 import { toLowerCase } from '../../lib/utils';

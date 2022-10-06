@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import Collapse from '../Collapse/Collapse';
 import skills from '../../data/skills';
 import { useBreakpoints } from '../../hooks';

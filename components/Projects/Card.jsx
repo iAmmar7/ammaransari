@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import Badge from '../Badge/Badge';
 import { blurryDataProfile } from '../../lib/blurryData';
 import { isEmpty, toLowerCase } from '../../lib/utils';

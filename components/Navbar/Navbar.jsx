@@ -1,15 +1,11 @@
-import { useRef } from 'react';
 import { motion, LayoutGroup } from 'framer-motion';
-import Lottie from 'lottie-react';
 
-import Logo from '../Logo/Logo';
+import Logo from '../Logo';
 import NavItem from './NavItem';
+import Icon from '../Icon';
 import { PAGES } from './constants';
-import downloadIcon from '../../public/icons/download.json';
 
 function Navbar() {
-  const resumeRef = useRef();
-
   return (
     <LayoutGroup className='relative'>
       <motion.header
@@ -29,22 +25,27 @@ function Navbar() {
         </nav>
         <div className='flex item-center ml-auto mr-1 sm:mr-3 sm:order-3'>
           <a
-            className='appearance-none bg-transparent rounded-base text-muted text-sm outline-0 py-2 px-3 no-underline cursor-pointer transition-all duration-md ease-base hover:bg-muted hover:text-primary hover:opacity-100 inline-flex items-center justify-center'
+            className='appearance-none bg-transparent rounded-base text-sm outline-0 py-2 px-3 no-underline cursor-pointer transition-all duration-md ease-base hover:bg-muted hover:opacity-100 inline-flex items-center justify-center gap-x-1 group overflow-hidden'
             download
             role='button'
             href='/doc/AmmarAnsari_Resume.pdf'
-            onMouseEnter={() => resumeRef.current?.play()}
-            onMouseLeave={() => resumeRef.current?.stop()}
             title='Download resume'
           >
-            <Lottie
-              lottieRef={resumeRef}
-              className='w-5 h-5 mr-2'
-              animationData={downloadIcon}
-              loop={false}
-              autoplay={false}
-            />
-            Resume
+            <div className='w-fit grid'>
+              <div className='[grid-area:1/1] flex items-center justify-center transition ease-in-out translate-y-0 duration-300 group-hover:translate-y-10'>
+                <Icon
+                  icon='ri-download-line'
+                  className='text-muted group-hover:text-primary transition-all duration-md ease-base'
+                />
+              </div>
+              <div className='[grid-area:1/1] flex items-center justify-center transition ease-in-out -translate-y-10 duration-300 group-hover:translate-y-0'>
+                <Icon
+                  icon='ri-download-line'
+                  className='text-muted group-hover:text-primary transition-all duration-md ease-base'
+                />
+              </div>
+            </div>
+            <span className='text-muted group-hover:text-primary transition-all duration-md ease-base'>Resume</span>
           </a>
         </div>
       </motion.header>

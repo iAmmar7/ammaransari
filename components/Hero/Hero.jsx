@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import SocialLinks from '../SocialLinks/SocialLinks';
 import ExternalLink from '../ExternalLink/ExternalLink';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import Button from '../Button/Button';
 
 function Hero(props) {

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
 import Navbar from '../Navbar/Navbar';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 
 function Section(props) {
   const { title, description, children, id, next } = props;

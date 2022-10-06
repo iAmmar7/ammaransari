@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 
 // FIXME: Tailwind is not reading dynamic colors properly. Ideal solution: `from-${color} text-${color}`
 const colorMapper = {

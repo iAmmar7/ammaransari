@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { socialLinks } from '../../lib/socialMedia';
 import { APP_URL } from '../../lib/constants';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 
 function Footer(props) {
   const { className } = props;

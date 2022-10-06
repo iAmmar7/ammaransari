@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
 
 import { socialLinks } from '../../lib/socialMedia';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import Badge from '../Badge/Badge';
 
 function SocialLinks(props) {

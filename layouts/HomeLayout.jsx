@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Icon, Button, Footer } from '../components';
+import { Button, Footer } from '../components';
+import Icon from '../components/Icon';
 
-function Home(props) {
+function HomeLayout(props) {
   const { children } = props;
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
@@ -46,4 +47,4 @@ function Home(props) {
   );
 }
 
-export default Home;
+export default HomeLayout;

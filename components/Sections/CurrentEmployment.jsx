@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Timeline from '../Timeline/Timeline';
 import ExternalLink from '../ExternalLink/ExternalLink';
 import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
+import Icon from '../Icon';
 import CURRENT_EMPLOYEMT from '../../data/currentEmployment';
 import { isObject, isString } from '../../lib/utils';
 import Section from './Section';
