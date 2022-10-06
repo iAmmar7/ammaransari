@@ -4,13 +4,13 @@ import { useRouter } from 'next/router';
 import Button from '../Button';
 import Icon from '../Icon';
 import Collapse from '../Collapse';
-import skills from '../../data/skills';
+import SKILLS from '../../data/skills';
 import { useBreakpoints } from '../../hooks';
 import { isEmpty, take, takeRight } from '../../lib/utils';
 
-const skillsName = skills
-  .filter((skill) => skill.major)
-  .sort((a, b) => (a.priority || Number.MAX_SAFE_INTEGER) - (b.priority || Number.MAX_SAFE_INTEGER));
+const skillsName = SKILLS.filter((skill) => skill.major).sort(
+  (a, b) => (a.priority || Number.MAX_SAFE_INTEGER) - (b.priority || Number.MAX_SAFE_INTEGER)
+);
 
 function Filters(props) {
   const { filters, updateFilters } = props;
