@@ -17,7 +17,7 @@ const textColorMapper = (type) => {
   return textColor;
 };
 
-const Badge = forwardRef((props, _ref) => {
+const Badge = forwardRef((props, ref) => {
   const { type, as, className, children, ...otherProps } = props;
 
   const Component = as ?? 'span';
@@ -26,7 +26,7 @@ const Badge = forwardRef((props, _ref) => {
   const textColor = useMemo(() => textColorMapper(type), [type]);
 
   return (
-    <Component className={clsx('py-1 px-2 rounded-base', bgColor, textColor, className)} {...otherProps}>
+    <Component ref={ref} className={clsx('py-1 px-2 rounded-base', bgColor, textColor, className)} {...otherProps}>
       {children}
     </Component>
   );
