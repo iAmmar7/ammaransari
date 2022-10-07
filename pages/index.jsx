@@ -1,10 +1,13 @@
+import dynamic from 'next/dynamic';
+
 import HomeLayout from '../layouts/HomeLayout';
 import Meta from '../components/Meta';
 import HomeSection from '../components/Sections/HomeSection';
-import CurrentEmployment from '../components/Sections/CurrentEmployment';
-import CurrentTechStack from '../components/Sections/CurrentTechStack';
-import CurrentProject from '../components/Sections/CurrentProject';
-import ContactSection from '../components/Sections/ContactSection';
+
+const CurrentEmployment = dynamic(import('../components/Sections/CurrentEmployment'));
+const CurrentTechStack = dynamic(import('../components/Sections/CurrentTechStack'));
+const CurrentProject = dynamic(import('../components/Sections/CurrentProject'));
+const ContactSection = dynamic(import('../components/Sections/ContactSection'));
 
 function HomePage(props) {
   return (
