@@ -1,10 +1,11 @@
-import { useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 import { isArray, isEmpty, take } from '../../lib/utils';
-import PROJECTS from '../../data/projects';
 import Badge from '../Badge';
-import List from './List';
+import ListSkeleton from './Skeletons/List';
+
+const List = dynamic(import('./List'), { loading: ListSkeleton });
 
 const Title = ({ text }) => (
   <h2 className='text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-tertiary to-secondary'>
@@ -13,17 +14,7 @@ const Title = ({ text }) => (
 );
 
 function ProjectDetails(props) {
-  const { id, features, technologies, description, contribution } = props;
-
-  const relatedProjects = useMemo(() => {
-    const projects = PROJECTS.reduce((acc, proj) => {
-      if (proj.id === id) return acc;
-      const techCount = technologies.filter((tech) => proj.technologies.includes(tech)).length;
-      if (techCount > 0) acc.push({ ...proj, count: techCount });
-      return acc;
-    }, []);
-    return projects.sort((a, b) => b.count - a.count);
-  }, [id, technologies]);
+  const { features, technologies, description, contribution, relatedProjects } = props;
 
   return (
     <div className='mt-8 flex flex-col gap-y-5'>

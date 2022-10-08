@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useMemo } from 'react';
 
 import ProjectDetails from '../../components/Projects/Details';
 import Meta from '../../components/Meta';
@@ -6,10 +6,24 @@ import ProjectLayout from '../../layouts/ProjectLayout';
 import PROJECTS from '../../data/projects';
 
 function ProjectPage(props) {
+  const {
+    project: { id, technologies },
+  } = props;
+
+  const relatedProjects = useMemo(() => {
+    const projects = PROJECTS.reduce((acc, proj) => {
+      if (proj.id === id) return acc;
+      const techCount = technologies.filter((tech) => proj.technologies.includes(tech)).length;
+      if (techCount > 0) acc.push({ ...proj, count: techCount });
+      return acc;
+    }, []);
+    return projects.sort((a, b) => b.count - a.count);
+  }, [id, technologies]);
+
   return (
     <Fragment>
       <Meta {...props} />
-      <ProjectDetails {...props.project} />
+      <ProjectDetails {...props.project} relatedProjects={relatedProjects} />
     </Fragment>
   );
 }
