@@ -1,11 +1,15 @@
+import dynamic from 'next/dynamic';
 import { useEffect, useMemo, useState } from 'react';
 
 import { useSkillFilter } from '../../hooks';
 import { isEmpty } from '../../lib/utils';
 import PROJECTS from '../../data/projects';
 import Button from '../Button';
-import Filters from './Filters';
-import List from './List';
+import ListSkeleton from './Skeletons/List';
+import FiltersSkeleton from './Skeletons/Filters';
+
+const Filters = dynamic(import('./Filters'), { loading: FiltersSkeleton });
+const List = dynamic(import('./List'), { loading: ListSkeleton });
 
 function Projects() {
   const { filters, updateFilters } = useSkillFilter();
