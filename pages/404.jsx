@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/Image';
+// import Image from 'next/Image';
 import clsx from 'clsx';
 
 import Meta from '../components/Meta';
@@ -87,14 +87,14 @@ function Custom404(props) {
               </div>
             </div>
           </div>
-          <div className='absolute bottom-0 right-0 h-[10rem] w-[10rem] sm:h-[18rem] sm:w-[18rem] md:h-[24rem] md:w-[24rem]'>
+          {/* <div className='absolute bottom-0 right-0 h-[10rem] w-[10rem] sm:h-[18rem] sm:w-[18rem] md:h-[24rem] md:w-[24rem]'>
             <Image
               src='https://framerusercontent.com/images/p11yBuLiUWx3p905Pw2W33JBtEM.gif'
               alt='404 guy'
               layout='fill'
               priority
             />
-          </div>
+          </div> */}
         </main>
         <Footer />
       </div>
