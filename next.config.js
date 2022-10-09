@@ -7,7 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['via.placeholder.com'],
+    domains: ['via.placeholder.com', 'framerusercontent.com'],
   },
   webpack(config) {
     config.module.rules.push({
