@@ -36,10 +36,11 @@ const experience = [
         clientSubsidiaryUrl: 'https://www.uber.com',
         clientSubsidiaryTheme: '#000000',
         clientSummary: [
-          'Member of the CareemPay team.',
-          'Build and maintain the whole flow of “Pay with Careem” with other team members.',
+          'Responsible to build and streamline the whole flow of “pay with careem” with other team members.',
           'Integration with bank cards and handling the scenario of both 3DS and non-3DS cards.',
-          'Integrated the crash reporting library in payment SDK.',
+          'Reduced the bundle size by code splitting for different application flows.',
+          'Successfully deployed the server-side rendered application using the CI/CD pipeline with GitLab.',
+          'Improved the app performance by creating a separate package to implement a queue for analytics APIs.',
         ],
       },
     ],
@@ -60,6 +61,7 @@ const experience = [
       'Mainly focus on the front-end side development.',
       'Collaborate with multiple teams to provide generic solutions.',
       'Conduct dev sessions to elaborate and explain new generic features.',
+      'Accomplished real-time data for multiple teams by solving GraphQL subscription issue.',
     ],
   },
   {

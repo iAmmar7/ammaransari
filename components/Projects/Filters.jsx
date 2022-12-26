@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import Button from '../Button';
@@ -18,7 +18,16 @@ function Filters(props) {
   const { replace } = useRouter();
   const { sm, md, lg, xl, ...breakpoints } = useBreakpoints();
 
-  const handleCollapse = () => setCollapsed(!collapsed);
+  useEffect(() => {
+    const COLLAPSED_FROM_STORAGE = sessionStorage.getItem('collapsed');
+    const isCollapsed = COLLAPSED_FROM_STORAGE ? COLLAPSED_FROM_STORAGE === 'true' : true;
+    setCollapsed(isCollapsed);
+  }, []);
+
+  const handleCollapse = () => {
+    sessionStorage.setItem('collapsed', !collapsed);
+    setCollapsed(!collapsed);
+  };
 
   const handleFilter = useCallback(
     (val) => {
