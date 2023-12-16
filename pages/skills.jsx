@@ -22,7 +22,7 @@ export async function getStaticProps() {
     title: 'Skills - Ammar Ansari',
     summary: 'Technologies I have used throughout my career',
     description:
-      'Having worked in diverse group of people, I have had a chance to collaborate on multiple projects where I contributed using various tech-stack.',
+      'Having worked with a diverse group of people, I have had the opportunity to collaborate on multiple projects and contribute using various tech stacks.',
     tagline: 'Skills',
     image: '/images/code-meta.jpeg',
     route: '/skills',
