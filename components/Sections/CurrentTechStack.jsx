@@ -1,36 +1,54 @@
 import Link from 'next/link';
+import clsx from 'clsx';
 
 import Button from '../Button';
 import Icon from '../Icon';
 import Section from './Section';
 import CURRENT_TECH_STACK from '../../data/currentTechStack';
 import { toLowerCase } from '../../lib/utils';
-
-import { TypeScriptSVG, ReactSVG, NodeSVG, TailwindSVG, NextSVG, SwrSVG, FirebaseSVG, MySqlSVG } from '../SVG/svgs';
-import clsx from 'clsx';
+import {
+  TypeScriptSVG,
+  ReactSVG,
+  NodeSVG,
+  TailwindSVG,
+  NextSVG,
+  FirebaseSVG,
+  WebRTCSVG,
+  PlaywrightSVG,
+} from '../SVG/svgs';
 
 const skillToSVGMapper = (skill) => {
   if (toLowerCase(skill).includes('typescript'))
     return { Component: TypeScriptSVG, color: 'group-hover:text-typescript' };
-  if (toLowerCase(skill).includes('react')) return { Component: ReactSVG, color: 'group-hover:text-react' };
-  if (toLowerCase(skill).includes('node')) return { Component: NodeSVG, color: 'group-hover:text-node' };
-  if (toLowerCase(skill).includes('tailwind')) return { Component: TailwindSVG, color: 'group-hover:text-tailwind' };
-  if (toLowerCase(skill).includes('next')) return { Component: NextSVG, color: 'group-hover:text-next' };
-  if (toLowerCase(skill).includes('swr')) return { Component: SwrSVG, color: 'group-hover:text-swr' };
-  if (toLowerCase(skill).includes('firebase')) return { Component: FirebaseSVG, color: 'group-hover:text-firebase' };
-  if (toLowerCase(skill).includes('mysql')) return { Component: MySqlSVG, color: 'group-hover:text-mysql' };
+  if (toLowerCase(skill).includes('react'))
+    return { Component: ReactSVG, color: 'group-hover:text-react' };
+  if (toLowerCase(skill).includes('node'))
+    return { Component: NodeSVG, color: 'group-hover:text-node' };
+  if (toLowerCase(skill).includes('tailwind'))
+    return { Component: TailwindSVG, color: 'group-hover:text-tailwind' };
+  if (toLowerCase(skill).includes('next'))
+    return { Component: NextSVG, color: 'group-hover:text-next' };
+  if (toLowerCase(skill).includes('webrtc'))
+    return { Component: WebRTCSVG, color: 'group-hover:text-webrtc' };
+  if (toLowerCase(skill).includes('firebase'))
+    return { Component: FirebaseSVG, color: 'group-hover:text-firebase' };
+  if (toLowerCase(skill).includes('playwright'))
+    return { Component: PlaywrightSVG, color: 'group-hover:text-playwright' };
 };
 
-function SkillSection() {
+function TechStackSection() {
   return (
     <Section id='skills' title='Current tech-stack' next='projects'>
-      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 mt-6'>
+      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 mt-6 justify-center'>
         {CURRENT_TECH_STACK.map((tech) => {
           const SVG = skillToSVGMapper(tech.name);
           return (
             <Link
               key={tech.name}
-              href={{ pathname: '/projects', query: { skill: tech.name === 'TypeScript' ? null : tech.name } }}
+              href={{
+                pathname: '/projects',
+                query: { skill: tech.name === 'TypeScript' ? null : tech.name },
+              }}
               passHref
             >
               <a
@@ -69,4 +87,4 @@ function SkillSection() {
   );
 }
 
-export default SkillSection;
+export default TechStackSection;

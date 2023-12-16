@@ -16,7 +16,7 @@ function Contact() {
       const email = event.target.email.value;
       const message = event.target.message.value;
 
-      const res = await fetch(`/api/email`, {
+      const res = await fetch('/api/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

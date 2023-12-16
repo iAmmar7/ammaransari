@@ -2,7 +2,11 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './layouts/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './layouts/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     fontFamily: {
       inter: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -40,6 +44,9 @@ module.exports = {
         firebase: '#FFA611',
         swr: '#000000',
         mysql: '#00758F',
+        signalwire: '#6f42c1',
+        webrtc: '#BF0000',
+        playwright: '#2EAD33',
       },
       borderRadius: {
         base: '8px',

@@ -15,10 +15,19 @@ const colorMapper = {
   planz: 'from-planz text-planz',
   sudofy: 'from-sudofy text-sudofy',
   adres: 'from-adres text-adres',
+  signalwire: 'from-signalwire text-signalwire',
 };
 
 function ExternalLink(props) {
-  const { href, className, color = 'muted', showIcon = false, underline = false, children, ...otherProps } = props;
+  const {
+    href,
+    className,
+    color = 'muted',
+    showIcon = false,
+    underline = false,
+    children,
+    ...otherProps
+  } = props;
 
   return (
     <a
@@ -43,7 +52,9 @@ function ExternalLink(props) {
       ) : (
         children
       )}
-      {showIcon && <Icon icon='ri-external-link-line' className={clsx('text-sm', `text-${color}`)} />}
+      {showIcon && (
+        <Icon icon='ri-external-link-line' className={clsx('text-sm', `text-${color}`)} />
+      )}
     </a>
   );
 }

@@ -9,8 +9,9 @@ function AboutMe() {
   const funFact = (
     <div className='bg-muted border-l-4 border-secondary p-2 rounded-r-base text-center sm:text-left'>
       <p>
-        Fun fact about me: I`ve been the team`s <strong className='font-normal text-primary'>youngest engineer</strong>{' '}
-        in most of the companies where I`ve worked.
+        Fun fact about me: I&apos;ve been the team&apos;s{' '}
+        <strong className='font-normal text-primary'>youngest engineer</strong> in most of the companies where I&apos;ve
+        worked.
       </p>
     </div>
   );
@@ -65,8 +66,8 @@ function AboutMe() {
           </motion.div>
         </div>
         <div className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
-          <p className=''>
-            Hi, I`m <strong className='font-normal text-primary'>Ammar</strong>, currently working as a Software
+          <p>
+            Hi, I&apos;m <strong className='font-normal text-primary'>Ammar</strong>, currently working as a Software
             Engineer at Careem in the CareemPay team.
           </p>
           <p className='mt-2'>
@@ -84,7 +85,7 @@ function AboutMe() {
       </div>
       <div className='block md:hidden mt-6'>{funFact}</div>
       <div className='mt-6 text-center sm:text-left'>
-        On the academic side, I graduated from NED University with a Bachelor`s degree in{' '}
+        On the academic side, I graduated from NED University with a Bachelor&apos;s degree in{' '}
         <strong className='font-normal text-primary'>Computer Systems Engineering</strong>. I have a high degree of{' '}
         <strong className='font-normal text-primary'>adaptability</strong> and am constantly eager to learn new things
         and impart my knowledge to others.
