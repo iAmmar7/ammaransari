@@ -3,6 +3,9 @@ import ExternalLink from '../ExternalLink';
 import EXPERIENCE from '../../data/experience';
 import { isObject, isString } from '../../lib/utils';
 
+// Sort modifies the original array
+EXPERIENCE.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
+
 function WorkExperience() {
   return (
     <div className='text-primary'>
@@ -13,7 +16,13 @@ function WorkExperience() {
             date={`${exp.startDate} - ${exp.endDate ?? 'Present'}`}
             title={exp.title}
             subHeading={
-              <ExternalLink underline href={exp.companyUrl} color={exp.companyTag} showIcon title={exp.company}>
+              <ExternalLink
+                underline
+                href={exp.companyUrl}
+                color={exp.companyTag}
+                showIcon
+                title={exp.company}
+              >
                 {exp.company}
               </ExternalLink>
             }
@@ -26,7 +35,13 @@ function WorkExperience() {
                     <div className='mt-2' key={sum.clientId}>
                       <span className='flex items-center gap-x-1 flex-wrap'>
                         <p>Client</p>
-                        <ExternalLink underline href={sum.clientUrl} color={sum.clientTag} showIcon title={sum.client}>
+                        <ExternalLink
+                          underline
+                          href={sum.clientUrl}
+                          color={sum.clientTag}
+                          showIcon
+                          title={sum.client}
+                        >
                           {sum.client}
                         </ExternalLink>
                         {sum.clientSubsidiary && (

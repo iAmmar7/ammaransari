@@ -8,10 +8,11 @@ const experience = [
     companyTheme: '#EE2938',
     type: 'Full-time',
     startDate: 'Jul 2021',
-    location: 'Karachi, Pakistan, Remote',
+    endDate: 'Feb 2023',
+    location: 'Pakistan, UAE, Remote',
     summary: [
       'Responsible for both frontend and server-side development.',
-      'Implemented a “similar questions” feature using NLP with Python.',
+      'Developed a “similar questions” feature using NLP in Python, enhancing user engagement through relevant content suggestions.',
       {
         clientId: 1,
         client: 'ADRES',
@@ -19,10 +20,7 @@ const experience = [
         clientUrl: 'https://www.adres.ae',
         clientTheme: '#25589B',
         clientSummary: [
-          'Optimization and generic components development.',
-          'Assist the team with optimization techniques using the latest features of React.',
-          'Implemented the API Cache and automatic auth token re-fetch strategy.',
-          'Designed and developed the entire API-driven UI architecture.',
+          'Designed and executed an API-driven UI architecture, significantly enhancing system scalability and user experience.',
         ],
       },
       {
@@ -36,11 +34,9 @@ const experience = [
         clientSubsidiaryUrl: 'https://www.uber.com',
         clientSubsidiaryTheme: '#000000',
         clientSummary: [
-          'Responsible to build and streamline the whole flow of “pay with careem” with other team members.',
-          'Integration with bank cards and handling the scenario of both 3DS and non-3DS cards.',
-          'Reduced the bundle size by code splitting for different application flows.',
-          'Successfully deployed the server-side rendered application using the CI/CD pipeline with GitLab.',
-          'Improved the app performance by creating a separate package to implement a queue for analytics APIs.',
+          'Developed a 1-click checkout CareemPay SDK for merchants, simplifying payment processes and enhancing user experience.',
+          "Reduced application load time by 15% through strategic code splitting and deployed a server-side rendered application via GitLab's CI/CD pipeline, enhancing deployment efficiency.",
+          'Improved application performance by 25% by creating a package to queue analytics APIs, streamlining data processing.',
         ],
       },
     ],
@@ -55,7 +51,7 @@ const experience = [
     type: 'Full-time',
     startDate: 'Dec 2020',
     endDate: 'Jun 2021',
-    location: 'Miami, USA, Remote',
+    location: 'USA, Remote',
     summary: [
       'Design, develop and maintain software using state-of-the-art tools and techniques with the USA-based team.',
       'Mainly focus on the front-end side development.',
@@ -93,7 +89,7 @@ const experience = [
     type: 'Part-time',
     startDate: 'Aug 2019',
     endDate: 'Apr 2020',
-    location: 'Karachi, Pakistan, Remote',
+    location: 'Pakistan, Remote',
     summary: [
       'Building and maintaining Node.js server with the help of Express.js and Mongoose.js ODM for MongoDB database.',
       'Responsible for Database designing and maintaining.',
@@ -117,6 +113,22 @@ const experience = [
       'Front end web app development using technologies like CSS, Sass, Bootstrap, Vanilla JavaScript (ES6, ES7) and React.js',
       'Converting PSD and Website wireframes into responsive design.',
       'Worked with Vanilla JS and Google Firebase with real-time data in Chat room application.',
+    ],
+  },
+  {
+    id: 6,
+    title: 'Software Engineer',
+    company: 'SignalWire',
+    companyTag: 'signalwire',
+    companyUrl: 'https://signalwire.com',
+    companyTheme: '#6f42c1',
+    type: 'Full-time',
+    startDate: 'Jan 2023',
+    location: 'USA, Remote',
+    summary: [
+      'Develop and maintain JavaScript and Node.js configurable communication SDKs.',
+      'Manage long-running calls state with Saga Pattern and Redux Saga; implement WebRTC for video calls.',
+      'Handle CI/CD processes using GitHub Actions for SDK deployment to NPM.',
     ],
   },
 ];
