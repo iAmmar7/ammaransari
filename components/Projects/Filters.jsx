@@ -61,7 +61,10 @@ function Filters(props) {
     <div className='w-full'>
       <div className='flex items-center flex-wrap'>
         <div className='flex flex-wrap gap-2'>
-          <Button type={isEmpty(filters) || isEmpty(filters[0]) ? 'primary' : 'secondary'} onClick={handleFilter}>
+          <Button
+            type={isEmpty(filters) || isEmpty(filters[0]) ? 'primary' : 'secondary'}
+            onClick={handleFilter}
+          >
             All
           </Button>
           {take(skillsName, topFiltersCount).map((skill) => (
@@ -84,7 +87,10 @@ function Filters(props) {
         >
           <span className='flex items-center gap-x-1'>
             More
-            <Icon icon={collapsed ? 'ri-arrow-down-s-line' : 'ri-arrow-up-s-line'} className='min-w-[14px]' />
+            <Icon
+              icon={collapsed ? 'ri-arrow-down-s-line' : 'ri-arrow-up-s-line'}
+              className='min-w-[14px]'
+            />
           </span>
         </Button>
       </div>

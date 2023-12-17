@@ -18,7 +18,16 @@ const projects = [
       '<p><strong>Clear canvas</strong> and <strong>Download canvas</strong> image feature 🖼️</p>',
     ],
     domain: 'freelance',
-    technologies: ['React JS', 'Canvas API', 'Node JS', 'Express JS', 'Socket IO', 'PM2', 'Heroku', 'Vercel'],
+    technologies: [
+      'React JS',
+      'Canvas API',
+      'Node JS',
+      'Express JS',
+      'Socket IO',
+      'PM2',
+      'Heroku',
+      'Vercel',
+    ],
     thumbnail: '/images/projects/thumb-paint-app-realtime.png',
     code: 'https://github.com/iAmmar7/paint-app-realtime',
     url: 'https://paint-app-realtime.vercel.app',
@@ -67,7 +76,7 @@ const projects = [
       '<p>Firebase user roles 🦹</p>',
     ],
     domain: 'freelance',
-    technologies: ['Node JS', 'Firebase', 'Cloud Functions'],
+    technologies: ['Node JS', 'Firebase', 'Cloud Functions', 'Firebase Functions'],
     thumbnail: '/images/projects/thumb-parking-app.png',
     code: 'https://github.com/iAmmar7/parking-app',
     url: 'https://parking-app-f13ad.web.app',
@@ -187,7 +196,8 @@ const projects = [
     id: 'websocket-sdk',
     name: 'WebSocket SDKs',
     summary: 'WebSocket Client SDK for both Browser/Web and Node JS',
-    description: '3 days challenge to build a Web and Node JS SDK to handle Websocket client. 💥</p>',
+    description:
+      '3 days challenge to build a Web and Node JS SDK to handle Websocket client. 💥</p>',
     features: [
       '<p>Monorepo containing two SDKs with simulator for each 🌈</p>',
       '<p>An integrable SDK for <strong>Web</strong> application 🛠️</p>',
@@ -222,7 +232,8 @@ const projects = [
   {
     id: 'microfrontends-init',
     name: 'Microfrontends Init',
-    summary: 'A Single-SPA based micro-frontends application developed with React, Angular, and Vue.',
+    summary:
+      'A Single-SPA based micro-frontends application developed with React, Angular, and Vue.',
     features: [
       '<p><strong>3 microfrontends</strong> running inside the root-config. 🔥</p>',
       '<p><strong>2 shared utility modules</strong> are used by all microfrontends. ⚓</p>',
@@ -252,7 +263,8 @@ const projects = [
     id: 'vaccify',
     name: 'Vaccify',
     summary: 'An open-standard digital travel pass for COVID',
-    contribution: 'Open source application where I contributed on the Frontend side with React and Reactstrap',
+    contribution:
+      'Open source application where I contributed on the Frontend side with React and Reactstrap',
     technologies: ['React JS', 'Reactstrap', 'Blockchain', 'Open Source'],
     domain: 'open-source',
     thumbnail: '/images/projects/thumb-vaccify.png',
@@ -314,7 +326,8 @@ const projects = [
     id: 'Leaflet.DistortableImage',
     name: 'Leaflet.DistortableImage',
     summary: 'An open-source Leaflet extension to distort or "rubber sheet" images',
-    contribution: 'Contributed as a JavaScript developer and fixed one of the issues related to the drag handler',
+    contribution:
+      'Contributed as a JavaScript developer and fixed one of the issues related to the drag handler',
     domain: 'open-source',
     technologies: ['JavaScript', 'Leaflet', 'Open Source'],
     thumbnail: '/images/projects/thumb-Leaflet.DistortableImage.png',
@@ -375,7 +388,8 @@ const projects = [
     id: 'careempay-merchant-portal',
     name: 'CareemPay Merchant Portal',
     summary: 'Dashboard for CareemPay merchants',
-    description: '<p>A portal application for a merchants who integrate the CareemPay SDK in their application.</p>',
+    description:
+      '<p>A portal application for a merchants who integrate the CareemPay SDK in their application.</p>',
     contribution: [
       '<p>Setup the whole application with NextJS 13.</p>',
       '<p>Configuration of UI library.</p>',
@@ -423,7 +437,8 @@ const projects = [
     id: 'dari',
     name: 'DARI',
     summary: 'Real estate application',
-    description: '<p>Real estate management project for the Government of UAE by the company ADRES.</p>',
+    description:
+      '<p>Real estate management project for the Government of UAE by the company ADRES.</p>',
     contribution: [
       '<p>Optimization and generic components development.</p>',
       '<p>Assist the team with optimization techniques using the latest features of React.</p>',

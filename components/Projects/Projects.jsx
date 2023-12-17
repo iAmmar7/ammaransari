@@ -27,7 +27,9 @@ function Projects() {
 
   const projects = useMemo(() => {
     if (isEmpty(filters) || isEmpty(filters[0])) return PROJECTS;
-    const filteredProjects = PROJECTS.filter((proj) => filters.some((filter) => proj.technologies.includes(filter)));
+    const filteredProjects = PROJECTS.filter((proj) =>
+      filters.some((filter) => proj.technologies.includes(filter))
+    );
     return filteredProjects;
   }, [filters]);
 
