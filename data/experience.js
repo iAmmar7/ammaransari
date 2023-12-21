@@ -1,5 +1,21 @@
 const experience = [
   {
+    id: 6,
+    title: 'Software Engineer',
+    company: 'SignalWire',
+    companyTag: 'signalwire',
+    companyUrl: 'https://signalwire.com',
+    companyTheme: '#6f42c1',
+    type: 'Full-time',
+    startDate: 'Jan 2023',
+    location: 'USA, Remote',
+    summary: [
+      'Develop and maintain JavaScript and Node.js configurable communication SDKs.',
+      'Manage long-running calls state with Saga Pattern and Redux Saga; implement WebRTC for video calls.',
+      'Handle CI/CD processes using GitHub Actions for SDK deployment to NPM.',
+    ],
+  },
+  {
     id: 1,
     title: 'Software Engineer',
     company: 'VentureDive',
@@ -113,22 +129,6 @@ const experience = [
       'Front end web app development using technologies like CSS, Sass, Bootstrap, Vanilla JavaScript (ES6, ES7) and React.js',
       'Converting PSD and Website wireframes into responsive design.',
       'Worked with Vanilla JS and Google Firebase with real-time data in Chat room application.',
-    ],
-  },
-  {
-    id: 6,
-    title: 'Software Engineer',
-    company: 'SignalWire',
-    companyTag: 'signalwire',
-    companyUrl: 'https://signalwire.com',
-    companyTheme: '#6f42c1',
-    type: 'Full-time',
-    startDate: 'Jan 2023',
-    location: 'USA, Remote',
-    summary: [
-      'Develop and maintain JavaScript and Node.js configurable communication SDKs.',
-      'Manage long-running calls state with Saga Pattern and Redux Saga; implement WebRTC for video calls.',
-      'Handle CI/CD processes using GitHub Actions for SDK deployment to NPM.',
     ],
   },
 ];

@@ -3,13 +3,10 @@ import ExternalLink from '../ExternalLink';
 import EXPERIENCE from '../../data/experience';
 import { isObject, isString } from '../../lib/utils';
 
-// Sort modifies the original array
-const sortedExperience = EXPERIENCE.sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
-
 function WorkExperience() {
   return (
     <div className='text-primary'>
-      {sortedExperience.map((exp) => {
+      {EXPERIENCE.map((exp) => {
         const date = `${exp.startDate} - ${exp.endDate ?? 'Present'}`;
         return (
           <Timeline
