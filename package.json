@@ -11,11 +11,11 @@
   "dependencies": {
     "clsx": "^1.2.1",
     "framer-motion": "^7.1.0",
-    "klotty": "^0.7.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "remixicon": "^2.5.0"
+    "remixicon": "^2.5.0",
+    "resend": "^2.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",

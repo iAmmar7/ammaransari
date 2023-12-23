@@ -1,21 +1,25 @@
-import { Klotty } from 'klotty';
+import { Resend } from 'resend';
 
-const klotty = new Klotty(process.env.KLOTTY_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 import EmailTemplate from '../../components/EmailTemplate/EmailTemplate';
 
 export default async function sendEmail(req, res) {
   try {
-    const data = req.body;
+    const body = req.body;
 
-    await klotty.sendEmail({
-      from: 'web@ammaransari.com',
-      to: 'iammar7@yahoo.com',
-      subject: `${data.name} - via ammaransari.com`,
-      react: <EmailTemplate {...data} />,
+    const { data, error } = await resend.emails.send({
+      from: 'Ammar Ansari <contact@ammaransari.dev>',
+      to: ['iammaransari@gmail.com'],
+      subject: 'Contact - ammaransari.dev',
+      react: EmailTemplate({ ...body }),
     });
 
-    res.status(200).json({ message: 'Email sent' });
+    if (error) {
+      return res.status(400).json(error);
+    }
+
+    res.status(200).json(data);
   } catch (e) {
     res.status(500).json({ message: e.message });
   }
