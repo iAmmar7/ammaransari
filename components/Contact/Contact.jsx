@@ -10,6 +10,7 @@ const initFormData = { name: '', email: '', message: '' };
 function Contact() {
   const [formData, setFormData] = useState(initFormData);
   const [sentStatus, setSentStatus] = useState(null);
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (event) => {
     const { id, value } = event.target;
@@ -22,6 +23,7 @@ function Contact() {
   const handleSendEmail = async (event) => {
     event.preventDefault();
     setSentStatus(null);
+    setIsSending(true);
 
     try {
       const { name, email, message } = formData;
@@ -46,6 +48,8 @@ function Contact() {
       setSentStatus('succeed');
     } catch (error) {
       setSentStatus('failed');
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -136,7 +140,11 @@ function Contact() {
             <p className='text-sm text-green-400 mb-2'>Your message has been delivered!</p>
           </Collapse>
           <div className='flex flex-col gap-y-2'>
-            <Button type='submit' endEnhancer={<Icon icon='ri-send-plane-fill' className='ml-2' />}>
+            <Button
+              type='submit'
+              endEnhancer={<Icon icon='ri-send-plane-fill' className='ml-2' />}
+              disabled={isSending}
+            >
               Send
             </Button>
           </div>

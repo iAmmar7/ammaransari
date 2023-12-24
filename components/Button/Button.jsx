@@ -12,6 +12,7 @@ const Button = forwardRef((props, ref) => {
     startEnhancer,
     endEnhancer,
     children,
+    disabled = false,
     ...otherProps
   } = props;
 
@@ -34,13 +35,17 @@ const Button = forwardRef((props, ref) => {
     <Component
       ref={ref}
       className={clsx(
-        "relative inline-block h-auto min-h-0 w-auto cursor-pointer overflow-hidden opacity-100 text-center align-middle text-sm font-medium z-0 transition-all ease-base duration-500 after:content-[''] after:absolute after:left-0 after:top-0 after:inline-block after:h-full after:w-full after:origin-bottom after:scale-y-0 after:transform after:opacity-100 after:transition-transform after:ease-base after:duration-md hover:after:origin-top hover:after:scale-y-100 hover:after:transform active:transition-all active:ease-base active:duration-md",
+        "relative inline-block h-auto min-h-0 w-auto cursor-pointer overflow-hidden opacity-100 text-center align-middle text-sm font-medium z-0 transition-all ease-base duration-500 after:content-[''] after:absolute after:left-0 after:top-0 after:inline-block after:h-full after:w-full after:origin-bottom after:scale-y-0 after:transform after:opacity-100 after:transition-transform after:ease-base after:duration-md active:transition-all active:ease-base active:duration-md",
         colors,
         padding,
         rounded ? 'rounded-full' : 'rounded-base',
-        className
+        className,
+        disabled
+          ? 'cursor-not-allowed opacity-90'
+          : 'hover:after:origin-top hover:after:scale-y-100 hover:after:transform'
       )}
       {...(['submit', 'button', 'reset'].includes(type) && { type })}
+      disabled={disabled}
       {...otherProps}
     >
       <span className='z-10 text-inherit transition-none relative flex items-center justify-center'>
