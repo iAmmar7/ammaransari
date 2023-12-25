@@ -44,7 +44,10 @@ function ProjectDetails(props) {
               ))}
             </ul>
           ) : (
-            <div className='leading-8 mt-2' dangerouslySetInnerHTML={{ __html: contribution }}></div>
+            <div
+              className='leading-8 mt-2'
+              dangerouslySetInnerHTML={{ __html: contribution }}
+            ></div>
           )}
         </section>
       )}
