@@ -11,8 +11,9 @@ const experience = [
     location: 'USA, Remote',
     summary: [
       'Develop and maintain JavaScript and Node.js configurable communication SDKs.',
-      'Manage long-running calls state with Saga Pattern and Redux Saga; implement WebRTC for video calls.',
-      'Handle CI/CD processes using GitHub Actions for SDK deployment to NPM.',
+      'Manage long-running calls state with Saga Pattern using Redux Saga.',
+      'Integrate WebRTC for high-quality video conferencing features.',
+      'Handle CI/CD processes using GitHub Actions for SDK testing & deployment to NPM.',
     ],
   },
   {

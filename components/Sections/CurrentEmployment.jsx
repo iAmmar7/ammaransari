@@ -4,9 +4,11 @@ import Timeline from '../Timeline/Timeline';
 import ExternalLink from '../ExternalLink';
 import Button from '../Button';
 import Icon from '../Icon';
-import CURRENT_EMPLOYEMT from '../../data/currentEmployment';
+import EXPERIENCE from '../../data/experience';
 import { isObject, isString } from '../../lib/utils';
 import Section from './Section';
+
+const CURRENT_EMPLOYEMT = EXPERIENCE.find((exp) => !exp.endDate);
 
 function ExperienceSection() {
   return (
@@ -34,7 +36,13 @@ function ExperienceSection() {
                 <div className='mt-2' key={sum.clientId}>
                   <span className='flex items-center gap-x-1 flex-wrap'>
                     <p>Client</p>
-                    <ExternalLink underline href={sum.clientUrl} color={sum.clientTag} showIcon title={sum.client}>
+                    <ExternalLink
+                      underline
+                      href={sum.clientUrl}
+                      color={sum.clientTag}
+                      showIcon
+                      title={sum.client}
+                    >
                       {sum.client}
                     </ExternalLink>
                     {sum.clientSubsidiary && (
