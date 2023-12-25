@@ -42,8 +42,12 @@ function Project(props) {
             {/* Go back */}
             <div className='flex flex-row items-center mb-6 md:mb-8'>
               <Link href='/projects' passHref>
-                <a title='Go back' className='flex items-center justify-center rounded-full bg-neutrals-900/20'>
+                <a
+                  title='Go back'
+                  className='flex items-center gap-1 justify-center rounded-full bg-neutrals-900/20'
+                >
                   <Icon icon='ri-arrow-left-line' className='text-xl' />
+                  <span className='text-sm text-muted'>projects</span>
                 </a>
               </Link>
             </div>
@@ -98,7 +102,9 @@ function Project(props) {
                     text={name}
                     delay={0.6}
                   />
-                  <p className='text-sm lg:text-base leading-relaxed max-w-prose mb-12'>{summary}</p>
+                  <p className='text-sm lg:text-base leading-relaxed max-w-prose mb-12'>
+                    {summary}
+                  </p>
                   <div className='flex gap-x-2 border-b-[0.5px] border-muted pb-3'>
                     {take(technologies, 3).map((tech) => (
                       <Badge className='text-xs md:text-sm' key={tech}>
