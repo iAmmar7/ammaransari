@@ -361,7 +361,7 @@ const projects = [
     technologies: [
       'ts',
       'react',
-      'next-js',
+      'next',
       'context-api',
       'tailwind',
       'swr',
@@ -392,7 +392,7 @@ const projects = [
     technologies: [
       'ts',
       'react',
-      'next-js',
+      'next',
       'context-api',
       'tailwind',
       'swr',
@@ -515,7 +515,7 @@ const projects = [
       'context-api',
       'graphql',
       'apollo',
-      'next-js',
+      'next',
       'ant-design',
       'styled-components',
       'react-native',
@@ -579,7 +579,7 @@ const projects = [
     description:
       '<p>Did you mean: <i><a href="https://ammaransari.vercel.app" style="color: #8f9ba8; text-decoration: underline;">Ammar Ansari</a></i></p>',
     domain: 'side-project',
-    technologies: ['react', 'next-js', 'tailwind', 'framer-motion'],
+    technologies: ['react', 'next', 'tailwind', 'framer-motion', 'resend'],
     thumbnail: '/images/projects/thumb-portfolio.png',
     code: 'https://github.com/iAmmar7/ammaransari',
     url: 'https://ammaransari.vercel.app',

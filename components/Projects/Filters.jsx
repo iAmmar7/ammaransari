@@ -4,13 +4,11 @@ import { useRouter } from 'next/router';
 import Button from '../Button';
 import Icon from '../Icon';
 import Collapse from '../Collapse';
-import SKILLS from '../../data/skills';
 import { useBreakpoints } from '../../hooks';
 import { isEmpty, take, takeRight } from '../../lib/utils';
+import { sortSkillsByUsage } from '../../lib/helpers';
 
-const skillsName = SKILLS.filter((skill) => skill.major).sort(
-  (a, b) => (a.priority || Number.MAX_SAFE_INTEGER) - (b.priority || Number.MAX_SAFE_INTEGER)
-);
+const TOP_SKILLS = sortSkillsByUsage().filter((skill) => skill.major);
 
 function Filters(props) {
   const { filters, updateFilters } = props;
@@ -67,11 +65,11 @@ function Filters(props) {
           >
             All
           </Button>
-          {take(skillsName, topFiltersCount).map((skill) => (
+          {take(TOP_SKILLS, topFiltersCount).map((skill) => (
             <Button
-              key={`${skill.domain}-${skill.name}`}
-              type={filters.includes(skill.name) ? 'primary' : 'secondary'}
-              onClick={() => handleFilter(skill.name)}
+              key={`${skill.domain}-${skill.id}`}
+              type={filters.includes(skill.id) ? 'primary' : 'secondary'}
+              onClick={() => handleFilter(skill.id)}
             >
               {skill.name}
             </Button>
@@ -96,11 +94,11 @@ function Filters(props) {
       </div>
       <Collapse show={!collapsed} id='skill-extended-filters'>
         <div className='flex flex-wrap gap-2 mt-2 '>
-          {takeRight(skillsName, skillsName.length - topFiltersCount).map((skill) => (
+          {takeRight(TOP_SKILLS, TOP_SKILLS.length - topFiltersCount).map((skill) => (
             <Button
-              key={`${skill.domain}-${skill.name}`}
-              type={filters.includes(skill.name) ? 'primary' : 'secondary'}
-              onClick={() => handleFilter(skill.name)}
+              key={`${skill.domain}-${skill.id}`}
+              type={filters.includes(skill.id) ? 'primary' : 'secondary'}
+              onClick={() => handleFilter(skill.id)}
             >
               {skill.name}
             </Button>

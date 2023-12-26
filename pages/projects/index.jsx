@@ -20,7 +20,7 @@ export default ProjectsPage;
 export async function getStaticProps() {
   const meta = {
     title: 'Projects - Ammar Ansari',
-    summary: 'Technologies I have used throughout my career',
+    summary: 'Filter and discover projects I have worked on by technology stack.',
     description:
       'Projects based on various tech-stack including front-end, back-end, server-side development and a few mobile apps.',
     tagline: 'Projects',

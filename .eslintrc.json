@@ -1,6 +1,14 @@
 {
-  "extends": ["next", "prettier", "eslint:recommended"],
+  "extends": [
+    "next",
+    "prettier",
+    "eslint:recommended"
+  ],
   "rules": {
     "no-unused-vars": "warn"
+  },
+  "env": {
+    "es6": true,
+    "node": true
   }
 }

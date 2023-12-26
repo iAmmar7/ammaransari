@@ -16,7 +16,7 @@ function Projects() {
   const [count, setCount] = useState(6);
 
   useEffect(() => {
-    const COUNT_FROM_STORAGE = parseInt(sessionStorage.getItem('count') || 6);
+    const COUNT_FROM_STORAGE = parseInt(sessionStorage.getItem('count') || 9);
     setCount(COUNT_FROM_STORAGE);
   }, []);
 

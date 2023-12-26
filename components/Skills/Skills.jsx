@@ -5,23 +5,6 @@ import skills from '../../data/skills';
 import { capitalize, groupBy } from '../../lib/utils';
 import StarRating from './Ratings';
 
-const skillMapper = (name) => {
-  switch (name) {
-    case 'JavaScript':
-    case 'Data Structures':
-    case 'OOP':
-    case 'Algorithms':
-    case 'Git':
-    case 'GithHub/BitBucket/GitLab':
-    case 'C++':
-      return '';
-    case 'RESTful API':
-      return 'Express JS';
-    default:
-      return name;
-  }
-};
-
 const groupedSkills = groupBy(skills, 'domain');
 
 const SkillTitle = ({ title }) => (
@@ -42,18 +25,18 @@ const DomainSection = ({ domain }) => {
     <div className='mb-10'>
       <SkillTitle title={capitalize(domain)} />
       <div className='flex flex-wrap items-center gap-y-2 gap-x-4'>
-        {groupedSkills[domain].map(({ name, ratings }) => {
-          const query = skillMapper(name);
+        {groupedSkills[domain].map(({ id, name, ratings }) => {
           return (
-            <Link key={name} href={`/projects?skill=${query}`}>
+            // TODO: Skill that has no project shouldn't be clickable
+            <Link key={id} href={`/projects?skill=${id}`}>
               <a
                 className='md:min-w-[9rem] group'
-                title={`View ${query} projects`}
-                onMouseEnter={() => setHovered(name)}
+                title={`View ${name} projects`}
+                onMouseEnter={() => setHovered(id)}
                 onMouseLeave={() => setHovered(null)}
               >
                 <p className='text-sm'>{name}</p>
-                <StarRating ratings={ratings} hovered={hovered === name} />
+                <StarRating ratings={ratings} hovered={hovered === id} />
               </a>
             </Link>
           );
