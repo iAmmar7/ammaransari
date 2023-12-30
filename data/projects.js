@@ -315,7 +315,7 @@ const projects = [
     url: 'https://redis-chat-challenge-ll7n94qro-iammar7.vercel.app',
   },
   {
-    id: 'Leaflet.DistortableImage',
+    id: 'leaflet-distortable-image',
     name: 'Leaflet.DistortableImage',
     summary: 'An open-source Leaflet extension to distort or "rubber sheet" images',
     contribution:
@@ -583,6 +583,62 @@ const projects = [
     thumbnail: '/images/projects/thumb-portfolio.png',
     code: 'https://github.com/iAmmar7/ammaransari',
     url: 'https://ammaransari.vercel.app',
+  },
+  {
+    id: 'video-sdk-browser',
+    name: 'Video SDK - Browser',
+    summary: 'An SDK that allows you to integrate WebRTC Video calling in your web application.',
+    description:
+      'The Video SDK contains the classes and functions that you need to create a video conferencing application.',
+    contribution: [
+      '<p>Fully responsible for the entire lifecycle of the Video SDK, from development to deployment.</p>',
+      '<p>Implemented a feature allowing users to connect to WebRTC using only TCP transport, enhancing connectivity options.</p>',
+      '<p>Played a key role in the core coding aspects of the SDK, contributing significantly to its robust functionality.</p>',
+      '<p>Developed an innovative image mirror feature, adding advanced capabilities to the SDK.</p>',
+      "<p>Responsible for the SDK's deployment to NPM, ensuring its accessibility and ease of use for developers.</p>",
+      '<p>Managed CI/CD processes, ensuring efficient and reliable development workflows.</p>',
+    ],
+    domain: 'company-based',
+    company: 'SignalWire',
+    technologies: ['webrtc', 'redux-saga', 'ts'],
+    thumbnail: '/images/projects/thumb-video-sdk-browser.png',
+    url: 'https://developer.signalwire.com/sdks/reference/browser-sdk/video/',
+    code: 'https://github.com/signalwire/signalwire-js/tree/main/packages/js',
+  },
+  {
+    id: 'chat-sdk-browser',
+    name: 'Chat SDK - Browser',
+    summary: 'An SDK that allows you to integrate Chating features in your web application.',
+    description:
+      'The Chat SDK contains the classes and functions that you need to create a real-time chat application',
+    contribution: [
+      '<p>Fully responsible for the entire lifecycle of the Chat SDK, from development to deployment.</p>',
+      '<p>Implemented robust unit and end-to-end testing to ensure reliability and performance.</p>',
+      '<p>Managed the deployment of the SDK to NPM, ensuring easy accessibility for developers.</p>',
+      '<p>Handled CI/CD processes, streamlining continuous development and integration workflows.</p>',
+    ],
+    domain: 'company-based',
+    company: 'SignalWire',
+    technologies: ['redux-saga', 'ts'],
+    thumbnail: '/images/projects/thumb-chat-sdk-browser.png',
+    url: 'https://developer.signalwire.com/sdks/reference/browser-sdk/chat/',
+  },
+  {
+    id: 'pubsub-sdk-browser',
+    name: 'PubSub SDK - Browser',
+    summary: 'An SDK that allows you to integrate messaging system in your web application.',
+    description:
+      'The PubSub SDK contains the classes and functions that you need to create a real-time messaging system into your browser.',
+    contribution: [
+      '<p>Building, fixing, and managing of the PubSub SDK, overseeing all aspects of its development.</p>',
+      '<p>Ensured high-quality and reliability through comprehensive unit and end-to-end testing.</p>',
+      "<p>Managed the SDK's NPM deployment, facilitating its distribution and implementation.</p>",
+      '<p>Developed and maintained CI/CD pipelines, enhancing development efficiency and reliability.</p>',
+    ],
+    domain: 'company-based',
+    company: 'SignalWire',
+    technologies: ['redux-saga', 'ts'],
+    url: 'https://developer.signalwire.com/sdks/reference/browser-sdk/pubsub/',
   },
 ];
 
