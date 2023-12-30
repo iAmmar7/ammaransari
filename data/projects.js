@@ -67,7 +67,7 @@ const projects = [
       '<p>Firebase user roles 🦹</p>',
     ],
     domain: 'freelance',
-    technologies: ['node', 'firebase', 'cloud -functions', 'firebase-functions'],
+    technologies: ['node', 'firebase', 'cloud-functions', 'firebase-functions'],
     thumbnail: '/images/projects/thumb-parking-app.png',
     code: 'https://github.com/iAmmar7/parking-app',
     url: 'https://parking-app-f13ad.web.app',
