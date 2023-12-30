@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import Script from 'next/script';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import 'remixicon/fonts/remixicon.css';
 import '../styles/globals.css';
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }) {
        `}
       </Script>
       <Component {...pageProps} />
+      <SpeedInsights />
     </Layout>
   );
 }
