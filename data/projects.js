@@ -836,7 +836,7 @@ const projects = [
     ],
     domain: 'company-based',
     company: 'SignalWire',
-    technologies: ['ts', 'firebase'],
+    technologies: ['ts', 'firebase', 'github-pages'],
     thumbnail: '/images/projects/thumb-sdk-playgrounds.png',
     code: 'https://github.com/signalwire/signalwire-js/tree/main/internal',
   },

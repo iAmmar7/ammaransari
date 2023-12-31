@@ -92,13 +92,13 @@ function Project(props) {
                 </div>
               </div>
 
-              {/* Description */}
+              {/* Summary */}
               <figcaption>
                 <div className='w-full mt-4'>
                   <Badge className='text-xs md:text-sm'>{capitalize(domain)}</Badge>
                   <WavyText
                     as='h1'
-                    className='text-3xl sm:text-5xl font-display font-bold leading-[1.1] mt-4 sm:mt-2 mb-2 sm:mb-5 text-tertiary'
+                    className='text-3xl sm:text-5xl font-display font-bold leading-[1.1] mt-4 sm:mt-2 mb-2 sm:mb-5 text-tertiary min-h-[2.2rem] md:min-h-[3.3rem]'
                     text={name}
                     delay={0.6}
                   />
