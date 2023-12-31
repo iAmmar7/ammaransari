@@ -12,7 +12,7 @@ const TOP_SKILLS = sortSkillsByUsage().filter((skill) => skill.major);
 
 function Filters(props) {
   const { filters, updateFilters } = props;
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(null);
   const { replace } = useRouter();
   const { sm, md, lg, xl, ...breakpoints } = useBreakpoints();
 
@@ -54,6 +54,9 @@ function Filters(props) {
     if (breakpoints['2xl'] || breakpoints['3xl']) return 10;
     return 2;
   }, [sm, md, lg, xl, breakpoints]);
+
+  // To prevent UI flickering; do not render this component on the server
+  if (collapsed === null) return null;
 
   return (
     <div className='w-full'>
