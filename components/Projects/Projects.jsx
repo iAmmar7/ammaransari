@@ -49,8 +49,8 @@ function Projects() {
       <p className='text-sm text-muted text-right mt-2 sm:mt-4 mb-2 mr-1'>{currentView.visible}</p>
       <List projects={projects} count={count} />
       {count < projects.length && (
-        <div className='text-center mt-10'>
-          <Button type='primary' className='ml-[51px]' onClick={handleSetCount}>
+        <div className='mt-10 text-center'>
+          <Button type='primary' onClick={handleSetCount}>
             Load {currentView.remaining} More
           </Button>
         </div>
