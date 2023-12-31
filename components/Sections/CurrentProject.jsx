@@ -7,7 +7,7 @@ import PROJECTS from '../../data/projects';
 import ProjectList from '../Projects/List';
 import { useBreakpoints } from '../../hooks';
 
-const CURRENT_PROJECTS = PROJECTS.filter((project) => project.current);
+const CURRENT_PROJECTS = PROJECTS.filter((project) => project.spotlight);
 
 function CurrentProject() {
   const { xs, sm } = useBreakpoints();

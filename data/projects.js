@@ -71,7 +71,6 @@ const projects = [
     thumbnail: '/images/projects/thumb-parking-app.png',
     code: 'https://github.com/iAmmar7/parking-app',
     url: 'https://parking-app-f13ad.web.app',
-    current: true,
   },
   {
     id: 'forecastware',
@@ -373,7 +372,6 @@ const projects = [
     ],
     thumbnail: '/images/projects/thumb-careempay-sdk.png',
     url: 'https://1click.careem.com',
-    current: true,
   },
   {
     id: 'careempay-merchant-portal',
@@ -404,7 +402,6 @@ const projects = [
     ],
     thumbnail: '',
     url: '',
-    current: true,
   },
   {
     id: 'careem-identity',
@@ -424,7 +421,6 @@ const projects = [
     technologies: ['react', 'material-ui', 'jest', 'react-testing-library'],
     thumbnail: '/images/projects/thumb-careem-identity.png',
     url: 'https://identity.careem.com',
-    current: true,
   },
   {
     id: 'dari',
@@ -604,6 +600,7 @@ const projects = [
     thumbnail: '/images/projects/thumb-video-sdk.png',
     url: 'https://developer.signalwire.com/sdks/reference/browser-sdk/video/',
     code: 'https://www.npmjs.com/package/@signalwire/js',
+    spotlight: true,
   },
   {
     id: 'chat-sdk',
@@ -681,6 +678,7 @@ const projects = [
     technologies: ['websocket', 'node', 'redux-saga', 'ts', 'jest', 'playwright'],
     url: 'https://developer.signalwire.com/sdks/reference/realtime-sdk/voice/',
     code: 'https://www.npmjs.com/package/@signalwire/realtime-api',
+    spotlight: true,
   },
   {
     id: 'messaging-sdk',
@@ -822,6 +820,7 @@ const projects = [
     technologies: ['webrtc', 'ts', 'websocket', 'redux-saga', 'jest', 'playwright'],
     thumbnail: '/images/projects/thumb-callfabric-sdk.png',
     code: 'https://www.npmjs.com/package/@signalwire/js',
+    spotlight: true,
   },
   {
     id: 'signalwire-sdk-playgrounds',
