@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { isArray, isEmpty, take } from '../../lib/utils';
 import Badge from '../Badge';
 import ListSkeleton from './Skeletons/List';
+import { getSkillNameBySkillId } from '../../lib/helpers';
 
 const List = dynamic(import('./List'), { loading: ListSkeleton });
 
@@ -55,18 +56,22 @@ function ProjectDetails(props) {
         <section>
           <Title text='Tech-Stack' />
           <div className='flex flex-wrap mt-4 gap-2'>
-            {technologies.map((tech) => (
-              <Link key={tech} href={`/projects?skill=${tech}`} passHref>
-                <Badge
-                  type='tertiary'
-                  as='a'
-                  className='text-white cursor-pointer'
-                  title={`View more ${tech} projects`}
-                >
-                  {tech}
-                </Badge>
-              </Link>
-            ))}
+            {technologies.map((techId) => {
+              const tech = getSkillNameBySkillId(techId);
+              return (
+                <Link key={techId} href={`/projects?skill=${techId}`} passHref>
+                  <Badge
+                    type='tertiary'
+                    className='text-white cursor-pointer'
+                    title={`View more ${tech} projects`}
+                  >
+                    <Badge type='tertiary' as='a' className='text-white'>
+                      {tech}
+                    </Badge>
+                  </Badge>
+                </Link>
+              );
+            })}
           </div>
         </section>
       )}

@@ -73,7 +73,7 @@ function Card(props) {
               <a title={`${name} details`}>
                 <div className='mt-4'>
                   <h5 className='mb-0 font-bold'>{name}</h5>
-                  <p className='truncate'>{summary}</p>
+                  <p className='truncate text-muted'>{summary}</p>
                   <div className='flex gap-x-1 items-end mt-1'>
                     <Badge type='secondary' className='text-sm'>
                       {domain}

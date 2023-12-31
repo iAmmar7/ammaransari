@@ -24,7 +24,7 @@ function Project(props) {
   } = component;
 
   return (
-    <div className='flex flex-col min-h-screen relative z-0'>
+    <div className='flex flex-col min-h-screen relative z-0 text-sm md:text-base'>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <Navbar />
       <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto'>
@@ -102,9 +102,7 @@ function Project(props) {
                     text={name}
                     delay={0.6}
                   />
-                  <p className='text-sm lg:text-base leading-relaxed max-w-prose mb-12'>
-                    {summary}
-                  </p>
+                  <p className='text-sm lg:text-base leading-relaxed mb-12'>{summary}</p>
                   <div className='flex gap-x-2 border-b-[0.5px] border-muted pb-3'>
                     {take(technologies, 3).map((tech) => (
                       <Badge className='text-xs md:text-sm' key={tech}>
