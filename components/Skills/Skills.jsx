@@ -4,6 +4,7 @@ import Link from 'next/link';
 import skills from '../../data/skills';
 import { capitalize, groupBy } from '../../lib/utils';
 import StarRating from './Ratings';
+import { hasProjectBySkillId } from '../../lib/helpers';
 
 const groupedSkills = groupBy(skills, 'domain');
 
@@ -26,8 +27,15 @@ const DomainSection = ({ domain }) => {
       <SkillTitle title={capitalize(domain)} />
       <div className='flex flex-wrap items-center gap-y-2 gap-x-4'>
         {groupedSkills[domain].map(({ id, name, ratings }) => {
+          if (!hasProjectBySkillId(id)) {
+            return (
+              <span key={id} className='md:min-w-[9rem] group'>
+                <p className='text-sm'>{name}</p>
+                <StarRating ratings={ratings} hovered={hovered === id} />
+              </span>
+            );
+          }
           return (
-            // TODO: Skill that has no project shouldn't be clickable
             <Link key={id} href={`/projects?skill=${id}`}>
               <a
                 className='md:min-w-[9rem] group'
