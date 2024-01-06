@@ -19,25 +19,30 @@ function AboutMe() {
   return (
     <div className='text-muted leading-8 text-base'>
       <div className='flex flex-col sm:flex-row-reverse gap-x-0 sm:gap-x-2'>
-        <div className='mt-0 w-auto sm:w-1/2 text-center sm:text-inherit'>
-          <Image
-            alt='Ammar'
-            src='/images/ammar.jpg'
-            width='320'
-            height='380'
-            quality={100}
-            placeholder='blur'
-            blurDataURL={blurryDataProfile}
-            priority
-            className='rounded-base z-10'
-          />
+        <div className='mt-0 w-auto sm:w-1/2 text-center sm:text-inherit flex flex-col'>
+          <div className='relative flex-1 mb-2 min-h-[400px] sm:min-h-[auto]'>
+            <Image
+              alt='Ammar'
+              src='/images/ammar.jpg'
+              fill
+              sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
+              quality={100}
+              placeholder='blur'
+              blurDataURL={blurryDataProfile}
+              priority
+              style={{ objectFit: 'contain' }}
+              className='rounded-md z-10'
+            />
+          </div>
           <motion.div
-            initial={{ y: -200 }}
-            whileInView={{ y: 0, transition: { ease: 'easeInOut', duration: 0.5 } }}
+            initial={{ y: -200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1, transition: { ease: 'easeInOut', duration: 0.5 } }}
             exit={{ y: -200 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-center text-3xl text-primary font-bold'>Ammar Ansari</h2>
+            <h2 className='text-center text-2xl sm:text-3xl text-primary font-bold'>
+              Ammar Ansari
+            </h2>
             <p className='text-center'>Software Engineer</p>
             <div className='flex justify-center gap-x-2 leading-6'>
               <strong>
