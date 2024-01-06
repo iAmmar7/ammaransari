@@ -27,8 +27,8 @@ function HomeLayout(props) {
       <main className='p-0'>{children}</main>
       <AnimatePresence>
         {showScrollToTop && (
-          <Link href='#home' passHref scroll={false}>
-            <motion.a
+          <Link href='#home' scroll={false}>
+            <motion.span
               key='top-navigator'
               className='fixed bottom-5 right-5 z-20'
               initial={{ x: 100, opacity: 0 }}
@@ -39,7 +39,7 @@ function HomeLayout(props) {
               <Button type='secondary' rounded={true} size='sm'>
                 <Icon icon='ri-arrow-up-s-line' className='text-inherit text-xl md:text-2xl' />
               </Button>
-            </motion.a>
+            </motion.span>
           </Link>
         )}
       </AnimatePresence>

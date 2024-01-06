@@ -19,9 +19,8 @@ function CurrentProject() {
         count={sm || xs ? 1 : 2}
         className='mt-0 lg:grid-cols-4'
       />
-      <Link href='/projects' passHref>
+      <Link href='/projects'>
         <Button
-          as='a'
           type='default'
           size='sm'
           className='mt-4'

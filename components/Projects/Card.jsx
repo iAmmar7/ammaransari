@@ -25,26 +25,23 @@ function Card(props) {
             <div className='blur-none transition-all duration-md group-hover:blur'>
               <picture className='box-border block overflow-hidden bg-none opacity-100 border-none m-0 p-0 relative h-60 w-full'>
                 <Image
-                  alt={name}
                   src={!isEmpty(image) ? image : 'https://via.placeholder.com/200.png'}
+                  alt={name}
+                  fill
                   quality={100}
                   placeholder='blur'
+                  style={{ objectFit: 'cover' }}
                   blurDataURL={blurryDataProfile}
-                  width={'100%'}
-                  height={'100%'}
-                  objectFit='cover'
-                  layout='responsive'
                 />
               </picture>
             </div>
             <div className='absolute left-0 top-0 z-10 flex h-full w-full -translate-x-full transform items-center justify-center gap-4 overflow-hidden bg-muted/80 transition-all duration-md group-hover:translate-x-0'>
-              <Link href={`/projects/${id}`}>
-                <a
-                  className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0'
-                  title='Project details'
-                >
-                  <Icon icon='ri-information-line' className='text-xl' />
-                </a>
+              <Link
+                href={`/projects/${id}`}
+                className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0'
+                title='Project details'
+              >
+                <Icon icon='ri-information-line' className='text-xl' />
               </Link>
               {code && (
                 <a
@@ -69,23 +66,21 @@ function Card(props) {
             </div>
           </div>
           <figcaption>
-            <Link href={`/projects/${id}`}>
-              <a title={`${name} details`}>
-                <div className='mt-4'>
-                  <h5 className='mb-0 font-bold'>{name}</h5>
-                  <p className='truncate text-muted'>{summary}</p>
-                  <div className='flex gap-x-1 items-end mt-1'>
-                    <Badge type='secondary' className='text-sm'>
-                      {domain}
+            <Link href={`/projects/${id}`} title={`${name} details`}>
+              <div className='mt-4'>
+                <h5 className='mb-0 font-bold'>{name}</h5>
+                <p className='truncate text-muted'>{summary}</p>
+                <div className='flex gap-x-1 items-end mt-1'>
+                  <Badge type='secondary' className='text-sm'>
+                    {domain}
+                  </Badge>
+                  {tech.map((t) => (
+                    <Badge type='secondary' key={t} className='text-sm'>
+                      {toLowerCase(t)}
                     </Badge>
-                    {tech.map((t) => (
-                      <Badge type='secondary' key={t} className='text-sm'>
-                        {toLowerCase(t)}
-                      </Badge>
-                    ))}
-                  </div>
+                  ))}
                 </div>
-              </a>
+              </div>
             </Link>
           </figcaption>
         </figure>

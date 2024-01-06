@@ -18,21 +18,27 @@ function NavItem(props) {
 
   return (
     <li>
-      <Link href={path} passHref>
-        <a className='border-0 relative hover:opacity-100 focus:opacity-100' title={`${name} - Ammar Ansari`}>
-          <motion.span className={css} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
-            {isHovered && (
-              <motion.span
-                className='absolute top-[-13px] inset-x-0 bg-secondary p-5 rounded-base -z-[1]'
-                layoutId='nav'
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              />
-            )}
-            {name}
-          </motion.span>
-        </a>
+      <Link
+        href={path}
+        className='border-0 relative hover:opacity-100 focus:opacity-100'
+        title={`${name} - Ammar Ansari`}
+      >
+        <motion.span
+          className={css}
+          onHoverStart={() => setIsHovered(true)}
+          onHoverEnd={() => setIsHovered(false)}
+        >
+          {isHovered && (
+            <motion.span
+              className='absolute top-[-13px] inset-x-0 bg-secondary p-5 rounded-base -z-[1]'
+              layoutId='nav'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
+          )}
+          {name}
+        </motion.span>
       </Link>
     </li>
   );

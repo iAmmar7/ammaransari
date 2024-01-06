@@ -43,16 +43,22 @@ function Section(props) {
                 {title}
               </h1>
             )}
-            {description && <p className='text-muted text-sm text-center mb-5 sm:text-left'>{description}</p>}
+            {description && (
+              <p className='text-muted text-sm text-center mb-5 sm:text-left'>{description}</p>
+            )}
             {children}
           </motion.div>
         </div>
       </div>
       {next && (
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+        >
           <div className='absolute inset-x-0 top-auto bottom-4 sm:bottom-8 w-full justify-between text-center text-muted'>
             <Link href={`#${next}`} scroll={false}>
-              <motion.a
+              <motion.span
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}
@@ -61,8 +67,11 @@ function Section(props) {
                 title='Move to next section'
               >
                 <span className='group-hover:text-secondary text-sm'>More</span>
-                <Icon icon='ri-arrow-down-line' className='animate-bounce mt-[2px] group-hover:text-secondary' />
-              </motion.a>
+                <Icon
+                  icon='ri-arrow-down-line'
+                  className='animate-bounce mt-[2px] group-hover:text-secondary'
+                />
+              </motion.span>
             </Link>
           </div>
         </motion.div>

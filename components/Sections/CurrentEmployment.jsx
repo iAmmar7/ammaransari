@@ -75,9 +75,8 @@ function ExperienceSection() {
       </Timeline>
       <Timeline
         title={
-          <Link href='/experience' passHref>
+          <Link href='/experience'>
             <Button
-              as='a'
               type='default'
               size='sm'
               className='-ml-4'

@@ -28,9 +28,8 @@ function Hero(props) {
       <div className='min-h-[50px]'>
         <SocialLinks />
       </div>
-      <Link href='/about' passHref>
+      <Link href='/about'>
         <Button
-          as='a'
           size='sm'
           type='default'
           endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
