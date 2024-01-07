@@ -126,13 +126,13 @@ function Contact() {
             <p className='text-sm text-red-400 mb-2'>
               Unable to send email! Try to send it manually{' '}
               <a
-                href='mailto:iammar7@yahoo.com'
+                href='mailto:iammaransari@gmail.com'
                 target='_blank'
                 rel='noreferrer'
                 className='text-secondary'
                 title='Send email to Ammar Ansari'
               >
-                iammar7@yahoo.com
+                iammaransari@gmail.com
               </a>
             </p>
           </Collapse>
