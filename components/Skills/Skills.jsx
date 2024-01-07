@@ -29,23 +29,28 @@ const DomainSection = ({ domain }) => {
         {groupedSkills[domain].map(({ id, name, ratings }) => {
           if (!hasProjectBySkillId(id)) {
             return (
-              <span key={id} className='md:min-w-[9rem] group'>
+              <span
+                key={id}
+                className='md:min-w-[9rem] group'
+                onMouseEnter={() => setHovered(id)}
+                onMouseLeave={() => setHovered(null)}
+              >
                 <p className='text-sm'>{name}</p>
                 <StarRating ratings={ratings} hovered={hovered === id} />
               </span>
             );
           }
           return (
-            <Link key={id} href={`/projects?skill=${id}`}>
-              <a
-                className='md:min-w-[9rem] group'
-                title={`View ${name} projects`}
-                onMouseEnter={() => setHovered(id)}
-                onMouseLeave={() => setHovered(null)}
-              >
-                <p className='text-sm'>{name}</p>
-                <StarRating ratings={ratings} hovered={hovered === id} />
-              </a>
+            <Link
+              key={id}
+              href={`/projects?skill=${id}`}
+              className='md:min-w-[9rem] group'
+              title={`View ${name} projects`}
+              onMouseEnter={() => setHovered(id)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              <p className='text-sm'>{name}</p>
+              <StarRating ratings={ratings} hovered={hovered === id} />
             </Link>
           );
         })}
