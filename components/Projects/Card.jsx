@@ -6,6 +6,7 @@ import Icon from '../Icon';
 import Badge from '../Badge';
 import { blurryDataProfile } from '../../lib/blurryData';
 import { isEmpty, toLowerCase } from '../../lib/utils';
+import { PLACEHOLDER_200 } from '../../lib/constants';
 
 function Card(props) {
   const { id, name, summary, image, url, code, domain, tech } = props;
@@ -25,7 +26,7 @@ function Card(props) {
             <div className='blur-none transition-all duration-md group-hover:blur'>
               <picture className='box-border block overflow-hidden bg-none opacity-100 border-none m-0 p-0 relative h-60 w-full'>
                 <Image
-                  src={!isEmpty(image) ? image : 'https://via.placeholder.com/200.png'}
+                  src={!isEmpty(image) ? image : PLACEHOLDER_200}
                   alt={name}
                   fill
                   sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'

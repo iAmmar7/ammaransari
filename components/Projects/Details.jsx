@@ -59,15 +59,13 @@ function ProjectDetails(props) {
             {technologies.map((techId) => {
               const tech = getSkillNameBySkillId(techId);
               return (
-                <Link key={techId} href={`/projects?skill=${techId}`} passHref>
+                <Link key={techId} href={`/projects?skill=${techId}`}>
                   <Badge
                     type='tertiary'
                     className='text-white cursor-pointer'
                     title={`View more ${tech} projects`}
                   >
-                    <Badge type='tertiary' as='a' className='text-white'>
-                      {tech}
-                    </Badge>
+                    {tech}
                   </Badge>
                 </Link>
               );
