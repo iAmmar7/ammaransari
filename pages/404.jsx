@@ -64,7 +64,9 @@ function Custom404(props) {
                       variants={child}
                       className={clsx(
                         'relative',
-                        letter ? 'text-secondary' : 'text-primary -top-3 animate-pulse transform rotate-12'
+                        letter
+                          ? 'text-secondary'
+                          : 'text-primary -top-3 animate-pulse transform rotate-12'
                       )}
                     >
                       {letter}
@@ -72,15 +74,15 @@ function Custom404(props) {
                   );
                 })}
               </motion.h1>
-              <p className='text-muted text-base md:text-md mb-6 text-center'>Whoops! It seems like you are lost.</p>
+              <p className='text-muted text-base md:text-md mb-6 text-center'>
+                Whoops! It seems like you are lost.
+              </p>
               <div className='flex gap-2'>
-                <Link href='/' passHref>
-                  <Button as='a' title='View home page'>
-                    Go to home
-                  </Button>
+                <Link href='/' title='View home page'>
+                  <Button>Go to home</Button>
                 </Link>
-                <Link href='/#contact' passHref>
-                  <Button as='a' title='Contact Ammar Ansari' type='secondary' className='border border-secondary'>
+                <Link href='/#contact' title='Contact Ammar Ansari'>
+                  <Button type='secondary' className='border border-secondary'>
                     Contact me
                   </Button>
                 </Link>
@@ -88,12 +90,17 @@ function Custom404(props) {
             </div>
           </div>
           <div className='absolute bottom-0 right-0 h-[10rem] w-[10rem] sm:h-[18rem] sm:w-[18rem] md:h-[24rem] md:w-[24rem]'>
-            <Image
-              src='https://framerusercontent.com/images/p11yBuLiUWx3p905Pw2W33JBtEM.gif'
-              alt='404 guy'
-              layout='fill'
-              priority
-            />
+            <div className='relative h-full'>
+              <Image
+                src='https://framerusercontent.com/images/p11yBuLiUWx3p905Pw2W33JBtEM.gif'
+                alt='404 guy'
+                priority
+                fill
+                sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
+                quality={100}
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
           </div>
         </main>
         <Footer />
