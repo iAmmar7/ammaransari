@@ -268,7 +268,7 @@ const projects = [
     summary: 'A basic view of multi vendor e-commerce mobile application 💥',
     features: [
       '<p>Authentication and Authorization with <strong>Firebase</strong> 🔥</p>',
-      '<p><strong><CRUD</strong> operation for products 🛠️</p>',
+      '<p><strong>CRUD</strong> operation for products 🛠️</p>',
       '<p><strong>AsyncStorage</strong> to store the auth token 🏪</p>',
       '<p>Add to cart and place order feature 🎁</p>',
       '<p>Admin view to add/modify/delete currently logged in user products 💯</p>',
