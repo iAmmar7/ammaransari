@@ -81,7 +81,7 @@ function AboutMe() {
       </div>
       <div className='block md:hidden mt-6'>{funFact}</div>
       <div className='mt-6 text-center sm:text-left'>
-        On the academic side, I graduated from NED University with a Bachelor&apos;s degree in{' '}
+        On the academic side, I graduated a Bachelor&apos;s degree in{' '}
         <strong className='font-normal text-primary'>Computer Systems Engineering</strong>. I have a
         high degree of <strong className='font-normal text-primary'>adaptability</strong> and am
         constantly eager to learn new things and impart my knowledge to others.
