@@ -42,6 +42,7 @@ function Contact() {
 
       if (res.status !== 200) {
         setSentStatus('failed');
+        return;
       }
 
       setFormData(initFormData);
@@ -142,10 +143,14 @@ function Contact() {
           <div className='flex flex-col gap-y-2'>
             <Button
               type='submit'
-              endEnhancer={<Icon icon='ri-send-plane-fill' className='ml-2' />}
+              endEnhancer={
+                isSending
+                  ? <Icon icon='ri-loader-4-line' className='ml-2 animate-spin' />
+                  : <Icon icon='ri-send-plane-fill' className='ml-2' />
+              }
               disabled={isSending}
             >
-              Send
+              {isSending ? 'Sending...' : 'Send'}
             </Button>
           </div>
         </form>
