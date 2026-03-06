@@ -1,1 +1,1 @@
-export const SITE_NAME = 'ammaransari.dev';
+export { siteConfig } from '@/data/content';
