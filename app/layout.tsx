@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { Instrument_Serif, Outfit, JetBrains_Mono } from 'next/font/google';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
+import { siteConfig } from '@/data/content';
 import './globals.css';
 
 const instrumentSerif = Instrument_Serif({
@@ -22,8 +25,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Ammar Ansari - Software Engineer',
-  description: 'Personal portfolio of Ammar Ansari, Software Engineer',
+  title: {
+    default: `${siteConfig.name} - ${siteConfig.title}`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url),
 };
 
 export default function RootLayout({
@@ -36,7 +43,11 @@ export default function RootLayout({
       lang='en'
       className={`${instrumentSerif.variable} ${outfit.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main className='min-h-screen pt-14'>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
