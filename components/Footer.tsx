@@ -7,16 +7,16 @@ export function Footer() {
     <footer className='border-t border-border/50'>
       <Container className='flex flex-col items-center justify-between gap-4 py-8 sm:flex-row'>
         <ul className='flex items-center gap-5'>
-          {socialLinks.map(({ name, url }) => (
-            <li key={name}>
+          {socialLinks.map(({ title, url }) => (
+            <li key={title}>
               <a
                 href={url}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-sm text-fg-muted transition-colors hover:text-accent'
-                title={name}
+                title={title}
               >
-                {name}
+                {title}
               </a>
             </li>
           ))}

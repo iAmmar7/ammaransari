@@ -4,20 +4,20 @@ export const projects: Project[] = [
   {
     id: 'paint-app-realtime',
     name: 'Paint App',
-    summary: 'An effortless real-time paint application',
+    summary: '💥 An effortless real-time paint application 💥',
     features: [
-      'Real-time drawing interaction with all the connected users',
-      'NodeJS cluster mode with Redis and PM2 integration',
-      'Server deployment on Heroku',
-      'Frontend deployment on Vercel',
-      'Automatic deployment on both platforms',
-      'Text, Brush, Pen, and Rectangle draw',
-      'Color selection',
-      'Increase or decrease the brush size',
-      'Increase or decrease the text size',
-      'Custom hook to maintain history',
-      'Both Undo and Redo feature',
-      'Clear canvas and Download canvas image feature',
+      'Real-time drawing interaction with all the connected users 🌈',
+      'NodeJS cluster mode with Redis and PM2 integration 🛃',
+      'Server deployment on Heroku 🔥',
+      'Frontend deployment on Vercel 🔥',
+      'Automatic deployment on both platforms 🏃',
+      'Text, Brush, Pen, and Rectangle draw ✏️ 🖌️ 🔡 🟥',
+      'Color selection 🌈',
+      'Increase or decrease the brush size 🖌️',
+      'Increase or decrease the text size 🔡',
+      'Custom hook to maintain history 💻',
+      'Both Undo and Redo feature 🔄',
+      'Clear canvas and Download canvas image feature 🖼️',
     ],
     domain: 'freelance',
     technologies: ['react', 'canvas', 'node', 'express', 'socket-io', 'pm2', 'heroku', 'vercel'],
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     name: 'Courier Service Management',
     summary: 'The Courier vendor management project for a specific client.',
     features: [
-      'Graphical view of overall company stats using Recharts.',
+      'Graphical view of over all company stats using Recharts.',
       'Monitor rider and vendor activities via auto-generated stats.',
       'Add/Remove/Edit riders and vendors data.',
       'Tabular view of all the orders.',
@@ -66,7 +66,7 @@ export const projects: Project[] = [
       'Firebase admin',
       'Firebase auth',
       'Firebase database',
-      'Firebase user roles',
+      'Firebase user roles 🦹',
     ],
     domain: 'freelance',
     technologies: ['node', 'firebase', 'cloud-functions', 'firebase-functions'],
@@ -77,31 +77,36 @@ export const projects: Project[] = [
   {
     id: 'forecastware',
     name: 'ForecastWare',
-    summary: 'Weather forecast cross-platform mobile application based on React Native with Expo',
+    summary:
+      '💥 Weather forecast cross-platform mobile application based on React Native with Expo Managed workflow 💥',
     features: [
-      "Device's current location",
-      "Location tracker using device's background location service",
-      'Temperature check on every 10000 meters location change',
-      'Notification on temperature change',
-      'Background fetch job that runs after every 15 minutes to update the current location weather',
-      'Task manager to handle Background Fetch jobs',
-      'SQLite to store multiple locations data',
-      'Mobile battery level monitor with auto-close at 20%',
-      'Screenshot taker icon on different screens',
-      'Weather map using Google Maps with different layouts',
-      "Barometer service to display the device's surrounding atmospheric pressure",
-      'In app web browser using expo-web for external links',
-      'Sentry integration for crash report and performance monitoring',
-      'Snack integration for testing on different platforms',
-      'Search locations feature both for map and weather',
-      'Combined custom theme using React Native Paper and React Native Navigation',
-      'Dark mode feature using Material Design practices',
-      'Store user preferences in AsyncStorage',
-      'Temperature unit change feature; support for Celsius, Fahrenheit, and Kelvin',
-      'Custom hooks and utility functions',
-      'Custom animation using Animatable library',
-      'State management with React Context API',
-      'Location data fetched from the Open Weather API',
+      "Device's current location 📌",
+      "Location tracker using device's background location service 📌",
+      'Temperature check on every 10000 meters location change 👾',
+      'Notification on temperature change 🌌',
+      'Background fetch job that runs after every 15 minutes to update the current location weather and display the notification ⏲️',
+      'Task manager to handle Background Fetch jobs 🥷',
+      'SQLite to store multiple locations data 🏪',
+      'Mobile battery level monitor. The app will display a pop-up and close if the battery level goes down to 20% 🔋',
+      'Screenshot taker icon on different screens 📸',
+      'Weather map using Google Maps with different layouts for precipitation, clouds, pressure, temperature, and wind 🗺️',
+      "Barometer service to display the device's surrounding atmospheric pressure 🌡️",
+      'In app web browser using expo-web for external links 🕸️',
+      'Sentry integration for crash report and performance monitoring 🔗',
+      'Snack integration for testing on different platforms 🔗',
+      'Search locations feature both for map and weather 🔍',
+      'Combined custom theme using React Native Paper and React Native Navigation 🔥',
+      'Dark mode feature using Material Design practices 🔥',
+      'The design of this app is inspired by Android Weather Application 📱',
+      "Enabling the app theme color by user's mobile theme preference 🤳",
+      'Store user preferences in AsyncStorage 🏬',
+      'Temperature unit change feature; current support for Celsius, Fahrenheit, and Kelvin. 🔥',
+      'Custom hooks 😻',
+      'Custom lodash-like utility functions 😻',
+      'Custom animation using Animatable library 😻',
+      'Custom expo configuration for different platoforms 🔌',
+      'For state management, this app is using React Context API 🧰',
+      'The location data is being fetched from the Open Weather API 🧰',
     ],
     domain: 'side-project',
     technologies: [
@@ -123,9 +128,9 @@ export const projects: Project[] = [
   {
     id: 'board-game',
     name: 'Board Game',
-    summary: '3 day challenge to build and deploy the board game.',
+    summary: '💥 3 day challenge to build and deploy the board game. 💥',
     description:
-      "You've been selected as the new knight from King Arthur himself. Some bandits raided the local towns and stole some valuable items from the people. You need to collect those items and bring them back to the town folks. Player needs to collect all items in shortest amount of time while avoiding enemies on a 20x20 board.",
+      'You\'ve been selected as the new knight from King Arthur himself. Some bandits raided the local towns and stole some valuable items from the people. You need to collect those items and bring them back to the town folks. You will have to sneak into their base and collect all items without being detected, so stealth is your best friend.Rules:Create a board of 20x20 cells.The player will always spawn on (0,0) location of the board. (top left corner)Enemies can spawn randomly on different locations of the board.Items should also be spawn randomly on different locations of the board.The player will move to the item location using keyboard (up,down,left,right) arrow keys.You need to pick all items by moving to the cell block of the items.Avoid touch enemies, because if you do, you\'ll die immediately.Complete the challenge in shortest amount of time.Goal: Player needs to collect all items in shortest amount of time.',
     domain: 'challenge',
     technologies: [
       'react',
@@ -184,26 +189,27 @@ export const projects: Project[] = [
     id: 'websocket-sdk',
     name: 'WebSocket SDKs',
     summary: 'WebSocket Client SDK for both Browser/Web and Node JS',
-    description: '3 days challenge to build a Web and Node JS SDK to handle Websocket client.',
+    description: '3 days challenge to build a Web and Node JS SDK to handle Websocket client. 💥',
     features: [
-      'Monorepo containing two SDKs with simulator for each',
-      'An integrable SDK for Web application',
-      'An integrable SDK for Node application',
+      'Monorepo containing two SDKs with simulator for each 🌈',
+      'An integrable SDK for Web application 🛠️',
+      'An integrable SDK for Node application 🛠️',
       'on: Listens for messages from the WebSocket server',
       'send: Sends a message to the server',
       'disconnect: Disconnects the client from websocket server',
-      'SDK emits a custom event sdkready when WebSocket Client successfully connects',
-      'A simulator app to see the web-sdk in action',
-      'A simulator app to see the node-sdk in action',
+      'SDK emits a custom event sdkready when WebSocket Client successfully connects with the WebSocket Server 🛎️',
+      'A simulator app to see the web-sdk in action 🏃',
+      'A simulator app to see the node-sdk in action 🏃',
       'Shared packages for Eslint, TSConfig, and a Utility',
       'Both SDKs and a Utility package is bundled with Vite',
-      'Both SDKs can be published to NPM',
+      'Both SDKs are being used as an external package in their respective simulator. These SDKs can be published to NPM 🔥',
       'Unit tests with JEST',
     ],
     domain: 'challenge',
     technologies: ['ts', 'node', 'jest', 'vite', 'monorepo', 'turborepo'],
     thumbnail: '/images/projects/thumb-websocket-sdk.png',
     code: 'https://github.com/iAmmar7/websocket-sdk',
+    url: '',
   },
   {
     id: 'park-cafe',
@@ -221,15 +227,15 @@ export const projects: Project[] = [
     summary:
       'A Single-SPA based micro-frontends application developed with React, Angular, and Vue.',
     features: [
-      '3 microfrontends running inside the root-config',
-      '2 shared utility modules are used by all microfrontends',
-      'Navbar is built with VueJS',
-      'Auth module is built with React',
-      'Attendance module is built with Angular',
-      'Home page is being rendered from the root-config',
-      'Style guide shared module is built with Tailwind',
-      'API shared module is using Axios',
-      'JSON server to perform authentication',
+      '3 microfrontends running inside the root-config. 🔥',
+      '2 shared utility modules are used by all microfrontends. ⚓',
+      'Navbar is built with VueJS. 🔥',
+      'Auth module is built with React. ❤️',
+      'Attendance module is built with Angular. ❤️‍🔥',
+      'Home page is being rendered from the root-config. ⛓️',
+      'Style guide shared module is built with Tailwind. 🔹',
+      'API shared module is using Axios. 📲',
+      'JSON server to perform authentication. 💥',
     ],
     domain: 'side-project',
     technologies: [
@@ -249,10 +255,10 @@ export const projects: Project[] = [
     id: 'vaccify',
     name: 'Vaccify',
     summary: 'An open-standard digital travel pass for COVID',
-    description:
+    contribution:
       'Open source application where I contributed on the Frontend side with React and Reactstrap',
-    domain: 'open-source',
     technologies: ['react', 'reactstrap', 'blockchain', 'open-source'],
+    domain: 'open-source',
     thumbnail: '/images/projects/thumb-vaccify.png',
     code: 'https://github.com/TrustNetPK',
     url: 'https://vaccify.pk',
@@ -260,15 +266,16 @@ export const projects: Project[] = [
   {
     id: 'shoplaza',
     name: 'Shoplaza',
-    summary: 'A basic view of multi vendor e-commerce mobile application',
+    summary: 'A basic view of multi vendor e-commerce mobile application 💥',
     features: [
-      'Authentication and Authorization with Firebase',
-      'CRUD operation for products',
-      'AsyncStorage to store the auth token',
-      'Add to cart and place order feature',
-      'Admin view to add/modify/delete currently logged in user products',
-      'Dark mode using React Context API',
-      'State management with Redux using Redux Toolkit',
+      'Authentication and Authorization with Firebase 🔥',
+      'CRUD operation for products 🛠️',
+      'AsyncStorage to store the auth token 🏪',
+      'Add to cart and place order feature 🎁',
+      'Admin view to add/modify/delete currently logged in user products 💯',
+      'Dark mode using React Context API 🔥',
+      'This app is using the Open Sans font for all the text 🔠',
+      'For state management, this app has been integrated with Redux using Redux Toolkit 🟣',
     ],
     domain: 'side-project',
     technologies: [
@@ -290,16 +297,16 @@ export const projects: Project[] = [
     name: 'Redis Chat Challenge',
     summary: 'A real-time chat application',
     description:
-      'Two day Hackathon challenge to create a real-time chat application using Redis.',
+      'Two day Hackathon challenge to create a real-time chat application using Redis. 💥',
     features: [
-      'Real-time chat with all the connected users',
-      'NodeJS server with Redis and Socket IO integration',
-      'Server deployment on Heroku',
-      'Frontend deployment on Vercel',
-      'Automatic deployment on both platforms',
-      'Create custom channel feature',
-      'Search in chat feature',
-      'Participant count feature',
+      'Real-time chat with all the connected users 🌈',
+      'NodeJS server with Redis and Socket IO integration 🛃',
+      'Server deployment on Heroku 🔥',
+      'Frontend deployment on Vercel 🔥',
+      'Automatic deployment on both platforms 🏃',
+      'Create custom channel feature.',
+      'Search in chat feature.',
+      'Participant count feature.',
     ],
     domain: 'challenge',
     technologies: ['node', 'express', 'redis', 'socket-io', 'react', 'heroku', 'vercel'],
@@ -311,7 +318,7 @@ export const projects: Project[] = [
     id: 'leaflet-distortable-image',
     name: 'Leaflet.DistortableImage',
     summary: 'An open-source Leaflet extension to distort or "rubber sheet" images',
-    description:
+    contribution:
       'Contributed as a JavaScript developer and fixed one of the issues related to the drag handler',
     domain: 'open-source',
     technologies: ['js', 'leaflet', 'open-source'],
@@ -322,15 +329,14 @@ export const projects: Project[] = [
   {
     id: 'stopwatch',
     name: 'Stopwatch',
-    summary:
-      'A straightforward stopwatch application with laps history using Vanilla JS and Sass.',
+    summary: 'A straightforward stopwatch application with laps history using Vanilla JS and Sass.',
     features: [
       'Time laps',
-      'Difference between the last time lapse',
-      'Built with pure JS and Sass',
-      'Responsive layout for mobile screen',
-      'LocalStorage usage to store the last timer and last history',
-      'Continue from the last time stored in LocalStorage',
+      'Difference between the last time lapse.',
+      'Built with pure JS and Sass.',
+      'Responsive layout for mobile screen.',
+      'LocalStorage usage to store the last timer and last history.',
+      'Continue from the last time stored in LocalStorage.',
     ],
     domain: 'side-project',
     technologies: ['js', 'sass', 'github-pages'],
@@ -344,11 +350,11 @@ export const projects: Project[] = [
     summary: 'Integratable SDK for CareemPay merchants',
     description:
       'An SDK for a merchant to integrate online checkout with CareemPay on any application. This SDK enables any business provider to allow their customers to pay via CareemPay.',
-    features: [
+    contribution: [
       'Responsible to build and maintain the whole flow of "pay with careem" with other team members.',
       'Integration with bank cards and handle the scenario of both 3DS and Non-3DS cards.',
       'Built the payment-only feature within the checkout application.',
-      'Integrated the crash reporting library in payment module.',
+      'Integrated the crash reporting library in payment module. ',
     ],
     domain: 'company-based',
     company: 'Careem',
@@ -374,7 +380,7 @@ export const projects: Project[] = [
     summary: 'Dashboard for CareemPay merchants',
     description:
       'A portal application for a merchant who has integrated the CareemPay SDK in his application.',
-    features: [
+    contribution: [
       'Setup the whole application with NextJS.',
       'Configuration of UI library.',
       'Create and maintain the generic React components that can be consumed across all the apps at Careem.',
@@ -396,6 +402,7 @@ export const projects: Project[] = [
       'turborepo',
     ],
     thumbnail: '',
+    url: '',
   },
   {
     id: 'careem-identity',
@@ -403,7 +410,7 @@ export const projects: Project[] = [
     summary: 'Auth provider for all Careem services',
     description:
       'Authentication and Authorization provider for all the applications of Careem. A kind of middleware application used by all Careem services to authenticate and authorize users.',
-    features: [
+    contribution: [
       'Contributed to this team as front-end engineer for one-click login feature.',
       'Revamped the previous version of this application.',
       'Integrated the API request polling for authentication via mobile push notification.',
@@ -422,11 +429,11 @@ export const projects: Project[] = [
     summary: 'Real estate application',
     description:
       'Real estate management project for the Government of UAE by the company ADRES.',
-    features: [
+    contribution: [
       'Optimization and generic components development.',
       'Assist the team with optimization techniques using the latest features of React.',
       'Implemented the API Cache and automatic auth token re-fetch strategy.',
-      'Integrated the payment module on both the Frontend and Backend sides with ADPay.',
+      'Integrated the payment module on both the Frontend and Backend sides of an application with ADPay.',
       'Designed and developed the entire API-driven UI architecture.',
     ],
     domain: 'company-based',
@@ -440,7 +447,7 @@ export const projects: Project[] = [
     name: 'Vendians',
     summary: 'Employee management application',
     description: 'Internal employee management portal for the employees of VentureDive.',
-    features: [
+    contribution: [
       'RESTful API creation for different modules.',
       'Design and develop new UI components.',
       'Fixed a legacy code bug in one of the UI components.',
@@ -469,7 +476,7 @@ export const projects: Project[] = [
     summary: 'EHR application for healthcare sector',
     description:
       'An electronic healthcare record information management application for patients and doctors in the United States of America.',
-    features: [
+    contribution: [
       'Design, develop and maintain software using various tools and techniques with the USA-based team.',
       'Mainly focus on the front-end side development.',
       'Collaborate with multiple teams to provide generic solutions.',
@@ -487,7 +494,7 @@ export const projects: Project[] = [
     summary: 'E-learning platform',
     description:
       'An e-learning platform for students and teachers with features like Q&A, tuitions, public chat, etc.',
-    features: [
+    contribution: [
       'Worked on both the front-end side and back-end side of this project.',
       'Responsible for all the backend operations, from database designing to input validation and API response.',
       'Build and maintain MongoDB and GraphQL schemas.',
@@ -495,7 +502,7 @@ export const projects: Project[] = [
       'Migrated an old React application to React Hooks.',
       'Added language locale feature on the frontend side with React Context API.',
       'Real-time user activity feature with GraphQL subscription and Redis.',
-      "Solved real-time data fetching problem with Apollo GraphQL subscription on Parhako's mobile application.",
+      "Solved real-time data fetching problem with Apollo GraphQL subscription on Parhako's mobile application with React-Native.",
       'Application deployment on Amazon EC2 machines.',
     ],
     domain: 'company-based',
@@ -522,19 +529,20 @@ export const projects: Project[] = [
     ],
     thumbnail: '/images/projects/thumb-parhako.png',
     code: 'https://github.com/Parhako',
+    url: '',
   },
   {
     id: 'vyyral',
     name: 'Vyyral',
     summary: 'Dashboard for Amazon seller central',
     description:
-      'Powerful Amazon analytics tool to boost sales at Amazon. Vyyral helps combine different costs and expenses incurred on a business sale and present it in a comprehensive way.',
-    features: [
+      'Powerful Amazon analytics tool to boost sales at Amazon. Vyyral helps combine different costs and expenses incurred on a business sale and present it in a comprehensive way to make it dynamic.',
+    contribution: [
       'Mainly focus on the server-side development.',
       'RESTful API creation with complex queries using MongoDB aggregation.',
-      'Implemented a "trial version" feature on the back-end side using Express middlewares.',
+      'Implemented a "trial version" feature on the back-end side using the Express middlewares.',
       'Cron jobs creation for multiple features.',
-      'Recurring payment module feature integration with Stripe.',
+      'Recurring  payment module feature integration with Stripe.',
       'Application deployment on Amazon EC2 machines.',
       'SSL integration with Nginx.',
     ],
@@ -564,7 +572,8 @@ export const projects: Project[] = [
   {
     id: 'portfolio',
     name: 'Ammar Ansari',
-    summary: 'Personal website - Portfolio',
+    summary: '🔥 Personal website - Portfolio 🔥',
+    description: 'Did you mean: Ammar Ansari',
     domain: 'side-project',
     technologies: ['react', 'next', 'tailwind', 'framer-motion', 'resend'],
     thumbnail: '/images/projects/thumb-portfolio.png',
@@ -574,17 +583,16 @@ export const projects: Project[] = [
   {
     id: 'video-sdk',
     name: 'Video SDK',
-    summary:
-      'JS SDK that allows you to integrate WebRTC Video calling in your web application.',
+    summary: 'JS SDK that allows you to integrate WebRTC Video calling in your web application.',
     description:
       'The Video SDK contains the classes and functions that you need to create a video conferencing application.',
-    features: [
+    contribution: [
       'Fully responsible for the entire lifecycle of the Video SDK, from development to deployment.',
-      'Implemented a feature allowing users to connect to WebRTC using only TCP transport.',
-      'Played a key role in the core coding aspects of the SDK.',
-      'Developed an innovative image mirror feature.',
-      "Responsible for the SDK's deployment to NPM.",
-      'Managed CI/CD processes using GitHub Actions.',
+      'Implemented a feature allowing users to connect to WebRTC using only TCP transport, enhancing connectivity options.',
+      'Played a key role in the core coding aspects of the SDK, contributing significantly to its robust functionality.',
+      'Developed an innovative image mirror feature, adding advanced capabilities to the SDK.',
+      "Responsible for the SDK's deployment to NPM, ensuring its accessibility and ease of use for developers.",
+      'Managed CI/CD processes, ensuring efficient and reliable development workflows.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -597,15 +605,14 @@ export const projects: Project[] = [
   {
     id: 'chat-sdk',
     name: 'Chat SDK',
-    summary:
-      'JS SDK that allows you to integrate Chat features in your web application.',
+    summary: 'JS SDK that allows you to integrate Chating features in your web application.',
     description:
-      'The Chat SDK contains the classes and functions that you need to create a real-time chat application.',
-    features: [
+      'The Chat SDK contains the classes and functions that you need to create a real-time chat application',
+    contribution: [
       'Fully responsible for the entire lifecycle of the Chat SDK, from development to deployment.',
-      'Implemented robust unit and end-to-end testing.',
-      'Managed the deployment of the SDK to NPM.',
-      'Handled CI/CD processes.',
+      'Implemented robust unit and end-to-end testing to ensure reliability and performance.',
+      'Managed the deployment of the SDK to NPM, ensuring easy accessibility for developers.',
+      'Handled CI/CD processes, streamlining continuous development and integration workflows.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -617,15 +624,14 @@ export const projects: Project[] = [
   {
     id: 'pubsub-sdk',
     name: 'PubSub SDK',
-    summary:
-      'JS SDK that allows you to integrate messaging system in your web application.',
+    summary: 'JS SDK that allows you to integrate messaging system in your web application.',
     description:
       'The PubSub SDK contains the classes and functions that you need to create a real-time messaging system into your browser.',
-    features: [
-      'Building, fixing, and managing of the PubSub SDK.',
+    contribution: [
+      'Building, fixing, and managing of the PubSub SDK, overseeing all aspects of its development.',
       'Ensured high-quality and reliability through comprehensive unit and end-to-end testing.',
-      "Managed the SDK's NPM deployment.",
-      'Developed and maintained CI/CD pipelines.',
+      "Managed the SDK's NPM deployment, facilitating its distribution and implementation.",
+      'Developed and maintained CI/CD pipelines, enhancing development efficiency and reliability.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -636,15 +642,14 @@ export const projects: Project[] = [
   {
     id: 'video-sdk-node',
     name: 'Video SDK - Node',
-    summary:
-      'Realtime SDK to listen for and react to events from the browser based Video SDK.',
+    summary: 'Realtime SDK to listen for and react to events from the browser based Video SDK.',
     description:
-      'Access the Video API Consumer. You can instantiate a Video.Client to subscribe to Video events.',
-    features: [
-      'Fully responsible for the entire lifecycle of the server-based Video SDK.',
-      'Implemented robust unit and end-to-end testing.',
-      'Managed the deployment of the SDK to NPM.',
-      'Handled CI/CD processes.',
+      'Access the Video API Consumer. You can instantiate a Video.Client to subscribe to Video events. Make sure to check the full list of events that a Video.Client can subscribe to.',
+    contribution: [
+      'Fully responsible for the entire lifecycle of the server-based Video SDK, from development to deployment.',
+      'Implemented robust unit and end-to-end testing to ensure reliability and performance.',
+      'Managed the deployment of the SDK to NPM, ensuring easy accessibility for developers.',
+      'Handled CI/CD processes, streamlining continuous development and integration workflows.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -659,14 +664,14 @@ export const projects: Project[] = [
     summary:
       'Realtime SDK to listen for and react to events from the Voice calling SignalWire APIs.',
     description:
-      'Access the Voice API. You can instantiate a Voice.Client to make or receive calls.',
-    features: [
-      'Played a pivotal role in the entire lifecycle of the Voice SDK.',
-      'Specialized in handling long-running processes crucial for managing calls using advanced JavaScript promise mechanisms.',
+      'Access the Voice API. You can instantiate a Voice.Client to make or receive calls. Please see Events for the list of events emitted by a Voice.Client object.',
+    contribution: [
+      'Played a pivotal role in the entire lifecycle of the Voice SDK, focusing on development, testing, and deployment.',
+      'Specialized in handling long-running processes crucial for managing calls, utilizing advanced JavaScript promise mechanisms.',
       'Developed a modified JS promise structure to enhance user control over call actions like playback, recording, etc.',
-      'Implemented robust unit and end-to-end testing.',
-      "Managed the SDK's deployment to NPM.",
-      'Handled CI/CD processes.',
+      'Implemented robust unit and end-to-end testing to ensure SDK reliability and performance.',
+      "Managed the SDK's deployment to NPM, facilitating its widespread availability and ease of integration.",
+      'Handled CI/CD processes, ensuring efficient and continuous development and integration workflows.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -678,16 +683,15 @@ export const projects: Project[] = [
   {
     id: 'messaging-sdk',
     name: 'Messaging SDK',
-    summary:
-      'Realtime SDK to listen for and react to events from the Messaging SignalWire APIs.',
+    summary: 'Realtime SDK to listen for and react to events from the Messaging SignalWire APIs.',
     description:
-      'Access the Messaging API. You can instantiate a Messaging.Client to send or receive SMS and MMS.',
-    features: [
-      'Responsible for the entire development cycle of the Messaging SDK.',
+      'Access the Messaging API. You can instantiate a Messaging.Client to send or receive SMS and MMS. Please check Messaging Events for the full list of events that a Messaging.Client can subscribe to.',
+    contribution: [
+      'Responsible for the entire development cycle of the Messaging SDK, ensuring its alignment with project objectives and user needs.',
       'Developed core functionalities allowing users to send text messages using the SignalWire API.',
-      'Implemented comprehensive unit and end-to-end testing.',
-      "Managed the SDK's deployment to NPM.",
-      'Handled the CI/CD processes.',
+      'Implemented and oversaw comprehensive unit and end-to-end testing, ensuring high standards of SDK reliability and performance.',
+      "Managed the SDK's deployment to NPM, providing easy access and integration for developers.",
+      'Handled the CI/CD processes, maintaining an efficient and seamless development pipeline.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -699,15 +703,15 @@ export const projects: Project[] = [
     id: 'chat-sdk-node',
     name: 'Chat SDK - Node',
     summary:
-      'Realtime SDK that allows you to integrate Chat features in your Node JS application.',
+      'Realtime SDK that allows you to integrate Chating features in your Node JS application.',
     description:
-      'Access the Chat API Consumer. You can instantiate a Chat.Client to subscribe to Chat events.',
-    features: [
-      'Responsible for the full development lifecycle of the NodeJS-based Chat SDK.',
-      "Ensured the SDK's compatibility and performance within Node.js.",
-      'Implemented comprehensive unit and end-to-end testing.',
-      "Managed the SDK's deployment to NPM.",
-      'Overseen the CI/CD processes.',
+      'Access the Chat API Consumer. You can instantiate a Chat.Client to subscribe to Chat events. Please check Chat Events for the full list of events that a Chat.Client can subscribe to.',
+    contribution: [
+      'Responsible for the full development lifecycle of the NodeJS-based Chat SDK, tailoring it specifically for server-side environments.',
+      "Ensured the SDK's compatibility and performance within Node.js, emphasizing backend integrations.",
+      'Implemented comprehensive unit and end-to-end testing, focusing on server-side reliability and scalability.',
+      "Managed the SDK's deployment to NPM, catering to the needs of Node.js developers and ensuring seamless integration.",
+      'Overseen the CI/CD processes, adapting them for NodeJS specific requirements and workflows.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -722,13 +726,13 @@ export const projects: Project[] = [
     summary:
       'Realtime SDK that allows you to integrate PubSub features in your Node JS application.',
     description:
-      'Access the PubSub API Consumer. You can instantiate a PubSub.Client to subscribe to PubSub events.',
-    features: [
-      'Fully responsible for the entire lifecycle of the NodeJS-based PubSub SDK.',
-      "Ensured the SDK's compatibility and optimized performance within Node.js.",
-      'Implemented robust unit and end-to-end testing.',
-      'Managed the deployment of the SDK to NPM.',
-      'Handled the CI/CD processes.',
+      'Access the PubSub API Consumer. You can instantiate a PubSub.Client to subscribe to PubSub events. Please check PubSub Events for the full list of events that a PubSub.Client can subscribe to.',
+    contribution: [
+      'Fully responsible for the entire lifecycle of the NodeJS-based PubSub SDK, from concept to deployment.',
+      "Ensured the SDK's compatibility and optimized performance within Node.js, focusing on efficient message passing and event handling.",
+      'Implemented robust unit and end-to-end testing to guarantee server-side reliability and effectiveness.',
+      'Managed the deployment of the SDK to NPM, ensuring it meets the specific needs of Node.js developers.',
+      'Handled the CI/CD processes, customizing them for Node.js-specific development and operational demands.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -742,13 +746,13 @@ export const projects: Project[] = [
     summary:
       'Realtime SDK that allows you to integrate SignalWire Task features in your Node JS application.',
     description:
-      'Access the Task API. You can instantiate a Task.Client to receive tasks from a different application.',
-    features: [
-      'Fully responsible for the entire lifecycle of the NodeJS-based Task SDK.',
-      "Ensured the SDK's compatibility and optimized performance within Node.js.",
-      'Implemented robust unit and end-to-end testing.',
-      "Managed the SDK's deployment to NPM.",
-      'Handled the CI/CD processes.',
+      'Access the Task API. You can instantiate a Task.Client to receive tasks from a different application. Please check Task Events for the full list of events that a Task.Client can subscribe to.',
+    contribution: [
+      'Fully responsible for the entire lifecycle of the NodeJS-based Task SDK, from initial development to final deployment.',
+      "Ensured the SDK's compatibility and optimized performance within Node.js, focusing on efficient task management and event handling.",
+      'Implemented robust unit and end-to-end testing to ensure server-side reliability and high efficiency.',
+      "Managed the SDK's deployment to NPM, catering to the specific needs and requirements of Node.js developers.",
+      'Handled the CI/CD processes, adapting them to suit NodeJS-specific development standards and practices.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -762,19 +766,19 @@ export const projects: Project[] = [
     summary: 'Shared utility library for all the SignalWire SDKs',
     description:
       'The SignalWire Core package contains lower level objects and shared utilities for various @signalwire packages.',
-    features: [
+    contribution: [
       'Fully responsible for the development, management, and maintenance of the SignalWire Core package.',
       'Developed essential utility functions and classes that form the backbone of all SignalWire SDKs.',
-      'Implemented a range of generic code solutions enhancing the functionality and efficiency of the SDKs.',
-      'Conducted robust unit and end-to-end testing.',
-      'Managed the deployment of the package to NPM.',
-      'Handled CI/CD processes.',
+      'Implemented a range of generic code solutions, significantly enhancing the functionality and efficiency of the SDKs.',
+      "Ensured the package's compatibility and optimized performance across various SignalWire SDKs.",
+      'Conducted robust unit and end-to-end testing to guarantee high reliability and performance.',
+      'Managed the deployment of the package to NPM, ensuring seamless integration across all SDKs.',
+      'Handled CI/CD processes, ensuring continuous development and integration aligns with best practices.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
     technologies: ['websocket', 'ts', 'redux-saga', 'jest', 'playwright'],
     code: 'https://www.npmjs.com/package/@signalwire/core',
-    thumbnail: '',
   },
   {
     id: 'signalwire-webrtc',
@@ -782,34 +786,34 @@ export const projects: Project[] = [
     summary: 'Shared WebRTC-related utility library for all the JS SignalWire SDKs.',
     description:
       'The SignalWire WebRTC package contains the various WebRTC object used by other SignalWire packages.',
-    features: [
-      'Fully responsible for the development, management, and maintenance of the SignalWire WebRTC package.',
-      'Developed crucial WebRTC-related utility functions and classes.',
-      'Implemented specialized WebRTC code solutions boosting real-time communication functionality.',
-      'Conducted comprehensive unit and end-to-end testing.',
-      'Managed the deployment of the package to NPM.',
-      'Handled the CI/CD processes.',
+    contribution: [
+      'Fully responsible for the development, management, and maintenance of the SignalWire WebRTC package, specifically focusing on WebRTC utilities.',
+      "Developed crucial WebRTC-related utility functions and classes, crucial for the enhancement of SignalWire's real-time communication features.",
+      'Implemented specialized WebRTC code solutions, significantly boosting the functionality and efficiency of SignalWire SDKs in real-time communication scenarios.',
+      'Ensured optimal compatibility and performance of the WebRTC utilities across different SignalWire SDKs.',
+      'Conducted comprehensive unit and end-to-end testing to ensure the reliability and performance of WebRTC components.',
+      'Managed the deployment of the package to NPM, focusing on seamless integration with WebRTC functionalities in all SignalWire SDKs.',
+      'Handled the CI/CD processes, aligning them with the unique requirements of WebRTC development and integration.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
     technologies: ['webrtc', 'ts', 'redux-saga', 'jest', 'playwright'],
     code: 'https://www.npmjs.com/package/@signalwire/webrtc',
-    thumbnail: '',
   },
   {
     id: 'callfabric-sdk',
     name: 'CallFabric SDK',
     summary:
-      'A browser based JavaScript SDK to integrate SignalWire Call Fabric for unified communications.',
+      'A browser based JavaScript SDK that allows developers to integrate SignalWire Call Fabric in their applications.',
     description:
-      'Call Fabric is a layer on top of other SignalWire SDKs that provides Unified Communication as a Service (UCaaS). With Call Fabric, you can make video calls, voice calls, messaging, chat, and more.',
-    features: [
-      'Fully responsible for the development, management, and maintenance of the CallFabric SDK.',
-      'Developed functionalities that unify server events across different communication types like voice, video, chat, and messaging.',
-      'Ensured seamless integration and interoperability with existing SignalWire SDKs.',
-      'Conducted extensive unit and end-to-end testing.',
-      'Managed the deployment of the SDK to NPM.',
-      'Handled CI/CD processes.',
+      'Call Fabric is a layer on top of other SignalWire SDKs that allows you to provide Unified Communication as a Service (UCaaS) to your customers. Therefore, the Call Fabric SDK can also be referred to as the UCaaS SDK. With Call Fabric, not only you can make video calls but you can also make other types of communication offered by the SignalWire such as voice call, messaging, chat, etc.',
+    contribution: [
+      'Fully responsible for the development, management, and maintenance of the CallFabric SDK, focusing on unified communications.',
+      'Developed and implemented functionalities that unify server events across different communication types like voice, video, chat, and messaging for easier integration.',
+      'Ensured seamless integration and interoperability of the CallFabric SDK with existing SignalWire SDKs, enhancing UCaaS capabilities.',
+      'Conducted extensive unit and end-to-end testing to ensure the reliability and performance of unified communication features.',
+      'Managed the deployment of the SDK to NPM, ensuring that it meets the diverse needs of developers in implementing UCaaS solutions.',
+      'Handled CI/CD processes, ensuring they are aligned with the specific requirements of unified communication development and integration.',
     ],
     domain: 'company-based',
     company: 'SignalWire',
@@ -820,14 +824,14 @@ export const projects: Project[] = [
   },
   {
     id: 'signalwire-sdk-playgrounds',
-    name: 'SignalWire SDK Playgrounds',
+    name: 'SignalWire SDK playgrounds',
     summary: 'Playgrounds or demo applications for all the SignalWire browser-based SDKs',
-    description: 'Install SDKs from the NPM and consume it as an end developer.',
-    features: [
+    description: 'Install SDKs from the NPM and consume it as an end developer',
+    contribution: [
       'Fully responsible for building and managing the SDK playgrounds.',
       'Integrate push notifications with Firebase to handle the incoming call.',
       'Deploy playgrounds on GitHub pages.',
-      'Handled CI/CD processes and published GitHub branch code to GitHub pages.',
+      'Handled CI/CD processes, and published GitHub branch code to GitHub pages.',
     ],
     domain: 'company-based',
     company: 'SignalWire',

@@ -30,13 +30,13 @@ export default function Home() {
 
           {/* Social links */}
           <div className='mt-8 flex items-center gap-4'>
-            {socialLinks.map(({ name, url }) => (
+            {socialLinks.map(({ title, url }) => (
               <ExternalLink
-                key={name}
+                key={title}
                 href={url}
                 className='text-sm text-fg-muted hover:text-accent'
               >
-                {name}
+                {title}
               </ExternalLink>
             ))}
           </div>

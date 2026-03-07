@@ -2,23 +2,23 @@ import type { SocialLink } from '@/types';
 
 export const socialLinks: SocialLink[] = [
   {
-    name: 'Email',
+    title: 'Email',
     url: 'mailto:contact@ammaransari.dev',
-    icon: 'mail',
+    icon: 'ri-mail-line',
   },
   {
-    name: 'GitHub',
+    title: 'GitHub',
     url: 'https://github.com/iammar7',
-    icon: 'github',
+    icon: 'ri-github-line',
   },
   {
-    name: 'LinkedIn',
+    title: 'LinkedIn',
     url: 'https://linkedin.com/in/iammar7',
-    icon: 'linkedin',
+    icon: 'ri-linkedin-line',
   },
   {
-    name: 'StackOverflow',
+    title: 'StackOverflow',
     url: 'https://stackoverflow.com/u/16401056',
-    icon: 'layers',
+    icon: 'ri-stack-overflow-line',
   },
 ];

@@ -18,9 +18,9 @@ export interface Project {
   summary: string;
   description?: string;
   features?: string[];
+  contribution?: string | string[];
   domain: Domain;
   company?: string;
-  companyTag?: string;
   technologies: string[];
   thumbnail?: string;
   code?: string;
@@ -34,15 +34,22 @@ export interface Skill {
   id: string;
   name: string;
   domain: SkillDomain;
+  ratings: number;
   major: boolean;
   priority?: number;
 }
 
 export interface ClientEntry {
+  clientId: number;
   client: string;
+  clientTag: string;
   clientUrl?: string;
-  role: string;
-  summary: string[];
+  clientTheme: string;
+  clientSubsidiary?: string;
+  clientSubsidiaryTag?: string;
+  clientSubsidiaryUrl?: string;
+  clientSubsidiaryTheme?: string;
+  clientSummary: string[];
 }
 
 export interface Experience {
@@ -60,12 +67,12 @@ export interface Experience {
 }
 
 export interface SocialLink {
-  name: string;
+  title: string;
   url: string;
   icon: string;
 }
 
 export interface TechStackItem {
   name: string;
-  icon: string;
+  domain: string;
 }
