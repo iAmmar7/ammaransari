@@ -1,25 +1,47 @@
 'use client';
 
 import { useState } from 'react';
+import { z } from 'zod';
 import { Button } from './Button';
 
+const contactSchema = z.object({
+  name: z.string().min(1, 'Name is required').max(100),
+  email: z.email('Invalid email address').max(320),
+  message: z.string().min(1, 'Message is required').max(5000),
+});
+
 type Status = 'idle' | 'sending' | 'success' | 'error';
+type FieldErrors = Partial<Record<'name' | 'email' | 'message', string>>;
 
 export function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<Status>('idle');
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setFieldErrors({});
+
+    const parsed = contactSchema.safeParse({ name, email, message });
+    if (!parsed.success) {
+      const tree = z.treeifyError(parsed.error);
+      setFieldErrors({
+        name: tree.properties?.name?.errors?.[0],
+        email: tree.properties?.email?.errors?.[0],
+        message: tree.properties?.message?.errors?.[0],
+      });
+      return;
+    }
+
     setStatus('sending');
 
     try {
       const res = await fetch('/api/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify(parsed.data),
       });
 
       if (!res.ok) {
@@ -57,6 +79,7 @@ export function ContactForm() {
           onChange={(e) => setName(e.target.value)}
           className={inputStyles}
         />
+        {fieldErrors.name && <p className='text-xs text-red-400'>{fieldErrors.name}</p>}
       </div>
       <div className='flex flex-col gap-1.5'>
         <label
@@ -74,6 +97,7 @@ export function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           className={inputStyles}
         />
+        {fieldErrors.email && <p className='text-xs text-red-400'>{fieldErrors.email}</p>}
       </div>
       <div className='flex flex-col gap-1.5'>
         <label
@@ -91,6 +115,7 @@ export function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           className={`${inputStyles} resize-none`}
         />
+        {fieldErrors.message && <p className='text-xs text-red-400'>{fieldErrors.message}</p>}
       </div>
 
       {status === 'error' && (
