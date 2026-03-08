@@ -37,9 +37,7 @@ export default function PageLayout({
               <h1 className='text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-linear-to-r from-accent to-highlight text-center sm:text-left'>
                 {tagline}
               </h1>
-              {summary && (
-                <p className='text-muted text-sm text-center sm:text-left'>{summary}</p>
-              )}
+              {summary && <p className='text-muted text-sm text-center sm:text-left'>{summary}</p>}
             </div>
             {children}
           </motion.div>

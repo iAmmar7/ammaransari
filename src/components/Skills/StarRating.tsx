@@ -42,8 +42,8 @@ const StarRating = memo(function StarRating({ ratings = 0, hovered = false }: St
   }, [ratings]);
 
   return (
-    <div className="w-full h-full">
-      <div className="flex text-xl text-accent">
+    <div className='w-full h-full'>
+      <div className='flex text-xl text-accent'>
         {stars.map(({ id, fill, half, last }) => (
           <Star key={id} delay={id} fill={fill} half={half} hovered={last === true && hovered} />
         ))}

@@ -18,19 +18,19 @@ export default function SocialLinks({ className }: SocialLinksProps) {
   return (
     <div className={clsx('flex items-center gap-x-3 pb-2', className)}>
       {socialLinks.map(({ title, url, icon }) => (
-        <div key={title} className="relative">
+        <div key={title} className='relative'>
           <motion.a
             href={url}
-            className="transition duration-200 ease-base relative text-muted no-underline focus:text-foreground cursor-pointer group"
-            target="_blank"
-            rel="noreferrer"
+            className='transition duration-200 ease-base relative text-muted no-underline focus:text-foreground cursor-pointer group'
+            target='_blank'
+            rel='noreferrer'
             onHoverStart={() => setHoveredLink(title)}
             onHoverEnd={() => setHoveredLink(null)}
             title={`${title} - Ammar Ansari`}
           >
             <Icon
               icon={icon}
-              className="text-2xl text-foreground group-hover:md:animate-pulse group-hover:text-accent"
+              className='text-2xl text-foreground group-hover:md:animate-pulse group-hover:text-accent'
             />
           </motion.a>
           <AnimatePresence>
@@ -40,9 +40,9 @@ export default function SocialLinks({ className }: SocialLinksProps) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="absolute top-9 right-1/2 translate-x-1/2 text-sm"
+                className='absolute top-9 right-1/2 translate-x-1/2 text-sm'
               >
-                <Badge type="secondary">{title}</Badge>
+                <Badge type='secondary'>{title}</Badge>
               </motion.span>
             )}
           </AnimatePresence>

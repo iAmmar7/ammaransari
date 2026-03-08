@@ -1,6 +1,13 @@
 'use client';
 
-import { forwardRef, useMemo, isValidElement, type ElementType, type ReactNode, type Ref } from 'react';
+import {
+  forwardRef,
+  useMemo,
+  isValidElement,
+  type ElementType,
+  type ReactNode,
+  type Ref,
+} from 'react';
 import clsx from 'clsx';
 
 type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'default' | 'submit' | 'button' | 'reset';
@@ -42,8 +49,7 @@ const Button = forwardRef(
         return 'bg-transparent text-muted hover:text-accent hover:bg-surface-secondary after:bg-surface-secondary';
       if (type === 'secondary')
         return 'bg-surface-secondary text-accent hover:text-black after:bg-white';
-      if (type === 'tertiary')
-        return 'bg-surface-muted text-muted hover:text-black after:bg-white';
+      if (type === 'tertiary') return 'bg-surface-muted text-muted hover:text-black after:bg-white';
       return 'bg-accent text-black after:bg-white';
     }, [type]);
 
@@ -69,7 +75,7 @@ const Button = forwardRef(
         disabled={disabled}
         {...otherProps}
       >
-        <span className="z-10 text-inherit transition-none relative flex items-center justify-center">
+        <span className='z-10 text-inherit transition-none relative flex items-center justify-center'>
           {isValidElement(startEnhancer) && startEnhancer}
           {children}
           {isValidElement(endEnhancer) && endEnhancer}

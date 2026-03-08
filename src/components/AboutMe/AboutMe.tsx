@@ -85,9 +85,8 @@ export default function AboutMe() {
       <div className='mt-6 text-center sm:text-left'>
         On the academic side, I graduated with a Bachelor&apos;s degree in{' '}
         <strong className='font-normal text-foreground'>Computer Systems Engineering</strong>. I
-        have a high degree of{' '}
-        <strong className='font-normal text-foreground'>adaptability</strong> and am constantly eager
-        to learn new things and impart my knowledge to others.
+        have a high degree of <strong className='font-normal text-foreground'>adaptability</strong>{' '}
+        and am constantly eager to learn new things and impart my knowledge to others.
       </div>
     </div>
   );

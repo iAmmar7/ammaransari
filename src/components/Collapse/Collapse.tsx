@@ -14,16 +14,16 @@ export default function Collapse({ initial = false, show = false, children }: Co
     <AnimatePresence initial={initial}>
       {show && (
         <motion.div
-          key="content"
-          initial="collapsed"
-          animate="open"
-          exit="collapsed"
+          key='content'
+          initial='collapsed'
+          animate='open'
+          exit='collapsed'
           variants={{
             open: { opacity: 1, height: 'auto' },
             collapsed: { opacity: 0, height: 0 },
           }}
           transition={{ duration: 0.5 }}
-          className="overflow-hidden w-full"
+          className='overflow-hidden w-full'
         >
           {children}
         </motion.div>

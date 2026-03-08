@@ -10,7 +10,7 @@ interface HomeSectionProps {
 
 export default function HomeSection({ title, description }: HomeSectionProps) {
   return (
-    <Section id="home" next="experience">
+    <Section id='home' next='experience'>
       <Hero title={title} description={description} />
     </Section>
   );

@@ -73,36 +73,36 @@ export default function Contact() {
   };
 
   return (
-    <div className="mb-4 md:mb-0 flex flex-col items-center md:items-start">
-      <div className="hidden sm:flex flex-col text-muted">
+    <div className='mb-4 md:mb-0 flex flex-col items-center md:items-start'>
+      <div className='hidden sm:flex flex-col text-muted'>
         <p>
           How can you connect with me? Well... I can think of two options; <br />
         </p>
-        <p className="text-foreground">1. Fill out this form,</p>
+        <p className='text-foreground'>1. Fill out this form,</p>
         <p>
           2. Or you may go through{' '}
           <a
-            href="https://www.quora.com/How-can-I-train-my-pigeon-to-carry-messages-for-me"
-            target="_blank"
-            rel="noreferrer"
-            className="underline"
+            href='https://www.quora.com/How-can-I-train-my-pigeon-to-carry-messages-for-me'
+            target='_blank'
+            rel='noreferrer'
+            className='underline'
           >
             this
           </a>{' '}
           amazing question on quora. I&apos;ll get back to you... eventually.
         </p>
       </div>
-      <div className="w-full flex flex-col items-center">
+      <div className='w-full flex flex-col items-center'>
         <form
-          className="flex flex-col mt-0 sm:mt-4 gap-y-2 w-full md:max-w-md"
+          className='flex flex-col mt-0 sm:mt-4 gap-y-2 w-full md:max-w-md'
           onSubmit={handleSendEmail}
           onBlur={handleResetError}
         >
           {fields.map((field) => {
             const Component = field.component;
             return (
-              <div className="flex flex-col mb-3 gap-y-2 min-w-[300px]" key={field.id}>
-                <label htmlFor={field.id} className="text-muted uppercase text-xs font-bold">
+              <div className='flex flex-col mb-3 gap-y-2 min-w-[300px]' key={field.id}>
+                <label htmlFor={field.id} className='text-muted uppercase text-xs font-bold'>
                   {field.id}
                 </label>
                 <Component
@@ -112,37 +112,37 @@ export default function Contact() {
                   value={formData[field.id]}
                   required
                   {...(field.component === 'textarea' ? { rows: 2 } : {})}
-                  className="text-foreground bg-surface border border-muted rounded-base p-3 focus:outline-none focus:border-accent"
+                  className='text-foreground bg-surface border border-muted rounded-base p-3 focus:outline-none focus:border-accent'
                   onChange={handleChange}
                 />
               </div>
             );
           })}
           <Collapse show={sentStatus === 'failed'}>
-            <p className="text-sm text-red-400 mb-2">
+            <p className='text-sm text-red-400 mb-2'>
               Unable to send email! Try to send it manually{' '}
               <a
-                href="mailto:iammaransari@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="text-accent"
-                title="Send email to Ammar Ansari"
+                href='mailto:iammaransari@gmail.com'
+                target='_blank'
+                rel='noreferrer'
+                className='text-accent'
+                title='Send email to Ammar Ansari'
               >
                 iammaransari@gmail.com
               </a>
             </p>
           </Collapse>
           <Collapse show={sentStatus === 'succeed'}>
-            <p className="text-sm text-green-400 mb-2">Your message has been delivered!</p>
+            <p className='text-sm text-green-400 mb-2'>Your message has been delivered!</p>
           </Collapse>
-          <div className="flex flex-col gap-y-2">
+          <div className='flex flex-col gap-y-2'>
             <Button
-              type="submit"
+              type='submit'
               endEnhancer={
                 isSending ? (
-                  <Icon icon="ri-loader-4-line" className="ml-2 animate-spin" />
+                  <Icon icon='ri-loader-4-line' className='ml-2 animate-spin' />
                 ) : (
-                  <Icon icon="ri-send-plane-fill" className="ml-2" />
+                  <Icon icon='ri-send-plane-fill' className='ml-2' />
                 )
               }
               disabled={isSending}

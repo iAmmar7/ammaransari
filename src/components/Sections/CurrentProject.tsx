@@ -15,19 +15,19 @@ export default function CurrentProject() {
   const { xs, sm } = useBreakpoints();
 
   return (
-    <Section id="projects" title="Current project(s)" next="contact">
+    <Section id='projects' title='Current project(s)' next='contact'>
       <ProjectList
         projects={CURRENT_PROJECTS}
         count={sm || xs ? 1 : 2}
-        className="mt-0 lg:grid-cols-4"
+        className='mt-0 lg:grid-cols-4'
       />
-      <Link href="/projects">
+      <Link href='/projects'>
         <Button
-          type="default"
-          size="sm"
-          className="mt-4"
-          endEnhancer={<Icon icon="ri-arrow-right-line" className="ml-1" />}
-          title="Go to projects page"
+          type='default'
+          size='sm'
+          className='mt-4'
+          endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+          title='Go to projects page'
         >
           Past projects
         </Button>

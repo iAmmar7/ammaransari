@@ -31,8 +31,8 @@ function Star({ delay = 1, fill = true, half = false, hovered = false }: StarPro
   return (
     <motion.i
       className={icon}
-      initial="initial"
-      whileInView="animate"
+      initial='initial'
+      whileInView='animate'
       variants={{
         ...starVariants,
         animate: (i: number) => ({

@@ -130,7 +130,7 @@ const projects: Project[] = [
     name: 'Board Game',
     summary: '3 day challenge to build and deploy the board game.',
     description:
-      '<p>You\'ve been selected as the new knight from King Arthur himself. Some bandits raided the local towns and stole some valuable items from the people. You need to collect those items and bring them back to the town folks. You will have to sneak into their base and collect all items without being detected, so stealth is your best friend.</p><p>Rules:</p><ol><li>Create a board of 20x20 cells.</li><li>The player will always spawn on (0,0) location of the board. (top left corner)</li><li>Enemies can spawn randomly on different locations of the board.</li><li>Items should also be spawn randomly on different locations of the board.</li><li>The player will move to the item location using keyboard (up,down,left,right) arrow keys.</li><li>You need to pick all items by moving to the cell block of the items.</li><li>Avoid touch enemies, because if you do, you\'ll die immediately.</li><li>Complete the challenge in shortest amount of time.</li></ol><p>Goal: Player needs to collect all items in shortest amount of time.</p>',
+      "<p>You've been selected as the new knight from King Arthur himself. Some bandits raided the local towns and stole some valuable items from the people. You need to collect those items and bring them back to the town folks. You will have to sneak into their base and collect all items without being detected, so stealth is your best friend.</p><p>Rules:</p><ol><li>Create a board of 20x20 cells.</li><li>The player will always spawn on (0,0) location of the board. (top left corner)</li><li>Enemies can spawn randomly on different locations of the board.</li><li>Items should also be spawn randomly on different locations of the board.</li><li>The player will move to the item location using keyboard (up,down,left,right) arrow keys.</li><li>You need to pick all items by moving to the cell block of the items.</li><li>Avoid touch enemies, because if you do, you'll die immediately.</li><li>Complete the challenge in shortest amount of time.</li></ol><p>Goal: Player needs to collect all items in shortest amount of time.</p>",
     domain: 'challenge',
     technologies: [
       'react',
@@ -189,8 +189,7 @@ const projects: Project[] = [
     id: 'websocket-sdk',
     name: 'WebSocket SDKs',
     summary: 'WebSocket Client SDK for both Browser/Web and Node JS',
-    description:
-      '3 days challenge to build a Web and Node JS SDK to handle Websocket client.</p>',
+    description: '3 days challenge to build a Web and Node JS SDK to handle Websocket client.</p>',
     features: [
       '<p>Monorepo containing two SDKs with simulator for each</p>',
       '<p>An integrable SDK for <strong>Web</strong> application</p>',
@@ -330,8 +329,7 @@ const projects: Project[] = [
   {
     id: 'stopwatch',
     name: 'Stopwatch',
-    summary:
-      'A straightforward stopwatch application with laps history using Vanilla JS and Sass.',
+    summary: 'A straightforward stopwatch application with laps history using Vanilla JS and Sass.',
     features: [
       '<p>Time laps</p>',
       '<p>Difference between the last time lapse.</p>',
@@ -586,8 +584,7 @@ const projects: Project[] = [
   {
     id: 'video-sdk',
     name: 'Video SDK',
-    summary:
-      'JS SDK that allows you to integrate WebRTC Video calling in your web application.',
+    summary: 'JS SDK that allows you to integrate WebRTC Video calling in your web application.',
     description:
       'The Video SDK contains the classes and functions that you need to create a video conferencing application.',
     contribution: [
@@ -609,8 +606,7 @@ const projects: Project[] = [
   {
     id: 'chat-sdk',
     name: 'Chat SDK',
-    summary:
-      'JS SDK that allows you to integrate Chating features in your web application.',
+    summary: 'JS SDK that allows you to integrate Chating features in your web application.',
     description:
       'The Chat SDK contains the classes and functions that you need to create a real-time chat application',
     contribution: [
@@ -629,8 +625,7 @@ const projects: Project[] = [
   {
     id: 'pubsub-sdk',
     name: 'PubSub SDK',
-    summary:
-      'JS SDK that allows you to integrate messaging system in your web application.',
+    summary: 'JS SDK that allows you to integrate messaging system in your web application.',
     description:
       'The PubSub SDK contains the classes and functions that you need to create a real-time messaging system into your browser.',
     contribution: [
@@ -648,8 +643,7 @@ const projects: Project[] = [
   {
     id: 'video-sdk-node',
     name: 'Video SDK - Node',
-    summary:
-      'Realtime SDK to listen for and react to events from the browser based Video SDK.',
+    summary: 'Realtime SDK to listen for and react to events from the browser based Video SDK.',
     description:
       'Access the Video API Consumer. You can instantiate a Video.Client to subscribe to Video events. Make sure to check the full list of events that a Video.Client can subscribe to.',
     contribution: [
@@ -690,8 +684,7 @@ const projects: Project[] = [
   {
     id: 'messaging-sdk',
     name: 'Messaging SDK',
-    summary:
-      'Realtime SDK to listen for and react to events from the Messaging SignalWire APIs.',
+    summary: 'Realtime SDK to listen for and react to events from the Messaging SignalWire APIs.',
     description:
       'Access the Messaging API. You can instantiate a Messaging.Client to send or receive SMS and MMS. Please check Messaging Events for the full list of events that a Messaging.Client can subscribe to.',
     contribution: [

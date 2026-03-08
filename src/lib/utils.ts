@@ -26,10 +26,7 @@ export const takeRight = <T>(arr: T[], n: number = 1): T[] => {
   return arr.slice(-n);
 };
 
-export const groupBy = <T, K extends keyof T>(
-  arr: T[],
-  key: K
-): Record<string, T[]> => {
+export const groupBy = <T, K extends keyof T>(arr: T[], key: K): Record<string, T[]> => {
   return arr.reduce<Record<string, T[]>>((acc, item) => {
     const group = String(item[key]);
     if (acc[group]) acc[group].push(item);

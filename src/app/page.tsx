@@ -15,7 +15,7 @@ export const metadata = generatePageMetadata({
 export default function HomePage() {
   return (
     <div>
-      <HomeSection title="Ammar Ansari" description="A constant learner striving for perfection" />
+      <HomeSection title='Ammar Ansari' description='A constant learner striving for perfection' />
       <CurrentEmployment />
       <CurrentTechStack />
       <CurrentProject />

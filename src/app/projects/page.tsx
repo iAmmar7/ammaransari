@@ -15,9 +15,9 @@ export const metadata = generatePageMetadata({
 export default function ProjectsPage() {
   return (
     <PageLayout
-      tagline="Projects"
-      summary="Filter and discover projects I have worked on by technology stack."
-      maxWidth="max-w-6xl"
+      tagline='Projects'
+      summary='Filter and discover projects I have worked on by technology stack.'
+      maxWidth='max-w-6xl'
     >
       <Suspense>
         <Projects />

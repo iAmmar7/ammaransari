@@ -51,8 +51,8 @@ export default function WavyText({
   return (
     <Component
       variants={containerVariants}
-      initial="hidden"
-      animate="visible"
+      initial='hidden'
+      animate='visible'
       className={`flex overflow-hidden flex-wrap ${className ?? ''}`}
       {...otherProps}
     >

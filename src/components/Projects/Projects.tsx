@@ -31,9 +31,7 @@ export default function Projects() {
 
   const filteredProjects = useMemo(() => {
     if (isEmpty(filters) || isEmpty(filters[0])) return projects;
-    return projects.filter((proj) =>
-      filters.some((filter) => proj.technologies.includes(filter))
-    );
+    return projects.filter((proj) => filters.some((filter) => proj.technologies.includes(filter)));
   }, [filters]);
 
   const currentView = useMemo(() => {
@@ -49,13 +47,11 @@ export default function Projects() {
       <Suspense fallback={<ProjectFiltersSkeleton />}>
         <Filters />
       </Suspense>
-      <p className="text-sm text-muted text-right mt-2 sm:mt-4 mb-2 mr-1">
-        {currentView.visible}
-      </p>
+      <p className='text-sm text-muted text-right mt-2 sm:mt-4 mb-2 mr-1'>{currentView.visible}</p>
       <List projects={filteredProjects} count={count} />
       {count < filteredProjects.length && (
-        <div className="mt-10 text-center">
-          <Button type="primary" onClick={handleSetCount}>
+        <div className='mt-10 text-center'>
+          <Button type='primary' onClick={handleSetCount}>
             Load {currentView.remaining} More
           </Button>
         </div>

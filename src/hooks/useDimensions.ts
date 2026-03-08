@@ -13,11 +13,12 @@ function getDimensions(): Dimensions {
 }
 
 export default function useDimensions(): Dimensions {
-  const [dimensions, setDimensions] = useState<Dimensions>({ width: null, height: null });
+  const [dimensions, setDimensions] = useState<Dimensions>(() => {
+    if (typeof window === 'undefined') return { width: null, height: null };
+    return getDimensions();
+  });
 
   useEffect(() => {
-    setDimensions(getDimensions());
-
     const handleSetDimensions = () => setDimensions(getDimensions());
     window.addEventListener('resize', handleSetDimensions);
 

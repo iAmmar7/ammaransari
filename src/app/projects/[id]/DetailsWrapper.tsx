@@ -13,7 +13,7 @@ export default function DetailsWrapper({ children }: { children: ReactNode }) {
         transition: { ease: 'easeInOut', duration: 0.5, delay: 0.6 },
       }}
       viewport={{ once: false }}
-      className="mx-auto w-full px-4 md:px-0 md:w-10/12 max-w-6xl relative"
+      className='mx-auto w-full px-4 md:px-0 md:w-10/12 max-w-6xl relative'
     >
       {children}
     </motion.section>

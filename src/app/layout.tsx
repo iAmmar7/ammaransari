@@ -6,7 +6,6 @@ import './globals.css';
 
 import Footer from '@/components/Footer/Footer';
 
-
 export const metadata: Metadata = {
   title: 'Ammar Ansari',
   description: 'A constant learner striving for perfection',
@@ -32,10 +31,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="flex flex-col relative z-0">
-          <main className="p-0">{children}</main>
+        <div className='flex flex-col relative z-0'>
+          <main className='p-0'>{children}</main>
 
-          <Footer className="absolute bottom-0 w-full" />
+          <Footer className='absolute bottom-0 w-full' />
         </div>
       </body>
     </html>

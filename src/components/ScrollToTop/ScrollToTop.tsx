@@ -22,17 +22,17 @@ export default function ScrollToTop() {
   return (
     <AnimatePresence>
       {show && (
-        <Link href="#home" scroll={false}>
+        <Link href='#home' scroll={false}>
           <motion.span
-            key="top-navigator"
-            className="fixed bottom-5 right-5 z-20"
+            key='top-navigator'
+            className='fixed bottom-5 right-5 z-20'
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.6 } }}
             exit={{ x: 100, opacity: 0, transition: { duration: 0.6 } }}
-            title="Scroll to top"
+            title='Scroll to top'
           >
-            <Button type="secondary" rounded size="sm">
-              <Icon icon="ri-arrow-up-s-line" className="text-inherit text-xl md:text-2xl" />
+            <Button type='secondary' rounded size='sm'>
+              <Icon icon='ri-arrow-up-s-line' className='text-inherit text-xl md:text-2xl' />
             </Button>
           </motion.span>
         </Link>
