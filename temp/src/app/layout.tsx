@@ -4,6 +4,9 @@ import type { Metadata } from 'next';
 import 'remixicon/fonts/remixicon.css';
 import './globals.css';
 
+import Footer from '@/components/Footer/Footer';
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
+
 export const metadata: Metadata = {
   title: 'Ammar Ansari',
   description: 'A constant learner striving for perfection',
@@ -28,7 +31,13 @@ export default function RootLayout({
           rel='stylesheet'
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="flex flex-col relative z-0">
+          <main className="p-0">{children}</main>
+          <ScrollToTop />
+          <Footer className="absolute bottom-0 w-full" />
+        </div>
+      </body>
     </html>
   );
 }
