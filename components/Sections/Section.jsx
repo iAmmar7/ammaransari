@@ -36,7 +36,7 @@ function Section(props) {
             {title && (
               <h1
                 className={clsx(
-                  'text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-secondary to-tertiary text-center',
+                  'text-2xl sm:text-4xl font-bold text-transparent tracking-wide bg-clip-text bg-linear-to-r from-secondary to-tertiary text-center',
                   description ? 'mb-0' : 'mb-5'
                 )}
               >
@@ -69,7 +69,7 @@ function Section(props) {
                 <span className='group-hover:text-secondary text-sm'>More</span>
                 <Icon
                   icon='ri-arrow-down-line'
-                  className='animate-bounce mt-[2px] group-hover:text-secondary'
+                  className='animate-bounce mt-0.5 group-hover:text-secondary'
                 />
               </motion.span>
             </Link>

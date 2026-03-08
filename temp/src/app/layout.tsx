@@ -1,13 +1,8 @@
+/* eslint-disable @next/next/no-page-custom-font */
+// FIXME: Fix the font loading to resolve the ESLint warning
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import 'remixicon/fonts/remixicon.css';
 import './globals.css';
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '500', '700'],
-  display: 'optional',
-});
 
 export const metadata: Metadata = {
   title: 'Ammar Ansari',
@@ -24,10 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
+    <html lang='en'>
+      <head>
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=optional'
+          rel='stylesheet'
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
