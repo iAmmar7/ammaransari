@@ -129,6 +129,12 @@ ul {
   list-style: none;
 }
 
+/* ─── Utilities ─── */
+
+@utility bg-home-gradient {
+  background-image: var(--home-gradient);
+}
+
 /* ─── Component Layer ─── */
 
 @layer components {
