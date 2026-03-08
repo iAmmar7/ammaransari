@@ -5,9 +5,9 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'motion/react';
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Button from '@/components/Button';
+import Navbar from '@/components/navbar/navbar';
+import Footer from '@/components/footer';
+import Button from '@/components/ui/button';
 
 const container = {
   hidden: { opacity: 0 },

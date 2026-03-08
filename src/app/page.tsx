@@ -1,10 +1,10 @@
 import { generatePageMetadata } from '@/lib/metadata';
-import HomeSection from '@/components/Sections/HomeSection';
-import CurrentEmployment from '@/components/Sections/CurrentEmployment';
-import CurrentTechStack from '@/components/Sections/CurrentTechStack';
-import CurrentProject from '@/components/Sections/CurrentProject';
-import ContactSection from '@/components/Sections/ContactSection';
-import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
+import HomeSection from './_components/home-section';
+import CurrentEmployment from './_components/current-employment';
+import CurrentTechStack from './_components/current-tech-stack';
+import CurrentProject from './_components/current-project';
+import ContactSection from './_components/contact-section';
+import ScrollToTop from './_components/scroll-to-top';
 
 export const metadata = generatePageMetadata({
   title: 'Ammar Ansari',

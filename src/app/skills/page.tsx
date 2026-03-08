@@ -1,6 +1,6 @@
 import { generatePageMetadata } from '@/lib/metadata';
-import PageLayout from '@/components/PageLayout';
-import Skills from '@/components/Skills';
+import PageLayout from '@/components/page-layout';
+import Skills from './_components/skills';
 
 export const metadata = generatePageMetadata({
   title: 'Skills - Ammar Ansari',

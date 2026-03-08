@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 
 import { generatePageMetadata } from '@/lib/metadata';
-import PageLayout from '@/components/PageLayout';
-import Projects from '@/components/Projects/Projects';
+import PageLayout from '@/components/page-layout';
+import Projects from './_components/projects';
 
 export const metadata = generatePageMetadata({
   title: 'Projects - Ammar Ansari',

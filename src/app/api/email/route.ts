@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import EmailTemplate from '@/components/EmailTemplate/EmailTemplate';
+import EmailTemplate from './email-template';
 
 export async function POST(request: Request) {
   try {

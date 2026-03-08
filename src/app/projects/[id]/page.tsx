@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 import projects from '@/data/projects';
 import { generatePageMetadata } from '@/lib/metadata';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import ProjectDetails from '@/components/Projects/Details';
-import ProjectHero from './ProjectHero';
-import DetailsWrapper from './DetailsWrapper';
+import Navbar from '@/components/navbar/navbar';
+import Footer from '@/components/footer';
+import ProjectDetails from './_components/details';
+import ProjectHero from './_components/project-hero';
+import DetailsWrapper from './_components/details-wrapper';
 
 export function generateStaticParams() {
   return projects.map((proj) => ({ id: proj.id }));

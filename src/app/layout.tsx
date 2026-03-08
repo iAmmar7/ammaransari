@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import 'remixicon/fonts/remixicon.css';
 import './globals.css';
 
-import Footer from '@/components/Footer/Footer';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Ammar Ansari',

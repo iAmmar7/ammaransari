@@ -1,6 +1,6 @@
 import { generatePageMetadata } from '@/lib/metadata';
-import PageLayout from '@/components/PageLayout';
-import WorkExperience from '@/components/WorkExperience';
+import PageLayout from '@/components/page-layout';
+import WorkExperience from './_components/work-experience';
 
 export const metadata = generatePageMetadata({
   title: 'Experience - Ammar Ansari',
