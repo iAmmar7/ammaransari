@@ -5,7 +5,7 @@ import 'remixicon/fonts/remixicon.css';
 import './globals.css';
 
 import Footer from '@/components/Footer/Footer';
-import ScrollToTop from '@/components/ScrollToTop/ScrollToTop';
+
 
 export const metadata: Metadata = {
   title: 'Ammar Ansari',
@@ -34,7 +34,7 @@ export default function RootLayout({
       <body>
         <div className="flex flex-col relative z-0">
           <main className="p-0">{children}</main>
-          <ScrollToTop />
+
           <Footer className="absolute bottom-0 w-full" />
         </div>
       </body>
