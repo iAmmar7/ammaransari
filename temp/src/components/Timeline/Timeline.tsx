@@ -20,7 +20,7 @@ export default function Timeline({ date, title, subHeading, children }: Timeline
           whileInView={{ x: 0, opacity: 1, transition: { ease: 'easeInOut', duration: 0.5 } }}
           exit={{ x: -200, opacity: 0 }}
           viewport={{ once: true }}
-          className='absolute top-0 left-12 mt-7 mr-12 min-w-40 rounded-full bg-surface-secondary/10 p-1 text-center text-sm leading-none md:relative md:left-0'
+          className='absolute top-0 left-12 mt-7 mr-12 min-w-40 rounded-full bg-surface-secondary p-1 text-center text-sm leading-none md:relative md:left-0'
         >
           {date}
         </motion.span>
