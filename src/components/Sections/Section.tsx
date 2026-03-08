@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'motion/react';
 
@@ -65,7 +64,13 @@ export default function Section({ title, description, children, id, next }: Sect
           viewport={{ once: false }}
         >
           <div className='absolute inset-x-0 top-auto bottom-4 sm:bottom-8 w-full justify-between text-center text-muted'>
-            <Link href={`#${next}`} scroll={false}>
+            <a
+              href={`#${next}`}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(next)?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               <motion.span
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -80,7 +85,7 @@ export default function Section({ title, description, children, id, next }: Sect
                   className='animate-bounce mt-0.5 group-hover:text-accent'
                 />
               </motion.span>
-            </Link>
+            </a>
           </div>
         </motion.div>
       )}
