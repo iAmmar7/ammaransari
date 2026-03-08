@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+
+/* ─── Design Tokens (CSS Custom Properties) ─── */
+
+:root {
+  --color-foreground: #f2f2f2;
+  --color-accent: #2dc8ee;
+  --color-highlight: #9e8cfc;
+  --color-muted: #8f9ba8;
+  --color-surface: #08070b;
+  --color-surface-secondary: #072d40;
+  --color-surface-tertiary: #2c2150;
+  --color-surface-muted: #212024;
+
+  --home-gradient: radial-gradient(circle at 10% 90%, #2c2150, rgba(8, 7, 11, 0.2) 25%),
+    radial-gradient(circle at 95% 30%, #072d40, rgba(8, 7, 11, 0.2) 25%);
+}
+
+/* ─── Tailwind Theme ─── */
+
+@theme inline {
+  /* Font */
+  --font-inter: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+
+  /* Semantic Colors */
+  --color-foreground: var(--color-foreground);
+  --color-accent: var(--color-accent);
+  --color-highlight: var(--color-highlight);
+  --color-muted: var(--color-muted);
+  --color-surface: var(--color-surface);
+  --color-surface-secondary: var(--color-surface-secondary);
+  --color-surface-tertiary: var(--color-surface-tertiary);
+  --color-surface-muted: var(--color-surface-muted);
+
+  /* Named Colors — Brands */
+  --color-venturedive: #ed2736;
+  --color-careem: #47a23f;
+  --color-uber: var(--color-muted);
+  --color-carecloud: #009cdd;
+  --color-planz: #f0542e;
+  --color-sudofy: #3277db;
+  --color-adres: #225294;
+
+  /* Named Colors — Tech */
+  --color-typescript: #007acc;
+  --color-react: #88dded;
+  --color-next: #000000;
+  --color-tailwind: #38bdf7;
+  --color-node: rgb(60, 135, 58);
+  --color-firebase: #ffa611;
+  --color-swr: #000000;
+  --color-mysql: #00758f;
+  --color-signalwire: #6f42c1;
+  --color-webrtc: #bf0000;
+  --color-playwright: #2ead33;
+
+  /* Border Radius */
+  --radius-base: 8px;
+
+  /* Transition Timing */
+  --ease-base: ease-in-out;
+
+  /* Font Size */
+  --text-32: 32px;
+  --text-32--line-height: 38px;
+
+  /* Letter Spacing */
+  --tracking-base: 1.2px;
+
+  /* Spacing */
+  --spacing-15: 60px;
+
+  /* Animations */
+  --animate-ping-right: ping-right 1s ease-in-out infinite;
+  --animate-left-to-right: left-to-right 3s ease-in-out;
+
+  @keyframes ping-right {
+    0%,
+    100% {
+      left: 0;
+      transform: translateX(0);
+    }
+    50% {
+      left: 100%;
+      transform: translateX(-20%);
+    }
+  }
+
+  @keyframes left-to-right {
+    0%,
+    100% {
+      left: 0;
+      transform: translateX(0);
+    }
+    50% {
+      left: 100%;
+      transform: translateX(100%);
+    }
+  }
+}
+
+/* ─── Base Styles ─── */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: var(--color-surface);
+  color: var(--color-foreground);
+}
+
+html {
+  color-scheme: dark;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ─── Component Layer ─── */
+
+@layer components {
+  .btn-header {
+    @apply appearance-none bg-transparent border-0 rounded-base text-foreground cursor-pointer px-2.5 transition duration-200 ease-base;
+  }
+
+  .heading-h1 {
+    @apply text-4xl sm:text-5xl m-0 mb-5 text-foreground font-extrabold;
+    line-height: 50px;
+  }
+
+  .external-link {
+    @apply border-b-[0.5px] border-muted text-foreground no-underline transition-opacity duration-200 ease-base hover:opacity-80;
+  }
+}
