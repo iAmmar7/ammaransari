@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={inter.variable}>
+    <html lang='en' className={inter.variable} data-scroll-behavior='smooth'>
       <body className={inter.className}>
         <div className='flex flex-col relative z-0'>
           <main className='p-0'>{children}</main>
