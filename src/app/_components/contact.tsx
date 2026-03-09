@@ -101,7 +101,7 @@ export default function Contact() {
           {fields.map((field) => {
             const Component = field.component;
             return (
-              <div className='flex flex-col mb-3 gap-y-2 min-w-[300px]' key={field.id}>
+              <div className='flex flex-col mb-3 gap-y-2 min-w-75' key={field.id}>
                 <label htmlFor={field.id} className='text-muted uppercase text-xs font-bold'>
                   {field.id}
                 </label>

@@ -46,7 +46,7 @@ export default function CurrentTechStack() {
             <TechIcon
               src={tech.icon}
               className={clsx(
-                'w-[86px] sm:w-28 sm:h-28 h-20 rounded-base p-2 sm:p-4 transition duration-500 ease-base group-hover:opacity-10',
+                'w-21.5 sm:w-28 sm:h-28 h-20 rounded-base p-2 sm:p-4 transition duration-500 ease-base group-hover:opacity-10',
                 tech.hoverColor
               )}
             />
