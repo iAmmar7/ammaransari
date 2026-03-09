@@ -119,7 +119,7 @@
 
   html {
     color-scheme: dark;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
