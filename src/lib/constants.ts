@@ -9,4 +9,4 @@ export const THEME_BREAKPOINTS = {
   '2xl': 1536,
 } as const;
 
-export const PLACEHOLDER_200 = 'https://via.placeholder.com/200.png';
+export const PLACEHOLDER_200 = '/images/placeholder.svg';

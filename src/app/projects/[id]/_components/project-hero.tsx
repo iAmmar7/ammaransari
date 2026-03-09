@@ -6,11 +6,11 @@ import { motion } from 'motion/react';
 
 import Icon from '@/components/ui/icon';
 import ExternalLink from '@/components/ui/external-link';
-import WavyText from './wavy-text';
 import Badge from '@/components/ui/badge';
 import { capitalize, take, isEmpty } from '@/lib/utils';
 import { blurryDataProfile } from '@/lib/blurryData';
 import { PLACEHOLDER_200 } from '@/lib/constants';
+import WavyText from './wavy-text';
 
 interface ProjectHeroProps {
   name: string;

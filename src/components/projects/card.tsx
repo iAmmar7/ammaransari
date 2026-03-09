@@ -7,7 +7,7 @@ import { motion } from 'motion/react';
 import Icon from '@/components/ui/icon';
 import Badge from '@/components/ui/badge';
 import { blurryDataProfile } from '@/lib/blurryData';
-import { isEmpty, toLowerCase } from '@/lib/utils';
+import { toLowerCase } from '@/lib/utils';
 import { PLACEHOLDER_200 } from '@/lib/constants';
 
 interface CardProps {
@@ -37,7 +37,7 @@ export default function Card({ id, name, summary, image, url, code, domain, tech
             <div className='blur-none transition-all duration-500 group-hover:blur'>
               <picture className='box-border block overflow-hidden bg-none opacity-100 border-none m-0 p-0 relative h-60 w-full'>
                 <Image
-                  src={!isEmpty(image) ? image! : PLACEHOLDER_200}
+                  src={image || PLACEHOLDER_200}
                   alt={name}
                   fill
                   sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
