@@ -1,32 +1,27 @@
 'use client';
 
-import { lazy, Suspense, useCallback, useMemo, useState } from 'react';
+import { lazy, Suspense, useCallback, useMemo } from 'react';
 
 import useSkillFilter from '@/hooks/useSkillFilter';
+import useSessionStorage from '@/hooks/useSessionStorage';
 import { isEmpty } from '@/lib/utils';
 import projects from '@/data/projects';
 import Button from '@/components/ui/button';
 import ProjectListSkeleton from './skeletons/list';
 import ProjectFiltersSkeleton from './skeletons/filters';
 
-const Filters = lazy(() => import('./filters'));
 const List = lazy(() => import('@/components/projects/list'));
+const Filters = lazy(() => import('./filters'));
 
 const initialCount = 9;
 
-function getInitialCount(): number {
-  if (typeof window === 'undefined') return initialCount;
-  return parseInt(sessionStorage.getItem('count') || String(initialCount));
-}
-
 export default function Projects() {
   const { filters } = useSkillFilter();
-  const [count, setCount] = useState(getInitialCount);
+  const [count, setCount] = useSessionStorage('count', initialCount);
 
   const handleSetCount = useCallback(() => {
-    sessionStorage.setItem('count', String(count + 3));
-    setCount(count + 3);
-  }, [count]);
+    setCount((prev) => prev + 3);
+  }, [setCount]);
 
   const filteredProjects = useMemo(() => {
     if (isEmpty(filters) || isEmpty(filters[0])) return projects;

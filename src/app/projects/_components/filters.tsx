@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 
 import Button from '@/components/ui/button';
@@ -8,27 +8,20 @@ import Icon from '@/components/ui/icon';
 import Collapse from '@/components/ui/collapse';
 import useBreakpoints from '@/hooks/useBreakpoints';
 import useSkillFilter from '@/hooks/useSkillFilter';
+import useSessionStorage from '@/hooks/useSessionStorage';
 import { isEmpty, take, takeRight } from '@/lib/utils';
 import { sortSkillsByUsage } from '@/lib/helpers';
 
 const TOP_SKILLS = sortSkillsByUsage().filter((skill) => skill.major);
 
-function getInitialCollapsed(): boolean {
-  if (typeof window === 'undefined') return true;
-  const stored = sessionStorage.getItem('collapsed');
-  return stored ? stored === 'true' : true;
-}
-
 export default function Filters() {
   const { filters, updateFilters } = useSkillFilter();
-  const [collapsed, setCollapsed] = useState(getInitialCollapsed);
+  const [collapsed, setCollapsed] = useSessionStorage('collapsed', true);
   const router = useRouter();
   const { sm, md, lg, xl, ...breakpoints } = useBreakpoints();
 
   const handleCollapse = () => {
-    const next = !collapsed;
-    sessionStorage.setItem('collapsed', String(next));
-    setCollapsed(next);
+    setCollapsed((prev) => !prev);
   };
 
   const handleFilter = useCallback(

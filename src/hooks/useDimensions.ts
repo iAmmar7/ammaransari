@@ -1,30 +1,29 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Dimensions {
   width: number | null;
   height: number | null;
 }
 
-function getDimensions(): Dimensions {
-  const { innerWidth, innerHeight } = window;
-  return { width: innerWidth, height: innerHeight };
-}
+const serverDimensions: Dimensions = { width: null, height: null };
 
 export default function useDimensions(): Dimensions {
-  const [dimensions, setDimensions] = useState<Dimensions>(() => {
-    if (typeof window === 'undefined') return { width: null, height: null };
-    return getDimensions();
-  });
+  const [dimensions, setDimensions] = useState<Dimensions>(serverDimensions);
+  const ref = useRef(typeof document !== 'undefined' ? document.documentElement : null);
 
   useEffect(() => {
-    const handleSetDimensions = () => setDimensions(getDimensions());
-    window.addEventListener('resize', handleSetDimensions);
+    const element = ref.current;
+    if (!element) return;
 
-    return () => {
-      window.removeEventListener('resize', handleSetDimensions);
-    };
+    const observer = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      setDimensions({ width, height });
+    });
+
+    observer.observe(element);
+    return () => observer.disconnect();
   }, []);
 
   return dimensions;
