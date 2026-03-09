@@ -4,6 +4,9 @@ import type { Metadata } from 'next';
 import 'remixicon/fonts/remixicon.css';
 import './globals.css';
 
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
@@ -36,6 +39,8 @@ export default function RootLayout({
 
           <Footer className='absolute bottom-0 w-full' />
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
