@@ -6,7 +6,6 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import Footer from '@/components/footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,8 +33,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='flex flex-col relative z-0'>
           <main className='p-0'>{children}</main>
-
-          <Footer className='absolute bottom-0 w-full' />
         </div>
         <Analytics />
         <SpeedInsights />

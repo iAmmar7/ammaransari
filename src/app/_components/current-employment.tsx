@@ -16,7 +16,7 @@ function isClientSummary(item: unknown): item is ClientSummary {
 
 export default function CurrentEmployment() {
   return (
-    <Section id='experience' title='Current employment' next='skills'>
+    <Section id='experience' title='Current employment'>
       <Timeline
         date={`${CURRENT_EMPLOYMENT.startDate} - ${CURRENT_EMPLOYMENT.endDate ?? 'Present'}`}
         title={CURRENT_EMPLOYMENT.title}
@@ -32,7 +32,7 @@ export default function CurrentEmployment() {
           </ExternalLink>
         }
       >
-        <ul className='list-circle'>
+        <ul className='list-circle text-sm sm:text-base'>
           {CURRENT_EMPLOYMENT.summary.map((sum) => {
             if (typeof sum === 'string') return <li key={sum}>{sum}</li>;
             if (isClientSummary(sum))
@@ -69,7 +69,9 @@ export default function CurrentEmployment() {
                   </span>
                   <ul className='list-circle'>
                     {sum.clientSummary.map((cSum) => (
-                      <li key={cSum}>{cSum}</li>
+                      <li key={cSum} className='text-sm'>
+                        {cSum}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -77,21 +79,33 @@ export default function CurrentEmployment() {
           })}
         </ul>
       </Timeline>
-      <Timeline
-        title={
-          <Link href='/experience'>
-            <Button
-              type='default'
-              size='sm'
-              className='-ml-4'
-              endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
-              title='Go to experience page'
-            >
-              Employment history
-            </Button>
-          </Link>
-        }
-      />
+      <div className='hidden md:block'>
+        <Timeline
+          title={
+            <Link href='/experience'>
+              <Button
+                type='default'
+                size='sm'
+                className='-ml-4'
+                endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+                title='Go to experience page'
+              >
+                Employment history
+              </Button>
+            </Link>
+          }
+        />
+      </div>
+      <Link href='/experience' className='md:hidden mt-4 inline-block'>
+        <Button
+          type='default'
+          size='sm'
+          endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+          title='Go to experience page'
+        >
+          Employment history
+        </Button>
+      </Link>
     </Section>
   );
 }

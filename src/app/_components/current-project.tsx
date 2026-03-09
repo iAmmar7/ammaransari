@@ -15,7 +15,7 @@ export default function CurrentProject() {
   const { xs, sm } = useBreakpoints();
 
   return (
-    <Section id='projects' title='Current project(s)' next='contact'>
+    <Section id='projects' title='Current projects'>
       <ProjectList
         projects={CURRENT_PROJECTS}
         count={sm || xs ? 1 : 2}

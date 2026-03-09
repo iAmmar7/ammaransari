@@ -7,15 +7,10 @@ import ExternalLink from '@/components/ui/external-link';
 import Icon from '@/components/ui/icon';
 import Button from '@/components/ui/button';
 
-interface HeroProps {
-  title: string;
-  description: string;
-}
-
-export default function Hero({ title, description }: HeroProps) {
+export default function Hero() {
   return (
     <div className='text-base text-muted'>
-      <h1 className='heading-h1'>{title}</h1>
+      <h1 className='heading-h1'>Ammar Ansari</h1>
       <div className='mb-3 mx-0 text-foreground flex flex-col gap-y-1'>
         <p>
           Software Engineer at{' '}
@@ -28,7 +23,7 @@ export default function Hero({ title, description }: HeroProps) {
             SignalWire
           </ExternalLink>
         </p>
-        <span className='text-muted mt-2'>{description}.</span>
+        <span className='text-muted mt-2'>A constant learner striving for perfection.</span>
       </div>
       <div className='min-h-12.5'>
         <SocialLinks />

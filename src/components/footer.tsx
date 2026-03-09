@@ -19,7 +19,7 @@ export default function Footer({ className }: FooterProps) {
       viewport={{ once: false }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className={clsx(
-        'border-t border-white/10 bg-surface/95 backdrop-blur backdrop-filter px-4',
+        'border-t border-white/10 bg-transparent px-4',
         className
       )}
     >
