@@ -18,7 +18,7 @@ export default function Navbar() {
         className='flex items-center justify-center text-xs min-h-15 w-full flex-wrap absolute top-0 z-20 mt-2 sm:mt-0'
       >
         <Logo />
-        <nav className='text-center flex-1 order-2 basis-full sm:basis-auto overflow-x-scroll overflow-y-hidden lg:overflow-hidden'>
+        <nav className='text-center flex-1 order-2 basis-full sm:basis-auto overflow-x-auto overflow-y-hidden scrollbar-none'>
           <ul className='inline-flex relative md:justify-around'>
             {PAGES.map((page) => (
               <NavItem key={page.name} {...page} />
