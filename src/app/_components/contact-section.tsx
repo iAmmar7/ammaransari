@@ -4,12 +4,7 @@ import Footer from '@/components/footer';
 
 export default function ContactSection() {
   return (
-    <Section
-      id='contact'
-      title='Connect with me'
-      showNext={false}
-      footer={<Footer />}
-    >
+    <Section id='contact' title='Connect with me' footer={<Footer />}>
       <Contact />
     </Section>
   );

@@ -15,16 +15,13 @@ interface SectionProps {
 
 export default function Section({ title, description, children, id, footer }: SectionProps) {
   return (
-    <section
-      id={id}
-      className="h-dvh snap-start relative z-0 overflow-hidden"
-    >
+    <section id={id} className='h-dvh snap-start relative z-0 overflow-hidden'>
       <Navbar />
-      <div className="absolute inset-0 -z-10 bg-home-gradient opacity-40" />
-      <div className="h-dvh flex flex-col pt-32 md:pt-28 pb-4">
-        <div className="flex-1 flex flex-col justify-center">
-          <div className="mx-auto container relative">
-            <div className="px-0 my-0 overflow-hidden flex flex-col items-center">
+      <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
+      <div className={clsx('h-dvh flex flex-col pt-32 md:pt-28', footer ? 'pb-0' : 'pb-4')}>
+        <div className='flex-1 flex flex-col justify-center'>
+          <div className='mx-auto container relative'>
+            <div className='px-0 my-0 overflow-hidden flex flex-col items-center'>
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{
@@ -33,7 +30,7 @@ export default function Section({ title, description, children, id, footer }: Se
                   transition: { ease: 'easeInOut', duration: 0.5 },
                 }}
                 viewport={{ once: false }}
-                className="my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5"
+                className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'
               >
                 {title && (
                   <h1
@@ -46,7 +43,7 @@ export default function Section({ title, description, children, id, footer }: Se
                   </h1>
                 )}
                 {description && (
-                  <p className="text-muted text-sm text-center mb-5 sm:text-left">{description}</p>
+                  <p className='text-muted text-sm text-center mb-5 sm:text-left'>{description}</p>
                 )}
                 {children}
               </motion.div>
