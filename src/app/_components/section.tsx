@@ -4,30 +4,24 @@ import clsx from 'clsx';
 import { motion } from 'motion/react';
 
 import Navbar from '@/components/navbar/navbar';
-import Icon from '@/components/ui/icon';
-import { useFullPageScroll } from './full-page-scroll';
 
 interface SectionProps {
   title?: string;
   description?: string;
   children: React.ReactNode;
   id: string;
-  showNext?: boolean;
   footer?: React.ReactNode;
 }
 
-export default function Section({ title, description, children, id, showNext = true, footer }: SectionProps) {
-  const { goNext } = useFullPageScroll();
-
+export default function Section({ title, description, children, id, footer }: SectionProps) {
   return (
     <section
       id={id}
-      data-section
-      className="h-full overflow-y-auto scrollbar-none relative z-0"
+      className="h-dvh snap-start relative z-0 overflow-hidden"
     >
       <Navbar />
       <div className="absolute inset-0 -z-10 bg-home-gradient opacity-40" />
-      <div className="min-h-full flex flex-col pt-32 md:pt-28 pb-4">
+      <div className="h-dvh flex flex-col pt-32 md:pt-28 pb-4">
         <div className="flex-1 flex flex-col justify-center">
           <div className="mx-auto container relative">
             <div className="px-0 my-0 overflow-hidden flex flex-col items-center">
@@ -59,25 +53,6 @@ export default function Section({ title, description, children, id, showNext = t
             </div>
           </div>
         </div>
-        {showNext && (
-          <div className="text-center text-muted pb-4 sm:pb-6">
-            <button
-              onClick={goNext}
-              className="appearance-none bg-transparent border-none cursor-pointer group"
-              title="Move to next section"
-            >
-              <span className="inline-flex flex-row-reverse gap-x-1">
-                <span className="group-hover:text-accent text-sm text-muted transition duration-200">
-                  More
-                </span>
-                <Icon
-                  icon="ri-arrow-down-line"
-                  className="animate-bounce mt-0.5 group-hover:text-accent text-muted transition duration-200"
-                />
-              </span>
-            </button>
-          </div>
-        )}
         {footer}
       </div>
     </section>

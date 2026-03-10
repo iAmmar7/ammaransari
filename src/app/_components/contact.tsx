@@ -18,11 +18,26 @@ type SentStatus = 'succeed' | 'failed' | null;
 const initFormData: FormData = { name: '', email: '', message: '' };
 
 const fields = [
-  { id: 'name' as const, type: 'text', placeholder: 'John Doe', component: 'input' as const },
-  { id: 'email' as const, type: 'email', placeholder: 'john@doe.com', component: 'input' as const },
+  {
+    id: 'name' as const,
+    label: 'Name',
+    type: 'text',
+    placeholder: 'John Doe',
+    autoComplete: 'name',
+    component: 'input' as const,
+  },
+  {
+    id: 'email' as const,
+    label: 'Email',
+    type: 'email',
+    placeholder: 'john@doe.com',
+    autoComplete: 'email',
+    inputMode: 'email' as const,
+    component: 'input' as const,
+  },
   {
     id: 'message' as const,
-    type: 'text',
+    label: 'Message',
     placeholder: 'How can I help you?',
     component: 'textarea' as const,
   },
@@ -94,32 +109,37 @@ export default function Contact() {
       </div>
       <div className='w-full flex flex-col items-center'>
         <form
+          aria-label='Contact form'
           className='flex flex-col mt-0 sm:mt-4 gap-y-2 w-full md:max-w-md'
           onSubmit={handleSendEmail}
           onBlur={handleResetError}
+          noValidate
         >
           {fields.map((field) => {
             const Component = field.component;
             return (
               <div className='flex flex-col mb-3 gap-y-2 min-w-75' key={field.id}>
                 <label htmlFor={field.id} className='text-muted uppercase text-xs font-bold'>
-                  {field.id}
+                  {field.label}
                 </label>
                 <Component
                   id={field.id}
-                  type={field.type}
+                  {...('type' in field ? { type: field.type } : {})}
                   placeholder={field.placeholder}
                   value={formData[field.id]}
                   required
-                  {...(field.component === 'textarea' ? { rows: 2 } : {})}
-                  className='text-foreground bg-surface border border-muted rounded-base p-3 focus:outline-none focus:border-accent'
+                  aria-required='true'
+                  {...('autoComplete' in field ? { autoComplete: field.autoComplete } : {})}
+                  {...('inputMode' in field ? { inputMode: field.inputMode } : {})}
+                  {...(field.component === 'textarea' ? { rows: 3 } : {})}
+                  className='text-foreground bg-surface border border-muted rounded-base p-2 md:p-3 text-sm md:text-base focus:outline-none focus:border-accent'
                   onChange={handleChange}
                 />
               </div>
             );
           })}
           <Collapse show={sentStatus === 'failed'}>
-            <p className='text-sm text-red-400 mb-2'>
+            <p role='alert' className='text-sm text-red-400 mb-2'>
               Unable to send email! Try to send it manually{' '}
               <a
                 href='mailto:iammaransari@gmail.com'
@@ -133,7 +153,9 @@ export default function Contact() {
             </p>
           </Collapse>
           <Collapse show={sentStatus === 'succeed'}>
-            <p className='text-sm text-green-400 mb-2'>Your message has been delivered!</p>
+            <p role='status' className='text-sm text-green-400 mb-2'>
+              Your message has been delivered!
+            </p>
           </Collapse>
           <div className='flex flex-col gap-y-2'>
             <Button
