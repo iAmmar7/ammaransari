@@ -1,4 +1,6 @@
+import { Fragment } from 'react';
 import { generatePageMetadata } from '@/lib/metadata';
+
 import HomeSection from './_components/home-section';
 import CurrentEmployment from './_components/current-employment';
 import CurrentTechStack from './_components/current-tech-stack';
@@ -13,12 +15,12 @@ export const metadata = generatePageMetadata({
 
 export default function HomePage() {
   return (
-    <div className="h-dvh overflow-y-auto snap-y snap-mandatory">
+    <Fragment>
       <HomeSection />
       <CurrentEmployment />
       <CurrentTechStack />
       <CurrentProject />
       <ContactSection />
-    </div>
+    </Fragment>
   );
 }

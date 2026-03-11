@@ -5,7 +5,7 @@ import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-
+import Navbar from '@/components/navbar/navbar';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,7 +31,10 @@ export default function RootLayout({
   return (
     <html lang='en' className={inter.variable} data-scroll-behavior='smooth'>
       <body className={inter.className}>
-        <div className='flex flex-col relative z-0'>
+        <div className='relative z-0 h-dvh overflow-y-auto snap-y snap-mandatory'>
+          <div className='sticky top-0 z-20 h-0'>
+            <Navbar />
+          </div>
           <main className='p-0'>{children}</main>
         </div>
         <Analytics />

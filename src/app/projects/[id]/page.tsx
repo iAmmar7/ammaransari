@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 
 import projects from '@/data/projects';
 import { generatePageMetadata } from '@/lib/metadata';
-import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer';
 import ProjectDetails from './_components/details';
 import ProjectHero from './_components/project-hero';
@@ -48,7 +47,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   return (
     <div className='flex flex-col min-h-screen relative z-0 text-sm md:text-base'>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
-      <Navbar />
       <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto'>
         <ProjectHero
           name={name}

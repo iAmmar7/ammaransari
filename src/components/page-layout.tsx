@@ -2,7 +2,6 @@
 
 import { motion } from 'motion/react';
 
-import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer';
 
 interface PageLayoutProps {
@@ -21,7 +20,6 @@ export default function PageLayout({
   return (
     <div className='flex flex-col min-h-screen relative z-0'>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
-      <Navbar />
       <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto'>
         <div className='text-sm sm:text-base relative z-10 h-full py-5 px-0'>
           <motion.div

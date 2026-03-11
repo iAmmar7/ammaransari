@@ -5,7 +5,6 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'motion/react';
 
-import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer';
 import Button from '@/components/ui/button';
 
@@ -34,7 +33,6 @@ export default function NotFound() {
   return (
     <div className='flex flex-col min-h-screen relative z-0'>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
-      <Navbar />
       <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto grid relative'>
         <div className='flex flex-col gap-y-2 items-center sm:justify-center mt-10 md:mt-0 px-4'>
           <div className='flex flex-col gap-y-2 items-center'>

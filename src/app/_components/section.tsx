@@ -3,8 +3,6 @@
 import clsx from 'clsx';
 import { motion } from 'motion/react';
 
-import Navbar from '@/components/navbar/navbar';
-
 interface SectionProps {
   title?: string;
   description?: string;
@@ -16,7 +14,6 @@ interface SectionProps {
 export default function Section({ title, description, children, id, footer }: SectionProps) {
   return (
     <section id={id} className='h-dvh snap-start relative z-0 overflow-hidden'>
-      <Navbar />
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <div className={clsx('h-dvh flex flex-col pt-32 md:pt-28', footer ? 'pb-0' : 'pb-4')}>
         <div className='flex-1 flex flex-col justify-center'>
