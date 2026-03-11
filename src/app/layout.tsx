@@ -6,6 +6,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from '@/components/navbar/navbar';
+import HashScroll from '@/components/hash-scroll';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({
           </div>
           <main className='p-0'>{children}</main>
         </div>
+        <HashScroll />
         <Analytics />
         <SpeedInsights />
       </body>
