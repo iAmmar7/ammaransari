@@ -24,6 +24,7 @@ const projects: Project[] = [
     thumbnail: '/images/projects/thumb-paint-app-realtime.png',
     code: 'https://github.com/iAmmar7/paint-app-realtime',
     url: 'https://paint-app-realtime.vercel.app',
+    spotlight: true,
   },
   {
     id: 'courierservice',
@@ -54,7 +55,6 @@ const projects: Project[] = [
     ],
     thumbnail: '/images/projects/thumb-courierservice.png',
     code: 'https://github.com/iAmmar7/courierservice',
-    url: 'https://agile-chamber-90213.herokuapp.com/',
   },
   {
     id: 'parking-app',
@@ -72,7 +72,6 @@ const projects: Project[] = [
     technologies: ['node', 'firebase', 'cloud-functions', 'firebase-functions'],
     thumbnail: '/images/projects/thumb-parking-app.png',
     code: 'https://github.com/iAmmar7/parking-app',
-    url: 'https://parking-app-f13ad.web.app',
   },
   {
     id: 'forecastware',
@@ -183,7 +182,6 @@ const projects: Project[] = [
     ],
     thumbnail: '/images/projects/thumb-firmfigure.png',
     code: 'https://github.com/iAmmar7/FirmFigure-FE',
-    url: 'http://157.245.20.65:4000',
   },
   {
     id: 'websocket-sdk',
@@ -209,7 +207,6 @@ const projects: Project[] = [
     technologies: ['ts', 'node', 'jest', 'vite', 'monorepo', 'turborepo'],
     thumbnail: '/images/projects/thumb-websocket-sdk.png',
     code: 'https://github.com/iAmmar7/websocket-sdk',
-    url: '',
   },
   {
     id: 'park-cafe',
@@ -372,7 +369,7 @@ const projects: Project[] = [
       'turborepo',
     ],
     thumbnail: '/images/projects/thumb-careempay-sdk.png',
-    url: 'https://1click.careem.com',
+    url: 'https://design.venturedive.com/work/careem',
   },
   {
     id: 'careempay-merchant-portal',
@@ -468,7 +465,6 @@ const projects: Project[] = [
     ],
     thumbnail: '/images/projects/thumb-vendians.png',
     url: 'https://vendians.com',
-    current: true,
   },
   {
     id: 'go',
@@ -529,7 +525,6 @@ const projects: Project[] = [
     ],
     thumbnail: '/images/projects/thumb-parhako.png',
     code: 'https://github.com/Parhako',
-    url: '',
   },
   {
     id: 'vyyral',
@@ -679,7 +674,6 @@ const projects: Project[] = [
     technologies: ['websocket', 'node', 'redux-saga', 'ts', 'jest', 'playwright'],
     url: 'https://developer.signalwire.com/sdks/reference/realtime-sdk/voice/',
     code: 'https://www.npmjs.com/package/@signalwire/realtime-api',
-    spotlight: true,
   },
   {
     id: 'messaging-sdk',
@@ -821,7 +815,6 @@ const projects: Project[] = [
     technologies: ['webrtc', 'ts', 'websocket', 'redux-saga', 'jest', 'playwright'],
     thumbnail: '/images/projects/thumb-callfabric-sdk.png',
     code: 'https://www.npmjs.com/package/@signalwire/js',
-    spotlight: true,
   },
   {
     id: 'signalwire-sdk-playgrounds',
