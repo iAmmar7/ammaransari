@@ -60,7 +60,7 @@ export default function Card({ id, name, summary, image, url, code, domain, tech
                 <a
                   className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-surface p-0'
                   href={code}
-                  target='blank'
+                  target='_blank'
                   title='Project code'
                 >
                   <Icon icon='ri-code-s-slash-line' className='text-xl' />
@@ -70,7 +70,7 @@ export default function Card({ id, name, summary, image, url, code, domain, tech
                 <a
                   className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-surface p-0'
                   href={url}
-                  target='blank'
+                  target='_blank'
                   title='Project live'
                 >
                   <Icon icon='ri-external-link-line' className='text-xl' />
