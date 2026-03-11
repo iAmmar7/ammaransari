@@ -6,7 +6,7 @@ import { motion, LayoutGroup } from 'motion/react';
 import Logo from '@/components/logo';
 import NavItem from './nav-item';
 import Icon from '@/components/ui/icon';
-import { PAGES } from './constants';
+import { NAV_LINKS } from './constants';
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
@@ -45,7 +45,7 @@ export default function Navbar() {
             className='text-center overflow-x-auto overflow-y-hidden scrollbar-none'
           >
             <ul className='inline-flex relative md:justify-around'>
-              {PAGES.map((page) => (
+              {NAV_LINKS.map((page) => (
                 <NavItem key={page.name} {...page} />
               ))}
             </ul>

@@ -15,6 +15,7 @@ const DOMAINS: SkillDomain[] = [
   'web',
   'server',
   'mobile',
+  'desktop',
   'databases',
   'cloud',
   'general',

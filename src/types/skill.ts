@@ -3,6 +3,7 @@ export type SkillDomain =
   | 'server'
   | 'mobile'
   | 'databases'
+  | 'desktop'
   | 'cloud'
   | 'general'
   | 'languages';

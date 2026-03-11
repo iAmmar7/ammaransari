@@ -56,6 +56,8 @@
   --color-signalwire: #6f42c1;
   --color-webrtc: #bf0000;
   --color-playwright: #2ead33;
+  --color-rails: #cc0000;
+  --color-electron: #47848f;
 
   /* Border Radius */
   --radius-base: 8px;

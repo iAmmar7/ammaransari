@@ -7,6 +7,7 @@ import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Section from './section';
 import CURRENT_TECH_STACK from '@/data/currentTechStack';
+import { hasProjectBySkillId } from '@/lib/helpers';
 
 function TechIcon({ src, className }: { src: string; className?: string }) {
   return (
@@ -32,25 +33,31 @@ function TechIcon({ src, className }: { src: string; className?: string }) {
 export default function CurrentTechStack() {
   return (
     <Section id='skills' title='Current tech-stack'>
-      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 mt-6 justify-center'>
-        {CURRENT_TECH_STACK.map((tech) => (
+      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 justify-center'>
+        {CURRENT_TECH_STACK.map((tech, index) => (
           <Link
             key={tech.name}
             href={{
               pathname: '/projects',
-              query: tech.name === 'TypeScript' ? undefined : { skill: tech.name },
+              query: hasProjectBySkillId(tech.id) ? { skill: tech.id } : undefined,
             }}
-            className='group relative bg-surface-muted cursor-pointer rounded-base shadow-md backdrop-blur-md transition-all ease-base duration-500 hover:-translate-y-1.5'
+            className={clsx(
+              'group relative bg-surface-muted cursor-pointer rounded-base shadow-md backdrop-blur-md transition-all ease-base duration-500 hover:-translate-y-1.5',
+              index === 8 && 'sm:hidden'
+            )}
             title={`View ${tech.name} projects`}
           >
             <TechIcon
               src={tech.icon}
               className={clsx(
-                'w-21.5 sm:w-28 sm:h-28 h-20 rounded-base p-2 sm:p-4 transition duration-500 ease-base group-hover:opacity-10',
-                tech.hoverColor
+                'w-21.5 h-20 sm:w-32 sm:h-32 rounded-base p-2 sm:p-4 transition duration-500 ease-base',
+                'md:group-hover:opacity-10',
+                tech.color,
+                `md:text-current ${tech.hoverColor}`
               )}
             />
-            <p className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center transition duration-500 ease-base opacity-0 group-hover:opacity-100 font-bold text-sm sm:text-lg'>
+            <p className='pb-2.5 text-center text-xs font-bold md:hidden'>{tech.name}</p>
+            <p className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full hidden md:flex justify-center transition duration-500 ease-base opacity-0 group-hover:opacity-100 font-bold text-lg'>
               {tech.name}
             </p>
           </Link>

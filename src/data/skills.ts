@@ -30,7 +30,7 @@ const skills: Skill[] = [
     ratings: 2.5,
     major: true,
   },
-  { id: 'playwright', name: 'Playwright', domain: 'web', ratings: 2.5, major: false },
+  { id: 'playwright', name: 'Playwright', domain: 'web', ratings: 3, major: true },
 
   // Domain: SERVER
   { id: 'node', name: 'Node JS', domain: 'server', ratings: 3, major: true, priority: 3 },
@@ -45,17 +45,20 @@ const skills: Skill[] = [
   },
   { id: 'mongoose', name: 'Mongoose ODM', domain: 'server', ratings: 3.5, major: false },
   { id: 'sequelize', name: 'Sequelize ORM', domain: 'server', ratings: 3, major: false },
+  { id: 'prisma', name: 'Prisma', domain: 'server', ratings: 3, major: false },
   { id: 'cron-jobs', name: 'Cron Jobs', domain: 'server', ratings: 3, major: true },
   { id: 'nodemailer', name: 'Nodemailer', domain: 'server', ratings: 2, major: false },
   { id: 'stripe', name: 'Stripe APIs', domain: 'server', ratings: 2.5, major: true },
   { id: 'socket-io', name: 'Socket IO', domain: 'server', ratings: 3, major: true },
   { id: 'swagger', name: 'Swagger', domain: 'server', ratings: 2, major: false },
+  { id: 'rails', name: 'Ruby on Rails', domain: 'server', ratings: 2, major: false },
 
   // Domain: DATABASES
   { id: 'mysql', name: 'MySQL', domain: 'databases', ratings: 3, major: true },
   { id: 'mongodb', name: 'MongoDB', domain: 'databases', ratings: 2.5, major: true },
   { id: 'redis', name: 'Redis', domain: 'databases', ratings: 2, major: true },
   { id: 'firebase', name: 'Firebase', domain: 'databases', ratings: 3, major: true },
+  { id: 'postgresql', name: 'PostgreSQL', domain: 'databases', ratings: 3, major: false },
 
   // Domain: MOBILE
   { id: 'react-native', name: 'React Native', domain: 'mobile', ratings: 3, major: true },
@@ -75,6 +78,9 @@ const skills: Skill[] = [
     ratings: 2,
     major: false,
   },
+
+  // Domain: DESKTOP
+  { id: 'electron', name: 'Electron', domain: 'desktop', ratings: 2, major: false },
 
   // Domain: CLOUD
   { id: 'aws-ec2', name: 'AWS EC2', domain: 'cloud', ratings: 2.5, major: true },
