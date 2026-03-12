@@ -76,7 +76,7 @@ export default function ProjectHero({
                   <a
                     className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-surface p-0'
                     href={code}
-                    target='blank'
+                    target='_blank'
                   >
                     <Icon icon='ri-code-s-slash-line' className='text-xl' />
                   </a>
@@ -85,7 +85,7 @@ export default function ProjectHero({
                   <a
                     className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-surface p-0'
                     href={url}
-                    target='blank'
+                    target='_blank'
                   >
                     <Icon icon='ri-external-link-line' className='text-xl' />
                   </a>

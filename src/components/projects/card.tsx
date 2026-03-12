@@ -78,23 +78,47 @@ export default function Card({ id, name, summary, image, url, code, domain, tech
               )}
             </div>
           </div>
-          <figcaption>
-            <Link href={`/projects/${id}`} title={`${name} details`}>
-              <div className='mt-4'>
+          <figcaption className='mt-4'>
+            <div className='flex items-start justify-between gap-2'>
+              <Link href={`/projects/${id}`} title={`${name} details`} className='min-w-0'>
                 <h5 className='mb-0 font-bold'>{name}</h5>
                 <p className='truncate text-muted'>{summary}</p>
-                <div className='flex gap-x-1 items-end mt-1'>
-                  <Badge type='secondary' className='text-sm'>
-                    {domain}
-                  </Badge>
-                  {tech.map((t) => (
-                    <Badge type='secondary' key={t} className='text-sm'>
-                      {toLowerCase(t)}
-                    </Badge>
-                  ))}
+              </Link>
+              {(code || url) && (
+                <div className='flex gap-2 shrink-0 md:hidden'>
+                  {code && (
+                    <a
+                      className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface'
+                      href={code}
+                      target='_blank'
+                      title='Project code'
+                    >
+                      <Icon icon='ri-code-s-slash-line' className='text-base' />
+                    </a>
+                  )}
+                  {url && (
+                    <a
+                      className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface'
+                      href={url}
+                      target='_blank'
+                      title='Project live'
+                    >
+                      <Icon icon='ri-external-link-line' className='text-base' />
+                    </a>
+                  )}
                 </div>
-              </div>
-            </Link>
+              )}
+            </div>
+            <div className='flex gap-x-1 items-end mt-1'>
+              <Badge type='secondary' className='text-sm'>
+                {domain}
+              </Badge>
+              {tech.map((t) => (
+                <Badge type='secondary' key={t} className='text-sm'>
+                  {toLowerCase(t)}
+                </Badge>
+              ))}
+            </div>
           </figcaption>
         </figure>
       </article>

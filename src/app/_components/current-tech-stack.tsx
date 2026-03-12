@@ -33,7 +33,7 @@ function TechIcon({ src, className }: { src: string; className?: string }) {
 export default function CurrentTechStack() {
   return (
     <Section id='skills' title='Current tech-stack'>
-      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 justify-center'>
+      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 justify-center w-fit mx-auto'>
         {CURRENT_TECH_STACK.map((tech, index) => (
           <Link
             key={tech.name}

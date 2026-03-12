@@ -87,7 +87,7 @@ export default function Contact() {
       <div className='w-full flex flex-col items-center'>
         <form
           aria-label='Contact form'
-          className='flex flex-col mt-0 sm:mt-4 gap-y-2 w-full max-w-md md:max-w-xl'
+          className='flex flex-col mt-0 sm:mt-4 gap-y-2 w-full'
           onSubmit={handleSendEmail}
           onBlur={handleResetError}
         >
@@ -136,7 +136,7 @@ export default function Contact() {
               value={formData.message}
               required
               aria-required='true'
-              rows={3}
+              rows={4}
               className={inputClass}
               onChange={handleChange}
             />

@@ -27,7 +27,7 @@ export default function Section({ title, description, children, id, footer }: Se
                   transition: { ease: 'easeInOut', duration: 0.5 },
                 }}
                 viewport={{ once: false }}
-                className='my-0 mx-auto max-w-3xl py-0 px-4 sm:px-5'
+                className='my-0 mx-auto w-full max-w-3xl py-0 px-4 sm:px-5'
               >
                 {title && (
                   <h1

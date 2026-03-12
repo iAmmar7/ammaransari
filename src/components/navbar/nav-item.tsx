@@ -14,7 +14,7 @@ export default function NavItem({ name, path }: NavItemProps) {
   const [isHovered, setIsHovered] = useState(false);
   const pathname = usePathname();
 
-  const isActive = pathname.includes(path);
+  const isActive = pathname.startsWith(path);
 
   const css = isActive
     ? "text-accent sm:text-muted cursor-pointer inline-block text-xs font-medium p-5 no-underline uppercase transition-colors duration-200 ease-base hover:text-accent after:hidden sm:after:inline after:content-[''] after:absolute after:my-0 after:mx-auto after:inset-x-0 after:top-5 after:h-[2px] after:w-5 after:bg-accent after:transition-opacity after:duration-200 after:ease-base after:opacity-100 hover:after:bg-accent"

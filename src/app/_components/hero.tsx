@@ -9,7 +9,7 @@ import Button from '@/components/ui/button';
 
 export default function Hero() {
   return (
-    <div className='text-base text-muted'>
+    <div className='text-base text-muted mx-auto w-fit'>
       <h1 className='heading-h1'>Ammar Ansari</h1>
       <div className='mb-3 mx-0 text-foreground flex flex-col gap-y-1'>
         <p>

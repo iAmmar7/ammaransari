@@ -36,7 +36,7 @@ export default function Navbar() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className='flex items-center justify-center text-xs min-h-15 w-full flex-wrap relative mt-2 sm:mt-0 bg-background/80 backdrop-blur-md'
+        className='flex items-center justify-center text-xs min-h-15 w-full flex-wrap relative pt-1 sm:pt-0 bg-background/80 backdrop-blur-md'
       >
         <Logo />
         <div className='relative flex-1 order-2 basis-full sm:basis-auto overflow-hidden'>
