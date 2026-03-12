@@ -15,6 +15,8 @@ export default function Section({ title, description, children, id, footer }: Se
   return (
     <section id={id} className='h-dvh snap-start relative z-0 overflow-hidden'>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
+      <div className='absolute inset-x-0 top-0 h-16 -z-5 bg-linear-to-b from-surface/80 to-transparent' />
+      <div className='absolute inset-x-0 bottom-0 h-16 -z-5 bg-linear-to-t from-surface/80 to-transparent' />
       <div className={clsx('h-dvh flex flex-col pt-32 md:pt-28', footer ? 'pb-0' : 'pb-4')}>
         <div className='flex-1 flex flex-col justify-center'>
           <div className='mx-auto container relative'>

@@ -75,12 +75,12 @@ export default function NotFound() {
         <div className='absolute bottom-0 right-0 h-40 w-40 sm:h-72 sm:w-72 md:h-96 md:w-96'>
           <div className='relative h-full'>
             <Image
-              src='https://framerusercontent.com/images/p11yBuLiUWx3p905Pw2W33JBtEM.gif'
+              src='/images/404.gif'
               alt='404 guy'
               priority
               fill
               sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
-              quality={100}
+              quality={80}
               style={{ objectFit: 'cover' }}
             />
           </div>

@@ -65,7 +65,7 @@ export default function ProjectHero({
                   src={!isEmpty(thumbnail) ? thumbnail! : PLACEHOLDER_200}
                   fill
                   sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
-                  quality={100}
+                  quality={80}
                   placeholder='blur'
                   style={{ objectFit: 'cover' }}
                   blurDataURL={blurryDataProfile}

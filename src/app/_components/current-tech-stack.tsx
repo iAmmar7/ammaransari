@@ -33,20 +33,21 @@ function TechIcon({ src, className }: { src: string; className?: string }) {
 export default function CurrentTechStack() {
   return (
     <Section id='skills' title='Current tech-stack'>
-      <ul className='grid grid-cols-3 sm:grid-cols-4 gap-4 px-2 md:px-0 justify-center w-fit mx-auto'>
-        {CURRENT_TECH_STACK.map((tech, index) => (
-          <Link
-            key={tech.name}
-            href={{
-              pathname: '/projects',
-              query: hasProjectBySkillId(tech.id) ? { skill: tech.id } : undefined,
-            }}
-            className={clsx(
-              'group relative bg-surface-muted cursor-pointer rounded-base shadow-md backdrop-blur-md transition-all ease-base duration-500 hover:-translate-y-1.5',
-              index === 8 && 'sm:hidden'
-            )}
-            title={`View ${tech.name} projects`}
-          >
+      <div className='w-fit mx-auto'>
+        <ul className='grid grid-cols-[repeat(3,auto)] sm:grid-cols-[repeat(4,auto)] gap-4 px-2 md:px-0'>
+          {CURRENT_TECH_STACK.map((tech, index) => (
+            <Link
+              key={tech.name}
+              href={{
+                pathname: '/projects',
+                query: hasProjectBySkillId(tech.id) ? { skill: tech.id } : undefined,
+              }}
+              className={clsx(
+                'group relative bg-surface-muted cursor-pointer rounded-base shadow-md backdrop-blur-md transition-all ease-base duration-500 hover:-translate-y-1.5',
+                index === 8 && 'sm:hidden'
+              )}
+              title={`View ${tech.name} projects`}
+            >
             <TechIcon
               src={tech.icon}
               className={clsx(
@@ -62,18 +63,19 @@ export default function CurrentTechStack() {
             </p>
           </Link>
         ))}
-      </ul>
-      <Link href='/skills'>
-        <Button
-          type='default'
-          size='sm'
-          className='mt-4'
-          endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
-          title='Go to skills page'
-        >
-          Other skills
-        </Button>
-      </Link>
+        </ul>
+        <Link href='/skills'>
+          <Button
+            type='default'
+            size='sm'
+            className='mt-4'
+            endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+            title='Go to skills page'
+          >
+            Other skills
+          </Button>
+        </Link>
+      </div>
     </Section>
   );
 }
