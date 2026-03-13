@@ -41,7 +41,7 @@ export default function Footer({ className }: FooterProps) {
                     </span>
                     <Icon
                       icon={icon}
-                      className='text-2xl sm:text-base group-hover:md:animate-pulse ml-0.5 sm:opacity-0 group-hover:opacity-100 group-hover:transition-opacity group-hover:duration-200 group-hover:ease-base group-hover:text-accent text-foreground'
+                      className='text-2xl sm:text-base group-hover:md:animate-pulse ml-0.5 group-hover:text-accent text-foreground transition duration-200 ease-base'
                     />
                   </a>
                 </li>

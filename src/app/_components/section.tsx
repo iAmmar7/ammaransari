@@ -42,7 +42,7 @@ export default function Section({ title, description, children, id, footer }: Se
                   </h1>
                 )}
                 {description && (
-                  <p className='text-muted text-sm text-center mb-5 sm:text-left'>{description}</p>
+                  <p className='text-muted text-sm text-center mb-5'>{description}</p>
                 )}
                 {children}
               </motion.div>

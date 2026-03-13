@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Collapse from '@/components/ui/collapse';
-import { isEmpty } from '@/lib/utils';
 
 interface FormData {
   name: string;
@@ -32,13 +31,15 @@ export default function Contact() {
 
   const handleSendEmail = async (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
+
     setSentStatus(null);
     setIsSending(true);
 
     try {
       const { name, email, message } = formData;
-
-      if (isEmpty(name) || isEmpty(email) || isEmpty(message)) return;
 
       const res = await fetch('/api/email', {
         method: 'POST',
