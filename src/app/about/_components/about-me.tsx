@@ -27,7 +27,7 @@ export default function AboutMe() {
               alt='Ammar'
               src='/images/ammar.jpg'
               fill
-              sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
+              sizes='(max-width: 640px) 100vw, 50vw'
               quality={80}
               placeholder='blur'
               blurDataURL={blurryDataProfile}

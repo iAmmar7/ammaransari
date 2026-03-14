@@ -65,7 +65,7 @@ export default function NotFound() {
                 <Button>Go to home</Button>
               </Link>
               <Link href='/#contact' title='Contact Ammar Ansari'>
-                <Button type='secondary' className='border border-accent'>
+                <Button variant='secondary' className='border border-accent'>
                   Contact me
                 </Button>
               </Link>
@@ -79,7 +79,7 @@ export default function NotFound() {
               alt='404 guy'
               priority
               fill
-              sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
+              sizes='(max-width: 640px) 160px, (max-width: 768px) 288px, 384px'
               quality={80}
               style={{ objectFit: 'cover' }}
             />

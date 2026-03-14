@@ -74,7 +74,7 @@ export default function ProjectDetails({
               return (
                 <Link key={techId} href={`/projects?skill=${techId}`}>
                   <Badge
-                    type='tertiary'
+                    variant='tertiary'
                     className='text-white cursor-pointer'
                     title={`View more ${tech} projects`}
                   >

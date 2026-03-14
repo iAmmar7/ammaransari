@@ -3,7 +3,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   reactCompiler: true,
   images: {
-    qualities: [100, 75],
+    qualities: [75, 80, 100],
     remotePatterns: [
       {
         protocol: 'https',

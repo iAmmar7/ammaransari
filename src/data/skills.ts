@@ -89,6 +89,9 @@ const skills: Skill[] = [
   { id: 'heroku', name: 'Heroku', domain: 'cloud', ratings: 2.5, major: true },
   { id: 'vercel', name: 'Vercel', domain: 'cloud', ratings: 2.5, major: true },
   { id: 'pm2', name: 'PM2', domain: 'cloud', ratings: 2.5, major: true },
+  { id: 'docker', name: 'Docker', domain: 'cloud', ratings: 2.5, major: false },
+  { id: 'nginx', name: 'NGINX', domain: 'cloud', ratings: 2, major: false },
+  { id: 'sentry', name: 'Sentry', domain: 'cloud', ratings: 2, major: false },
 
   // Domain: GENERAL
   { id: 'dsa', name: 'Data Structures', domain: 'general', ratings: 3.5, major: false },

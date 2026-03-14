@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { RiArrowRightLine } from '@remixicon/react';
 
 import Timeline from '@/components/timeline';
 import ExternalLink from '@/components/ui/external-link';
@@ -84,10 +85,10 @@ export default function CurrentEmployment() {
           title={
             <Link href='/experience'>
               <Button
-                type='default'
+                variant='default'
                 size='sm'
                 className='-ml-4'
-                endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+                endEnhancer={<Icon icon={RiArrowRightLine} className='ml-1' />}
                 title='Go to experience page'
               >
                 Employment history
@@ -98,9 +99,9 @@ export default function CurrentEmployment() {
       </div>
       <Link href='/experience' className='md:hidden mt-4 inline-block'>
         <Button
-          type='default'
+          variant='default'
           size='sm'
-          endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+          endEnhancer={<Icon icon={RiArrowRightLine} className='ml-1' />}
           title='Go to experience page'
         >
           Employment history

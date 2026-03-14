@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import clsx from 'clsx';
+import { RiArrowRightLine } from '@remixicon/react';
 
 import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -66,10 +67,10 @@ export default function CurrentTechStack() {
         </ul>
         <Link href='/skills'>
           <Button
-            type='default'
+            variant='default'
             size='sm'
             className='mt-4'
-            endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+            endEnhancer={<Icon icon={RiArrowRightLine} className='ml-1' />}
             title='Go to skills page'
           >
             Other skills

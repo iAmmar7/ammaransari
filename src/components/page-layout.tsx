@@ -14,7 +14,7 @@ interface PageLayoutProps {
 export default function PageLayout({
   tagline,
   summary,
-  maxWidth = 'max-w-4xl',
+  maxWidth = 'max-w-5xl',
   children,
 }: PageLayoutProps) {
   return (
@@ -28,7 +28,7 @@ export default function PageLayout({
               y: 0,
               transition: { ease: 'easeInOut', duration: 0.5 },
             }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className={`my-0 mx-auto py-0 px-5 relative ${maxWidth}`}
           >
             <div className='mb-5'>

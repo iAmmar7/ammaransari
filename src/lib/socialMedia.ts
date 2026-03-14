@@ -1,22 +1,36 @@
-export const socialLinks = [
+import {
+  RiGithubLine,
+  RiLinkedinLine,
+  RiMailLine,
+  RiStackOverflowLine,
+  type RemixiconComponentType,
+} from '@remixicon/react';
+
+export interface SocialLink {
+  title: string;
+  url: string;
+  icon: RemixiconComponentType;
+}
+
+export const socialLinks: SocialLink[] = [
   {
     title: 'Email',
     url: 'mailto:contact@ammaransari.dev',
-    icon: 'ri-mail-line',
+    icon: RiMailLine,
   },
   {
     title: 'GitHub',
     url: 'https://github.com/iammar7',
-    icon: 'ri-github-line',
+    icon: RiGithubLine,
   },
   {
     title: 'LinkedIn',
     url: 'https://linkedin.com/in/iammar7',
-    icon: 'ri-linkedin-line',
+    icon: RiLinkedinLine,
   },
   {
     title: 'StackOverflow',
     url: 'https://stackoverflow.com/u/16401056',
-    icon: 'ri-stack-overflow-line',
+    icon: RiStackOverflowLine,
   },
 ];

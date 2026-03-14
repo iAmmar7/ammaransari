@@ -47,7 +47,7 @@ export default function Projects() {
       </Suspense>
       {count < filteredProjects.length && (
         <div className='mt-10 text-center'>
-          <Button type='primary' onClick={handleSetCount}>
+          <Button variant='primary' onClick={handleSetCount}>
             Load {currentView.remaining} More
           </Button>
         </div>

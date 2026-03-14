@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { RiArrowUpSLine } from '@remixicon/react';
 
 import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -30,8 +31,8 @@ export default function ScrollToTop() {
           title='Scroll to top'
           onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <Button type='secondary' rounded size='sm'>
-            <Icon icon='ri-arrow-up-s-line' className='text-inherit text-xl md:text-2xl' />
+          <Button variant='secondary' rounded size='sm'>
+            <Icon icon={RiArrowUpSLine} className='text-inherit text-xl md:text-2xl' />
           </Button>
         </motion.div>
       )}

@@ -15,7 +15,7 @@ export function generatePageMetadata({
   image,
   route = '',
 }: PageMetadataParams): Metadata {
-  const fullTitle = `${title} 🤙`;
+  const fullTitle = title;
   const url = `${APP_URL}${route}`;
 
   return {

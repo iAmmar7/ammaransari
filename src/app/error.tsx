@@ -24,7 +24,7 @@ export default function Error({
             <div className='flex gap-2'>
               <Button onClick={reset}>Try again</Button>
               <Link href='/' title='View home page'>
-                <Button type='secondary' className='border border-accent'>
+                <Button variant='secondary' className='border border-accent'>
                   Go to home
                 </Button>
               </Link>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { RiLoader4Line, RiSendPlaneFill } from '@remixicon/react';
 
 import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -77,7 +78,7 @@ export default function Contact() {
           <a
             href='https://www.quora.com/How-can-I-train-my-pigeon-to-carry-messages-for-me'
             target='_blank'
-            rel='noreferrer'
+            rel='noopener noreferrer'
             className='underline'
           >
             this
@@ -148,7 +149,7 @@ export default function Contact() {
               <a
                 href='mailto:iammaransari@gmail.com'
                 target='_blank'
-                rel='noreferrer'
+                rel='noopener noreferrer'
                 className='text-accent'
                 title='Send email to Ammar Ansari'
               >
@@ -164,11 +165,12 @@ export default function Contact() {
           <div className='flex flex-col gap-y-2'>
             <Button
               type='submit'
+              variant='primary'
               endEnhancer={
                 isSending ? (
-                  <Icon icon='ri-loader-4-line' className='ml-2 animate-spin' />
+                  <Icon icon={RiLoader4Line} className='ml-2 animate-spin' />
                 ) : (
-                  <Icon icon='ri-send-plane-fill' className='ml-2' />
+                  <Icon icon={RiSendPlaneFill} className='ml-2' />
                 )
               }
               disabled={isSending}

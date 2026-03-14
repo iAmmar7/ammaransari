@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import { RiArrowDownSLine, RiArrowUpSLine } from '@remixicon/react';
 
 import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -49,7 +50,7 @@ export default function Filters() {
       <div className='flex items-center flex-wrap'>
         <div className='flex flex-wrap gap-2'>
           <Button
-            type={isEmpty(filters) || isEmpty(filters[0]) ? 'primary' : 'secondary'}
+            variant={isEmpty(filters) || isEmpty(filters[0]) ? 'primary' : 'secondary'}
             onClick={() => handleFilter()}
           >
             All
@@ -57,7 +58,7 @@ export default function Filters() {
           {take(TOP_SKILLS, topFiltersCount).map((skill) => (
             <Button
               key={`${skill.domain}-${skill.id}`}
-              type={filters.includes(skill.id) ? 'primary' : 'secondary'}
+              variant={filters.includes(skill.id) ? 'primary' : 'secondary'}
               onClick={() => handleFilter(skill.id)}
             >
               {skill.name}
@@ -65,7 +66,7 @@ export default function Filters() {
           ))}
         </div>
         <Button
-          type='tertiary'
+          variant='tertiary'
           role='button'
           aria-expanded={!collapsed}
           aria-controls='skill-extended-filters'
@@ -75,7 +76,7 @@ export default function Filters() {
           <span className='flex items-center gap-x-1'>
             More
             <Icon
-              icon={collapsed ? 'ri-arrow-down-s-line' : 'ri-arrow-up-s-line'}
+              icon={collapsed ? RiArrowDownSLine : RiArrowUpSLine}
               className='min-w-3.5'
             />
           </span>
@@ -86,7 +87,7 @@ export default function Filters() {
           {takeRight(TOP_SKILLS, TOP_SKILLS.length - topFiltersCount).map((skill) => (
             <Button
               key={`${skill.domain}-${skill.id}`}
-              type={filters.includes(skill.id) ? 'primary' : 'secondary'}
+              variant={filters.includes(skill.id) ? 'primary' : 'secondary'}
               onClick={() => handleFilter(skill.id)}
             >
               {skill.name}

@@ -23,7 +23,7 @@ export default function SocialLinks({ className }: SocialLinksProps) {
             href={url}
             className='transition duration-200 ease-base relative text-muted no-underline focus:text-foreground cursor-pointer group'
             target='_blank'
-            rel='noreferrer'
+            rel='noopener noreferrer'
             onHoverStart={() => setHoveredLink(title)}
             onHoverEnd={() => setHoveredLink(null)}
             title={`${title} - Ammar Ansari`}
@@ -42,7 +42,7 @@ export default function SocialLinks({ className }: SocialLinksProps) {
                 exit={{ opacity: 0 }}
                 className='absolute top-9 right-1/2 translate-x-1/2 text-sm'
               >
-                <Badge type='secondary'>{title}</Badge>
+                <Badge variant='secondary'>{title}</Badge>
               </motion.span>
             )}
           </AnimatePresence>

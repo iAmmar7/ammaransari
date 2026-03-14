@@ -2,6 +2,7 @@
 
 import { memo } from 'react';
 import { motion } from 'motion/react';
+import { RiStarFill, RiStarLine, RiStarHalfLine } from '@remixicon/react';
 
 interface StarProps {
   delay?: number;
@@ -24,13 +25,13 @@ const starVariants = {
 };
 
 function Star({ delay = 1, fill = true, half = false, hovered = false }: StarProps) {
-  let icon = 'ri-star-fill';
-  if (!fill) icon = 'ri-star-line';
-  if (half) icon = 'ri-star-half-line';
+  let StarIcon = RiStarFill;
+  if (!fill) StarIcon = RiStarLine;
+  if (half) StarIcon = RiStarHalfLine;
 
   return (
-    <motion.i
-      className={icon}
+    <motion.span
+      className='inline-flex'
       initial='initial'
       whileInView='animate'
       variants={{
@@ -47,7 +48,9 @@ function Star({ delay = 1, fill = true, half = false, hovered = false }: StarPro
       }}
       viewport={{ once: true }}
       custom={delay}
-    />
+    >
+      <StarIcon size='1em' className='inline-block' />
+    </motion.span>
   );
 }
 

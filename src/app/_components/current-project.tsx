@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { RiArrowRightLine } from '@remixicon/react';
 
 import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -23,10 +24,10 @@ export default function CurrentProject() {
       />
       <Link href='/projects'>
         <Button
-          type='default'
+          variant='default'
           size='sm'
           className='mt-4'
-          endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+          endEnhancer={<Icon icon={RiArrowRightLine} className='ml-1' />}
           title='Go to projects page'
         >
           Past projects

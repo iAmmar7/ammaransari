@@ -1,4 +1,6 @@
+import { type ComponentPropsWithoutRef } from 'react';
 import clsx from 'clsx';
+import { RiExternalLinkLine } from '@remixicon/react';
 
 import Icon from './icon';
 
@@ -31,15 +33,26 @@ const colorMapper: Record<LinkColor, string> = {
   signalwire: 'from-signalwire text-signalwire',
 };
 
-interface ExternalLinkProps {
-  href: string;
-  className?: string;
+const iconColorMapper: Record<LinkColor, string> = {
+  primary: 'text-foreground',
+  secondary: 'text-accent',
+  tertiary: 'text-highlight',
+  muted: 'text-muted',
+  venturedive: 'text-venturedive',
+  careem: 'text-careem',
+  uber: 'text-uber',
+  carecloud: 'text-carecloud',
+  planz: 'text-planz',
+  sudofy: 'text-sudofy',
+  adres: 'text-adres',
+  signalwire: 'text-signalwire',
+};
+
+type ExternalLinkProps = ComponentPropsWithoutRef<'a'> & {
   color?: LinkColor;
   showIcon?: boolean;
   underline?: boolean;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
+};
 
 export default function ExternalLink({
   href,
@@ -58,7 +71,7 @@ export default function ExternalLink({
         className
       )}
       target='_blank'
-      rel='noreferrer'
+      rel='noopener noreferrer'
       {...otherProps}
     >
       {underline ? (
@@ -74,7 +87,7 @@ export default function ExternalLink({
         children
       )}
       {showIcon && (
-        <Icon icon='ri-external-link-line' className={clsx('text-sm', `text-${color}`)} />
+        <Icon icon={RiExternalLinkLine} className={clsx('text-sm', iconColorMapper[color])} />
       )}
     </a>
   );

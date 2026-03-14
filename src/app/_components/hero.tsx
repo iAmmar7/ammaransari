@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { RiArrowRightLine } from '@remixicon/react';
 
 import SocialLinks from '@/components/social-links';
 import ExternalLink from '@/components/ui/external-link';
@@ -31,8 +32,8 @@ export default function Hero() {
       <Link href='/about'>
         <Button
           size='sm'
-          type='default'
-          endEnhancer={<Icon icon='ri-arrow-right-line' className='ml-1' />}
+          variant='default'
+          endEnhancer={<Icon icon={RiArrowRightLine} className='ml-1' />}
           className='-ml-2 mt-2'
           title='Go to about page'
         >

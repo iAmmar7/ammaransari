@@ -1,43 +1,45 @@
 'use client';
 
-import { forwardRef, useMemo, type ElementType, type Ref } from 'react';
+import { forwardRef, type ComponentPropsWithoutRef, type ElementType, type Ref } from 'react';
 import clsx from 'clsx';
 
-type BadgeType = 'primary' | 'secondary' | 'tertiary' | 'muted';
+type BadgeVariant = 'primary' | 'secondary' | 'tertiary' | 'muted';
 
-interface BadgeProps {
-  type?: BadgeType;
+type BadgeProps = ComponentPropsWithoutRef<'span'> & {
+  variant?: BadgeVariant;
   as?: ElementType;
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-const bgColorMapper = (type?: BadgeType) => {
-  if (type === 'primary') return 'bg-surface';
-  if (type === 'secondary') return 'bg-surface-secondary';
-  if (type === 'tertiary') return 'bg-surface-tertiary';
-  return 'bg-surface-muted';
 };
 
-const textColorMapper = (type?: BadgeType) => {
-  if (type === 'primary') return 'text-foreground';
-  if (type === 'secondary') return 'text-accent';
-  if (type === 'tertiary') return 'text-highlight';
-  return 'text-muted';
+const bgColorMapper: Record<BadgeVariant, string> = {
+  primary: 'bg-surface',
+  secondary: 'bg-surface-secondary',
+  tertiary: 'bg-surface-tertiary',
+  muted: 'bg-surface-muted',
+};
+
+const textColorMapper: Record<BadgeVariant, string> = {
+  primary: 'text-foreground',
+  secondary: 'text-accent',
+  tertiary: 'text-highlight',
+  muted: 'text-muted',
 };
 
 const Badge = forwardRef(
-  ({ type, as, className, children, ...otherProps }: BadgeProps, ref: Ref<HTMLElement>) => {
+  (
+    { variant = 'muted', as, className, children, ...otherProps }: BadgeProps,
+    ref: Ref<HTMLElement>
+  ) => {
     const Component = as ?? 'span';
-
-    const bgColor = useMemo(() => bgColorMapper(type), [type]);
-    const textColor = useMemo(() => textColorMapper(type), [type]);
 
     return (
       <Component
         ref={ref}
-        className={clsx('py-1 px-2 rounded-base', bgColor, textColor, className)}
+        className={clsx(
+          'py-1 px-2 rounded-base',
+          bgColorMapper[variant],
+          textColorMapper[variant],
+          className
+        )}
         {...otherProps}
       >
         {children}

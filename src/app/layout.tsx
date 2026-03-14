@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import 'remixicon/fonts/remixicon.css';
+import { DM_Sans, Sora } from 'next/font/google';
 import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
@@ -8,11 +7,18 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from '@/components/navbar/navbar';
 import HashScroll from '@/components/hash-scroll';
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['300', '500', '700'],
-  display: 'optional',
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '700'],
+  display: 'swap',
+  variable: '--font-body',
+});
+
+const sora = Sora({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-display',
 });
 
 export const metadata: Metadata = {
@@ -30,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={inter.variable} data-scroll-behavior='smooth'>
-      <body className={inter.className}>
+    <html lang='en' className={`${dmSans.variable} ${sora.variable}`} data-scroll-behavior='smooth'>
+      <body className={dmSans.className}>
         <div className='relative z-0 h-dvh overflow-y-auto snap-y snap-mandatory'>
           <a
             href='#main-content'

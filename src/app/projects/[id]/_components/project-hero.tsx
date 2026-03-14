@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'motion/react';
+import { RiArrowLeftLine, RiCodeSSlashFill, RiExternalLinkLine } from '@remixicon/react';
 
 import Icon from '@/components/ui/icon';
 import ExternalLink from '@/components/ui/external-link';
@@ -39,7 +40,7 @@ export default function ProjectHero({
         y: 0,
         transition: { ease: 'easeInOut', duration: 0.5, delay: 0 },
       }}
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       className='w-full flex justify-center items-center transition-all duration-500'
     >
       <div className='mx-auto w-full px-4 md:px-0 md:w-10/12 max-w-6xl relative'>
@@ -50,47 +51,25 @@ export default function ProjectHero({
             title='Go back'
             className='flex items-center gap-1 justify-center rounded-full bg-neutrals-900/20'
           >
-            <Icon icon='ri-arrow-left-line' className='text-xl' />
+            <Icon icon={RiArrowLeftLine} className='text-xl' />
             <span className='text-sm text-muted'>projects</span>
           </Link>
         </div>
 
         {/* Thumbnail */}
         <figure>
-          <div className='bg-surface-muted opacity-100 rounded-base shadow-md backdrop-blur-md transition-all ease-base duration-500 p-0 group hover:translate-x-0 hover:-translate-y-1.5 hover:rotate-0 hover:skew-x-0 hover:skew-y-0 hover:scale-x-100 hover:scale-y-100'>
-            <div className='relative overflow-hidden rounded-base flex'>
-              <picture className='relative blur-none transition-all duration-500 group-hover:blur flex-1 h-96 w-full'>
-                <Image
-                  alt={name}
-                  src={!isEmpty(thumbnail) ? thumbnail! : PLACEHOLDER_200}
-                  fill
-                  sizes='(max-width: 768px) 10vw, (max-width: 1200px) 50vw, 33vw'
-                  quality={80}
-                  placeholder='blur'
-                  style={{ objectFit: 'cover' }}
-                  blurDataURL={blurryDataProfile}
-                />
-              </picture>
-              <div className='absolute left-0 top-0 z-10 flex h-full w-full -translate-x-full transform items-center justify-center gap-4 overflow-hidden bg-surface-muted/80 transition-all duration-500 group-hover:translate-x-0'>
-                {code && (
-                  <a
-                    className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-surface p-0'
-                    href={code}
-                    target='_blank'
-                  >
-                    <Icon icon='ri-code-s-slash-line' className='text-xl' />
-                  </a>
-                )}
-                {url && (
-                  <a
-                    className='inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-surface p-0'
-                    href={url}
-                    target='_blank'
-                  >
-                    <Icon icon='ri-external-link-line' className='text-xl' />
-                  </a>
-                )}
-              </div>
+          <div className='bg-surface-muted rounded-base shadow-md backdrop-blur-md'>
+            <div className='relative overflow-hidden rounded-base flex h-96 w-full'>
+              <Image
+                alt={name}
+                src={!isEmpty(thumbnail) ? thumbnail! : PLACEHOLDER_200}
+                fill
+                sizes='(max-width: 768px) 100vw, 83vw'
+                quality={80}
+                placeholder='blur'
+                style={{ objectFit: 'cover' }}
+                blurDataURL={blurryDataProfile}
+              />
             </div>
           </div>
 
@@ -117,17 +96,17 @@ export default function ProjectHero({
             {/* External links */}
             <div className='absolute flex items-center space-x-4 bottom-3 right-4 md:right-0'>
               {code && (
-                <ExternalLink title='View source code' href={code}>
+                <ExternalLink title='View source code' aria-label='View source code' href={code}>
                   <Icon
-                    icon='ri-code-s-slash-fill'
+                    icon={RiCodeSSlashFill}
                     className='text-base md:text-xl hover:text-highlight transition-colors duration-200 ease-base'
                   />
                 </ExternalLink>
               )}
               {url && (
-                <ExternalLink title='View live application' href={url}>
+                <ExternalLink title='View live application' aria-label='View live application' href={url}>
                   <Icon
-                    icon='ri-external-link-line'
+                    icon={RiExternalLinkLine}
                     className='text-base md:text-lg hover:text-highlight transition-colors duration-200 ease-base'
                   />
                 </ExternalLink>

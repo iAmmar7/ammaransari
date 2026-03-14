@@ -1,12 +1,13 @@
 import clsx from 'clsx';
+import type { RemixiconComponentType } from '@remixicon/react';
 
 interface IconProps {
-  icon?: string;
+  icon?: RemixiconComponentType;
   className?: string;
 }
 
-export default function Icon({ icon, className }: IconProps) {
-  if (!icon) return null;
+export default function Icon({ icon: IconComponent, className }: IconProps) {
+  if (!IconComponent) return null;
 
-  return <i className={clsx(icon, 'opacity-100', className)} />;
+  return <IconComponent size='1em' className={clsx('inline-block', className)} />;
 }
