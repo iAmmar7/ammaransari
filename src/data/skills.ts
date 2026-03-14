@@ -78,7 +78,7 @@ const skills: Skill[] = [
   },
 
   // Domain: DESKTOP
-  { id: 'electron', name: 'Electron', domain: 'desktop', ratings: 2 },
+  { id: 'electron', name: 'Electron', domain: 'desktop', ratings: 2.5 },
 
   // Domain: CLOUD
   { id: 'aws', name: 'AWS', domain: 'cloud', ratings: 2.5 },
@@ -102,8 +102,10 @@ const skills: Skill[] = [
 
   // Domain: LANGUAGES
   { id: 'js-lang', name: 'JavaScript', domain: 'languages', ratings: 4 },
+  { id: 'ts', name: 'TypeScript', domain: 'languages', ratings: 4 },
   { id: 'cplusplus', name: 'C++', domain: 'languages', ratings: 2 },
-  { id: 'python', name: 'Python', domain: 'languages', ratings: 1.5 },
+  { id: 'ruby', name: 'Ruby', domain: 'languages', ratings: 2 },
+  { id: 'python', name: 'Python', domain: 'languages', ratings: 2 },
 ];
 
 export default skills;
