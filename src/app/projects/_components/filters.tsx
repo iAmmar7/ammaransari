@@ -13,7 +13,7 @@ import useSessionStorage from '@/hooks/useSessionStorage';
 import { isEmpty, take, takeRight } from '@/lib/utils';
 import { sortSkillsByUsage } from '@/lib/helpers';
 
-const TOP_SKILLS = sortSkillsByUsage().filter((skill) => skill.major);
+const TOP_SKILLS = sortSkillsByUsage();
 
 export default function Filters() {
   const { filters, updateFilters } = useSkillFilter();
@@ -41,7 +41,7 @@ export default function Filters() {
     if (md) return 5;
     if (lg) return 6;
     if (xl) return 9;
-    if (breakpoints['2xl'] || breakpoints['3xl']) return 10;
+    if (breakpoints['2xl'] || breakpoints['3xl']) return 9;
     return 2;
   }, [sm, md, lg, xl, breakpoints]);
 
@@ -75,10 +75,7 @@ export default function Filters() {
         >
           <span className='flex items-center gap-x-1'>
             More
-            <Icon
-              icon={collapsed ? RiArrowDownSLine : RiArrowUpSLine}
-              className='min-w-3.5'
-            />
+            <Icon icon={collapsed ? RiArrowDownSLine : RiArrowUpSLine} className='min-w-3.5' />
           </span>
         </Button>
       </div>

@@ -71,12 +71,11 @@ export default function AboutMe() {
             networking, and software development. From{' '}
             <strong className='font-normal text-foreground'>small-scale startups</strong> to{' '}
             <strong className='font-normal text-foreground'>well-established organizations</strong>,
-            I have worked in various teams using multiple technologies and working in different
-            domains. In my various roles, I have found myself regularly called upon to tackle
-            technical challenges, resolve coding issues and engage with different teams working on
-            different projects.{' '}
-            <strong className='font-normal text-foreground'>My love of coding</strong> drives me
-            internally and I relish every opportunity to tackle the deepest technical challenges.
+            I have worked in various teams using multiple technologies across different domains.
+            Across these roles, I&apos;ve consistently tackled technical challenges, resolved complex
+            issues, and collaborated across teams and projects.{' '}
+            <strong className='font-normal text-foreground'>My love of coding</strong> drives me, and
+            I relish every opportunity to tackle deep technical challenges.
           </p>
           <div className='hidden md:block mt-6'>{funFact}</div>
         </div>
@@ -84,9 +83,10 @@ export default function AboutMe() {
       <div className='block md:hidden mt-6'>{funFact}</div>
       <div className='mt-6 text-center sm:text-left'>
         On the academic side, I graduated with a Bachelor&apos;s degree in{' '}
-        <strong className='font-normal text-foreground'>Computer Systems Engineering</strong>. I
-        have a high degree of <strong className='font-normal text-foreground'>adaptability</strong>{' '}
-        and am constantly eager to learn new things and impart my knowledge to others.
+        <strong className='font-normal text-foreground'>Computer Systems Engineering</strong>.
+        I&apos;m highly{' '}
+        <strong className='font-normal text-foreground'>adaptable</strong>, always eager to learn and
+        share knowledge with others.
       </div>
     </div>
   );

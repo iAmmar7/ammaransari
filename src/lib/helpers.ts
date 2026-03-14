@@ -1,8 +1,21 @@
 import skills from '@/data/skills';
 import projects from '@/data/projects';
 
+const MIN_PROJECTS_FOR_FILTER = 3;
+
+const skillFrequency = new Map<string, number>();
+projects.forEach((project) => {
+  project.technologies.forEach((tech) => {
+    skillFrequency.set(tech, (skillFrequency.get(tech) || 0) + 1);
+  });
+});
+
+export const getSkillProjectCount = (skillId: string): number => {
+  return skillFrequency.get(skillId) || 0;
+};
+
 export const hasProjectBySkillId = (skillId: string): boolean => {
-  return projects.some((project) => project.technologies.includes(skillId));
+  return getSkillProjectCount(skillId) >= MIN_PROJECTS_FOR_FILTER;
 };
 
 export const getSkillNameBySkillId = (skillId: string): string | undefined => {
@@ -11,18 +24,12 @@ export const getSkillNameBySkillId = (skillId: string): string | undefined => {
 };
 
 export const sortSkillsByUsage = () => {
-  const skillFrequency = new Map<string, number>();
-
-  projects.forEach((project) => {
-    project.technologies.forEach((tech) => {
-      skillFrequency.set(tech, (skillFrequency.get(tech) || 0) + 1);
+  return [...skills]
+    .filter((skill) => getSkillProjectCount(skill.id) >= MIN_PROJECTS_FOR_FILTER)
+    .sort((a, b) => {
+      const freqA = skillFrequency.get(a.id) || 0;
+      const freqB = skillFrequency.get(b.id) || 0;
+      if (freqA === freqB) return b.ratings - a.ratings;
+      return freqB - freqA;
     });
-  });
-
-  return [...skills].sort((a, b) => {
-    const freqA = skillFrequency.get(a.id) || 0;
-    const freqB = skillFrequency.get(b.id) || 0;
-    if (freqA === freqB) return b.ratings - a.ratings;
-    return freqB - freqA;
-  });
 };

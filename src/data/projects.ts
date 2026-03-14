@@ -2,6 +2,52 @@ import type { Project } from '@/types/project';
 
 const projects: Project[] = [
   {
+    id: 'dpflow',
+    name: 'DPFlow',
+    summary: 'A multi-tenant SaaS platform for the dental industry',
+    description:
+      '<p>An enterprise-grade SaaS platform built for the dental industry - serving labs, manufacturers, and clinics. DPFlow streamlines daily operations including order management, workflow automation, product and material tracking, and customer management. Built as a full-stack monorepo with a web app, backend API, shared core library, and an Electron desktop app.</p>',
+    features: [
+      '<p><strong>Multi-tenant</strong> architecture with tenant-scoped data isolation</p>',
+      '<p>Order management with status tracking, sub-orders, and file attachments</p>',
+      '<p><strong>Workflow automation</strong> with configurable step templates</p>',
+      '<p>Product, material, and supplier management for dental manufacturing</p>',
+      '<p>Customer and patient tracking with billing and shipping addresses</p>',
+      '<p><strong>3D visualization</strong> using Three.js and React Three Fiber</p>',
+      '<p>File management with <strong>S3-compatible</strong> object storage integration</p>',
+      '<p><strong>Electron desktop app</strong> with system tray and IPC communication</p>',
+      '<p>JWT-based authentication with access and refresh tokens</p>',
+      '<p><strong>Monorepo</strong> with shared core library (ESM + CJS dual builds)</p>',
+      '<p>CI/CD pipeline with GitHub Actions for linting, testing, and building</p>',
+    ],
+    contribution: [
+      '<p>Architected the entire system: backend, data model, and frontend.</p>',
+      '<p>Designed a PostgreSQL database schema with 50+ models using Prisma ORM.</p>',
+      '<p>Built the web frontend with latest React, TypeScript, MUI, and TanStack Router.</p>',
+      '<p>Developed the backend API with Express.js, Zod validation, and Pino logging.</p>',
+      '<p>Created a shared core library with dual ESM/CJS builds using tsup.</p>',
+      '<p>Built an Electron desktop watcher app that keeps web-uploaded files in sync with the local OS folder, using S3 for cloud file storage.</p>',
+      '<p>Guided the team and product direction throughout the development lifecycle.</p>',
+    ],
+    domain: 'freelance',
+    technologies: [
+      'ts',
+      'react',
+      'node',
+      'express',
+      'postgresql',
+      'prisma',
+      'electron',
+      'vite',
+      'vitest',
+      'aws',
+      'docker',
+    ],
+    thumbnail: '/images/projects/thumb-dpflow.png',
+    code: 'https://github.com/muhammadPro4-2061/PDFlow',
+    spotlight: true,
+  },
+  {
     id: 'paint-app-realtime',
     name: 'Paint App',
     summary: 'An effortless real-time paint application',
@@ -24,14 +70,13 @@ const projects: Project[] = [
     thumbnail: '/images/projects/thumb-paint-app-realtime.png',
     code: 'https://github.com/iAmmar7/paint-app-realtime',
     url: 'https://paint-app-realtime.vercel.app',
-    spotlight: true,
   },
   {
     id: 'courierservice',
     name: 'Courier Service Management',
-    summary: 'The Courier vendor management project for a specific client.',
+    summary: 'A courier vendor management system built for a specific client.',
     features: [
-      '<p>Graphical view of over all company stats using Recharts.</p>',
+      '<p>Graphical view of overall company stats using Recharts.</p>',
       '<p>Monitor rider and vendor activities via auto-generated stats.</p>',
       '<p>Add/Remove/Edit riders and vendors data.</p>',
       '<p>Tabular view of all the orders.</p>',
@@ -103,7 +148,7 @@ const projects: Project[] = [
       '<p>Custom hooks</p>',
       '<p>Custom lodash-like utility functions</p>',
       '<p>Custom <strong>animation</strong> using Animatable library</p>',
-      '<p>Custom <strong>expo configuration</strong> for different platoforms</p>',
+      '<p>Custom <strong>expo configuration</strong> for different platforms</p>',
       '<p>For state management, this app is using <strong>React Context API</strong></p>',
       '<p>The location data is being fetched from the <strong>Open Weather API</strong></p>',
     ],
@@ -187,7 +232,8 @@ const projects: Project[] = [
     id: 'websocket-sdk',
     name: 'WebSocket SDKs',
     summary: 'WebSocket Client SDK for both Browser/Web and Node JS',
-    description: '3 days challenge to build a Web and Node JS SDK to handle Websocket client.</p>',
+    description:
+      '<p>3-day challenge to build a Web and Node JS SDK to handle WebSocket client.</p>',
     features: [
       '<p>Monorepo containing two SDKs with simulator for each</p>',
       '<p>An integrable SDK for <strong>Web</strong> application</p>',
@@ -328,8 +374,8 @@ const projects: Project[] = [
     name: 'Stopwatch',
     summary: 'A straightforward stopwatch application with laps history using Vanilla JS and Sass.',
     features: [
-      '<p>Time laps</p>',
-      '<p>Difference between the last time lapse.</p>',
+      '<p>Lap times</p>',
+      '<p>Difference between the last two laps.</p>',
       '<p>Built with pure JS and Sass.</p>',
       '<p>Responsive layout for mobile screen.</p>',
       '<p>LocalStorage usage to store the last timer and last history.</p>',
@@ -519,7 +565,7 @@ const projects: Project[] = [
       'mongoose',
       'redis',
       'woocommerce-api',
-      'aws-ec2',
+      'aws',
       'pm2',
       'ssh',
     ],
@@ -555,7 +601,7 @@ const projects: Project[] = [
       'nodemailer',
       'stripe',
       'swagger',
-      'aws-ec2',
+      'aws',
       'pm2',
       'ssh',
       'nginx',
@@ -601,7 +647,7 @@ const projects: Project[] = [
   {
     id: 'chat-sdk',
     name: 'Chat SDK',
-    summary: 'JS SDK that allows you to integrate Chating features in your web application.',
+    summary: 'JS SDK that allows you to integrate chatting features in your web application.',
     description:
       'The Chat SDK contains the classes and functions that you need to create a real-time chat application',
     contribution: [
@@ -698,7 +744,7 @@ const projects: Project[] = [
     id: 'chat-sdk-node',
     name: 'Chat SDK - Node',
     summary:
-      'Realtime SDK that allows you to integrate Chating features in your Node JS application.',
+      'Realtime SDK that allows you to integrate chatting features in your Node JS application.',
     description:
       'Access the Chat API Consumer. You can instantiate a Chat.Client to subscribe to Chat events. Please check Chat Events for the full list of events that a Chat.Client can subscribe to.',
     contribution: [
@@ -820,7 +866,7 @@ const projects: Project[] = [
     id: 'signalwire-sdk-playgrounds',
     name: 'SignalWire SDK playgrounds',
     summary: 'Playgrounds or demo applications for all the SignalWire browser-based SDKs',
-    description: 'Install SDKs from the NPM and consume it as an end developer',
+    description: 'Install SDKs from NPM and use them as an end developer.',
     contribution: [
       '<p>Fully responsible for building and managing the SDK playgrounds.</p>',
       '<p>Integrate push notifications with Firebase to handle the incoming call.</p>',

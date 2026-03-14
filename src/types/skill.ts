@@ -13,6 +13,5 @@ export interface Skill {
   name: string;
   domain: SkillDomain;
   ratings: number;
-  major: boolean;
   priority?: number;
 }

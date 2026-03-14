@@ -12,10 +12,11 @@ const experience: Experience[] = [
     startDate: 'Jan 2023',
     location: 'USA, Remote',
     summary: [
-      'Develop and maintain JavaScript and Node.js configurable communication SDKs.',
-      'Manage long-running calls state with Saga Pattern using Redux Saga.',
-      'Integrate WebRTC for high-quality video conferencing features.',
-      'Handle CI/CD processes using GitHub Actions for SDK testing & deployment to NPM.',
+      'Developed and maintained Node and JavaScript SDKs with over 10,000 weekly NPM downloads.',
+      'Oversaw 10+ SDK lifecycles with weekly releases, reducing bug reports by 30%.',
+      'Managed internal SDK playgrounds and client-facing demos, boosting user engagement.',
+      'Improved CI with job segmentation, reducing debugging time by 50%.',
+      'Architected end-to-end dental management system: backend, data model, and UI.',
     ],
   },
   {
@@ -27,11 +28,10 @@ const experience: Experience[] = [
     companyTheme: '#EE2938',
     type: 'Full-time',
     startDate: 'Jul 2021',
-    endDate: 'Feb 2023',
-    location: 'Pakistan, UAE, Remote',
+    endDate: 'Mar 2023',
+    location: 'Berlin, Dubai, Remote',
     summary: [
-      'Responsible for both frontend and server-side development.',
-      'Developed a "similar questions" feature using NLP in Python, enhancing user engagement through relevant content suggestions.',
+      'Led full-stack development, launched NLP-driven "smart suggestions", boosting client success by 30%.',
       {
         clientId: 1,
         client: 'ADRES',
@@ -54,8 +54,8 @@ const experience: Experience[] = [
         clientSubsidiaryTheme: '#000000',
         clientSummary: [
           'Developed a 1-click checkout CareemPay SDK for merchants, simplifying payment processes and enhancing user experience.',
-          "Reduced application load time by 15% through strategic code splitting and deployed a server-side rendered application via GitLab's CI/CD pipeline, enhancing deployment efficiency.",
-          'Improved application performance by 25% by creating a package to queue analytics APIs, streamlining data processing.',
+          'Integrated 3DS and non-3DS bank cards, improving conversion rates by 50% with web-to-app redirection.',
+          'Engineered a high-performance analytics API queue, achieving 2x faster checkout by resolving bottlenecks.',
         ],
       },
     ],
@@ -72,11 +72,8 @@ const experience: Experience[] = [
     endDate: 'Jun 2021',
     location: 'USA, Remote',
     summary: [
-      'Design, develop and maintain software using state-of-the-art tools and techniques with the USA-based team.',
-      'Mainly focus on the front-end side development.',
-      'Collaborate with multiple teams to provide generic solutions.',
-      'Conduct dev sessions to elaborate and explain new generic features.',
-      'Accomplished real-time data for multiple teams by solving GraphQL subscription issue.',
+      'Developed generic UI components; led dev sessions to enhance collaboration and reusability.',
+      'Solved complex GraphQL issue, boosting team productivity by 25% with real-time data access.',
     ],
   },
   {
@@ -91,13 +88,10 @@ const experience: Experience[] = [
     endDate: 'Nov 2020',
     location: 'Karachi, Pakistan',
     summary: [
-      'Mainly focus on the server-side development using technologies like Node.js, GraphQL, Apollo, MongoDB, Passport.js, etc.',
-      'Responsible for all the backend operations, from database designing to input validation and API response.',
-      'Build and maintain MongoDB and GraphQL schemas.',
-      'Implement user authorization and authentication with JWT and OAuth.',
-      'Migrated an old React application to a React Hooks.',
-      'Added language locale features on the frontend side with React Context API.',
-      'Solved real-time data fetching problem with Apollo GraphQL subscription on React-Native application.',
+      'Increased user engagement by 60% with a full-stack user activity feature.',
+      'Focused on server-side development using Node.js, GraphQL, Apollo, MongoDB, and Passport.js.',
+      'Built and maintained MongoDB and GraphQL schemas with JWT and OAuth authentication.',
+      'Migrated a legacy React application to React Hooks and added language locale features.',
     ],
   },
   {
@@ -111,11 +105,9 @@ const experience: Experience[] = [
     endDate: 'Apr 2020',
     location: 'Pakistan, Remote',
     summary: [
-      'Building and maintaining Node.js server with the help of Express.js and Mongoose.js ODM for MongoDB database.',
-      'Responsible for Database designing and maintaining.',
-      'Develop a new UI with a step-by-step user flow and graphical insight.',
-      'Integrating backend server with frontend using frontend JavaScript libraries like React, Redux, etc.',
-      'The core task was to build and maintain the whole application using MERN stack technology.',
+      'Built and maintained a full-stack MERN application, owning the entire development lifecycle.',
+      'Developed a new UI with step-by-step user flows and graphical insights using React and Redux.',
+      'Designed and maintained the database layer using MongoDB with Mongoose ODM.',
     ],
   },
   {
@@ -130,9 +122,9 @@ const experience: Experience[] = [
     endDate: 'Jun 2019',
     location: 'Karachi, Pakistan',
     summary: [
-      'Front end web app development using technologies like CSS, Sass, Bootstrap, Vanilla JavaScript (ES6, ES7) and React.js',
-      'Converting PSD and Website wireframes into responsive design.',
-      'Worked with Vanilla JS and Google Firebase with real-time data in Chat room application.',
+      'Front-end web app development using CSS, Sass, Bootstrap, Vanilla JavaScript (ES6, ES7), and React.js.',
+      'Converted PSD and website wireframes into responsive designs.',
+      'Built a real-time chat room application using Vanilla JS and Google Firebase.',
     ],
   },
 ];
