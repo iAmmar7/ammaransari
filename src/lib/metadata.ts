@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 
-const APP_URL = 'https://ammaransari.dev';
-
 interface PageMetadataParams {
   title: string;
   description: string;
@@ -15,19 +13,25 @@ export function generatePageMetadata({
   image,
   route = '',
 }: PageMetadataParams): Metadata {
-  const fullTitle = title;
-  const url = `${APP_URL}${route}`;
-
   return {
-    title: fullTitle,
+    title,
     description,
+    alternates: {
+      canonical: route || '/',
+    },
     openGraph: {
       title,
       description,
-      url,
+      url: route || '/',
       ...(image && {
-        images: [{ url: `${APP_URL}${image}`, type: 'image/jpeg' }],
+        images: [{ url: image, type: 'image/jpeg', width: 1200, height: 630, alt: title }],
       }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      ...(image && { images: [image] }),
     },
   };
 }

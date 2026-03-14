@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import { motion } from 'motion/react';
-
 import { blurryDataProfile } from '@/lib/blurryData';
+import { site } from '@/data/site';
 import ExternalLink from '@/components/ui/external-link';
 import SocialLinks from '@/components/social-links';
 
@@ -43,18 +43,18 @@ export default function AboutMe() {
             viewport={{ once: true }}
           >
             <h2 className='text-center text-2xl sm:text-3xl text-foreground font-bold'>
-              Ammar Ansari
+              {site.name}
             </h2>
-            <p className='text-center'>Software Engineer</p>
+            <p className='text-center'>{site.jobTitle}</p>
             <div className='flex justify-center gap-x-2 leading-6'>
               <strong>
                 <ExternalLink
                   color='signalwire'
-                  href='https://signalwire.com'
+                  href={site.employer.url}
                   underline
-                  title='SignalWire unifies old-school telecom, modern WebRTC video and audio, and IP messaging into a single API.'
+                  title={site.employer.description}
                 >
-                  SignalWire
+                  {site.employer.name}
                 </ExternalLink>
               </strong>
             </div>
@@ -64,7 +64,7 @@ export default function AboutMe() {
         <div className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
           <p>
             Hi, I&apos;m <strong className='font-normal text-foreground'>Ammar</strong>, currently
-            working as a Software Engineer at SignalWire in the SDK team.
+            working as a {site.jobTitle} at {site.employer.name} in the SDK team.
           </p>
           <p className='mt-2'>
             I am proud to have a unique background that combines system engineering, computer
@@ -72,10 +72,10 @@ export default function AboutMe() {
             <strong className='font-normal text-foreground'>small-scale startups</strong> to{' '}
             <strong className='font-normal text-foreground'>well-established organizations</strong>,
             I have worked in various teams using multiple technologies across different domains.
-            Across these roles, I&apos;ve consistently tackled technical challenges, resolved complex
-            issues, and collaborated across teams and projects.{' '}
-            <strong className='font-normal text-foreground'>My love of coding</strong> drives me, and
-            I relish every opportunity to tackle deep technical challenges.
+            Across these roles, I&apos;ve consistently tackled technical challenges, resolved
+            complex issues, and collaborated across teams and projects.{' '}
+            <strong className='font-normal text-foreground'>My love of coding</strong> drives me,
+            and I relish every opportunity to tackle deep technical challenges.
           </p>
           <div className='hidden md:block mt-6'>{funFact}</div>
         </div>
@@ -84,9 +84,8 @@ export default function AboutMe() {
       <div className='mt-6 text-center sm:text-left'>
         On the academic side, I graduated with a Bachelor&apos;s degree in{' '}
         <strong className='font-normal text-foreground'>Computer Systems Engineering</strong>.
-        I&apos;m highly{' '}
-        <strong className='font-normal text-foreground'>adaptable</strong>, always eager to learn and
-        share knowledge with others.
+        I&apos;m highly <strong className='font-normal text-foreground'>adaptable</strong>, always
+        eager to learn and share knowledge with others.
       </div>
     </div>
   );

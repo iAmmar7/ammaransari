@@ -47,6 +47,28 @@ const projects: Project[] = [
     spotlight: true,
   },
   {
+    id: 'penmit',
+    name: 'penmit',
+    summary: 'AI-powered CLI tool that generates conventional commit messages from staged diffs.',
+    description:
+      '<p>A developer CLI that generates commit messages using AI - supporting Ollama (local and cloud), Anthropic, and OpenAI. Built with a local-first philosophy, it reads only staged diffs and includes built-in secret redaction to ensure sensitive data never reaches cloud providers. Zero runtime dependencies, published to NPM.</p>',
+    features: [
+      '<p><strong>Local-first</strong> with Ollama support for fully offline, private usage</p>',
+      '<p>Built-in <strong>secret redaction</strong> that strips API keys, tokens, and passwords from diffs before sending to cloud providers</p>',
+      '<p>Supports multiple providers: Ollama, Anthropic (Claude), and OpenAI</p>',
+      '<p>Interactive prompt to accept, regenerate, or edit messages before committing</p>',
+      '<p>Setup wizard with persistent configuration and per-run overrides</p>',
+      '<p><strong>Zero runtime dependencies</strong> - single binary with no node_modules</p>',
+      '<p>Custom redaction patterns via <code>.penmitrc.json</code> for project-specific secrets</p>',
+    ],
+    contribution:
+      '<p>Sole developer - designed, built, tested, and published the entire CLI tool to NPM as an open-source project.</p>',
+    domain: 'side-project',
+    technologies: ['ts', 'node'],
+    code: 'https://github.com/iAmmar7/penmit',
+    url: 'https://www.npmjs.com/package/penmit',
+  },
+  {
     id: 'paint-app-realtime',
     name: 'Paint App',
     summary: 'An effortless real-time paint application',
@@ -167,6 +189,26 @@ const projects: Project[] = [
     code: 'https://github.com/iAmmar7/forecastware',
     url: 'https://snack.expo.dev/@iammar7/forecastware_v44',
     apk: 'https://1drv.ms/u/s!Ajq4XZm81_iYgZcAtWMcejVA8hqjVQ?e=Jks2Ff',
+  },
+  {
+    id: 'prime-rails',
+    name: 'Prime Rails',
+    summary:
+      'A large-scale Ruby on Rails SaaS platform powering the SignalWire dashboard and APIs.',
+    description:
+      "<p>SignalWire's core Rails application - a large-scale SaaS platform comprising marketing pages, a customer-facing dashboard, an internal admin interface, and RESTful APIs. The platform manages everything from user authentication and billing to telecom resource provisioning across multiple subdomains.</p>",
+    contribution: [
+      '<p>Adapted to a completely new tech stack (Ruby on Rails) and began contributing within the first few weeks.</p>',
+      '<p>Built a full CRUD module for config variables with filtering, ownership tracking, and unit tests.</p>',
+      '<p>Developed a voice call insight dashboard with interactive charts for call quality metrics.</p>',
+      '<p>Implemented scope validation for Fabric APIs with comprehensive test coverage.</p>',
+      '<p>Optimized slow ClickHouse database queries in the daily rollup pipeline.</p>',
+      '<p>Integrated <strong>PostHog</strong> for feature flag management, including early access feature evaluation at the project level.</p>',
+      '<p>Contributed rate limiting improvements and various bug fixes across the platform.</p>',
+    ],
+    domain: 'company-based',
+    company: 'SignalWire',
+    technologies: ['rails', 'postgresql', 'redis', 'docker', 'aws'],
   },
   {
     id: 'board-game',

@@ -8,6 +8,7 @@ interface PageLayoutProps {
   tagline: string;
   summary?: string;
   maxWidth?: string;
+  centerContent?: boolean;
   children: React.ReactNode;
 }
 
@@ -20,8 +21,8 @@ export default function PageLayout({
   return (
     <div className='flex flex-col min-h-screen relative z-0'>
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
-      <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto'>
-        <div className='text-sm sm:text-base relative z-10 h-full py-5 px-0'>
+      <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto flex items-center'>
+        <div className='text-sm sm:text-base relative z-10 h-full py-5 px-0 w-full'>
           <motion.div
             initial={{ y: 20 }}
             whileInView={{

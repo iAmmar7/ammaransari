@@ -1,5 +1,3 @@
-export const APP_URL = 'https://ammaransari.dev';
-
 export const THEME_BREAKPOINTS = {
   xs: 475,
   sm: 640,

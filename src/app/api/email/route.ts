@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { site } from '@/data/site';
 import EmailTemplate from './email-template';
 
 export async function POST(request: Request) {
@@ -9,9 +10,9 @@ export async function POST(request: Request) {
     const { name, email, message } = body;
 
     const { data, error } = await resend.emails.send({
-      from: 'Ammar Ansari <contact@ammaransari.dev>',
-      to: ['iammaransari@gmail.com'],
-      subject: 'Contact - ammaransari.dev',
+      from: `${site.name} <${site.email}>`,
+      to: [site.personalEmail],
+      subject: `Contact - ${site.domain}`,
       react: EmailTemplate({ name, email, message }),
     });
 

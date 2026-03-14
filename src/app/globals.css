@@ -24,8 +24,7 @@
   --font-body:
     'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell,
     Helvetica Neue, sans-serif;
-  --font-display:
-    Sora, 'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+  --font-display: Sora, 'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
 
   /* Semantic Colors */
   --color-foreground: var(--color-foreground);
@@ -37,7 +36,7 @@
   --color-surface-tertiary: var(--color-surface-tertiary);
   --color-surface-muted: var(--color-surface-muted);
 
-  /* Named Colors — Brands */
+  /* Named Colors - Brands */
   --color-venturedive: #ed2736;
   --color-careem: #47a23f;
   --color-uber: var(--color-muted);
@@ -46,7 +45,7 @@
   --color-sudofy: #3277db;
   --color-adres: #225294;
 
-  /* Named Colors — Tech */
+  /* Named Colors - Tech */
   --color-typescript: #007acc;
   --color-react: #88dded;
   --color-next: #000000;

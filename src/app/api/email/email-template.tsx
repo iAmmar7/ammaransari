@@ -11,6 +11,7 @@ import {
   Tailwind,
   Text,
 } from '@react-email/components';
+import { site } from '@/data/site';
 
 interface EmailTemplateProps {
   name: string;
@@ -22,7 +23,9 @@ export default function EmailTemplate({ name, email, message }: EmailTemplatePro
   return (
     <Html>
       <Head />
-      <Preview>New message from {name} via ammaransari.dev</Preview>
+      <Preview>
+        New message from {name} via {site.domain}
+      </Preview>
       <Tailwind
         config={{
           theme: {
@@ -40,7 +43,7 @@ export default function EmailTemplate({ name, email, message }: EmailTemplatePro
             {/* Header */}
             <Section className='pb-6 text-center'>
               <Text className='m-0 text-lg font-bold tracking-tight text-surface'>
-                ammaransari.dev
+                {site.domain}
               </Text>
             </Section>
 
@@ -97,8 +100,8 @@ export default function EmailTemplate({ name, email, message }: EmailTemplatePro
             <Section className='pt-6 text-center'>
               <Text className='m-0 text-[13px] text-gray-400'>
                 This email was sent from the contact form on{' '}
-                <Link href='https://ammaransari.dev' className='text-accent no-underline'>
-                  ammaransari.dev
+                <Link href={site.url} className='text-accent no-underline'>
+                  {site.domain}
                 </Link>
               </Text>
             </Section>

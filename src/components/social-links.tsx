@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import clsx from 'clsx';
-
 import { socialLinks } from '@/lib/socialMedia';
+import { site } from '@/data/site';
 import Icon from '@/components/ui/icon';
 import Badge from '@/components/ui/badge';
 
@@ -26,7 +26,7 @@ export default function SocialLinks({ className }: SocialLinksProps) {
             rel='noopener noreferrer'
             onHoverStart={() => setHoveredLink(title)}
             onHoverEnd={() => setHoveredLink(null)}
-            title={`${title} - Ammar Ansari`}
+            title={`${title} - ${site.name}`}
           >
             <Icon
               icon={icon}

@@ -5,7 +5,7 @@ import PageLayout from '@/components/page-layout';
 import Projects from './_components/projects';
 
 export const metadata = generatePageMetadata({
-  title: 'Projects - Ammar Ansari',
+  title: 'Projects',
   description:
     'Projects based on various tech-stack including front-end, back-end, server-side development and a few mobile apps.',
   image: '/images/code-meta.jpeg',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-
 import projects from '@/data/projects';
+import { site } from '@/data/site';
 import { generatePageMetadata } from '@/lib/metadata';
 import Footer from '@/components/footer';
 import ProjectDetails from './_components/details';
@@ -20,7 +20,7 @@ export async function generateMetadata({
   const project = projects.find((proj) => proj.id === id);
   if (!project) return {};
   return generatePageMetadata({
-    title: `${project.name} - Ammar Ansari`,
+    title: project.name,
     description: project.summary,
     image: project.thumbnail ?? '',
     route: `/projects/${project.id}`,

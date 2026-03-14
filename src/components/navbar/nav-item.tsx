@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'motion/react';
+import { site } from '@/data/site';
 
 interface NavItemProps {
   name: string;
@@ -25,7 +26,7 @@ export default function NavItem({ name, path }: NavItemProps) {
       <Link
         href={path}
         className='border-0 relative hover:opacity-100 focus:opacity-100'
-        title={`${name} - Ammar Ansari`}
+        title={`${name} - ${site.name}`}
       >
         <motion.span
           className={css}

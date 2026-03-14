@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { RiLoader4Line, RiSendPlaneFill } from '@remixicon/react';
-
 import Button from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Collapse from '@/components/ui/collapse';
+import { site } from '@/data/site';
 
 interface FormData {
   name: string;
@@ -147,13 +147,13 @@ export default function Contact() {
             <p role='alert' className='text-sm text-red-400 mb-2'>
               Unable to send email! Try to send it manually{' '}
               <a
-                href='mailto:iammaransari@gmail.com'
+                href={`mailto:${site.personalEmail}`}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-accent'
-                title='Send email to Ammar Ansari'
+                title={`Send email to ${site.name}`}
               >
-                iammaransari@gmail.com
+                {site.personalEmail}
               </a>
             </p>
           </Collapse>

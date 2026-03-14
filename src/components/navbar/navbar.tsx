@@ -3,11 +3,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { motion, LayoutGroup } from 'motion/react';
 import { RiArrowRightSLine, RiDownloadLine } from '@remixicon/react';
-
 import Logo from '@/components/logo';
 import NavItem from './nav-item';
 import Icon from '@/components/ui/icon';
 import { NAV_LINKS } from './constants';
+import { site } from '@/data/site';
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
@@ -65,7 +65,7 @@ export default function Navbar() {
             className='appearance-none bg-transparent rounded-base text-sm outline-0 py-2 px-3 no-underline cursor-pointer transition-all duration-500 ease-base hover:bg-surface-muted hover:opacity-100 inline-flex items-center justify-center gap-x-1 group overflow-hidden'
             download
             role='button'
-            href='/doc/AmmarAnsari_Resume.pdf'
+            href={site.resumePath}
             title='Download resume'
           >
             <div className='w-fit grid'>

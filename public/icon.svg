@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;display=swap');</style>
+    <linearGradient id="l1g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38ccf2"/>
+      <stop offset="100%" stop-color="#9e8cfc"/>
+    </linearGradient>
+    <filter id="l1f" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#38ccf2" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+  <rect x="20" y="20" width="160" height="160" rx="20" fill="#000000" filter="url(#l1f)"/>
+  <text x="100" y="101" font-family="'Sora', Arial, Helvetica, sans-serif" font-size="140" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="url(#l1g)">A.</text>
+</svg>

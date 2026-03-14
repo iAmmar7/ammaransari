@@ -7,6 +7,7 @@ import { motion } from 'motion/react';
 
 import Footer from '@/components/footer';
 import Button from '@/components/ui/button';
+import { site } from '@/data/site';
 
 const container = {
   hidden: { opacity: 0 },
@@ -64,7 +65,7 @@ export default function NotFound() {
               <Link href='/' title='View home page'>
                 <Button>Go to home</Button>
               </Link>
-              <Link href='/#contact' title='Contact Ammar Ansari'>
+              <Link href='/#contact' title={`Contact ${site.name}`}>
                 <Button variant='secondary' className='border border-accent'>
                   Contact me
                 </Button>
