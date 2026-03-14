@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import projects from '@/data/projects';
-import { site } from '@/data/site';
 import { generatePageMetadata } from '@/lib/metadata';
 import Footer from '@/components/footer';
 import ProjectDetails from './_components/details';

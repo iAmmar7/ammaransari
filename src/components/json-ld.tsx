@@ -2,9 +2,7 @@ import { site } from '@/data/site';
 import { socialLinks } from '@/lib/socialMedia';
 
 export function PersonJsonLd() {
-  const profileUrls = socialLinks
-    .filter(({ title }) => title !== 'Email')
-    .map(({ url }) => url);
+  const profileUrls = socialLinks.filter(({ title }) => title !== 'Email').map(({ url }) => url);
 
   const jsonLd = {
     '@context': 'https://schema.org',

@@ -16,14 +16,14 @@ My personal portfolio website built with Next.js, React, and TypeScript.
 
 ## Pages
 
-| Route | Description |
-| --- | --- |
-| `/` | Home with hero section and contact form |
-| `/about` | About me |
-| `/experience` | Work experience timeline |
-| `/skills` | Filterable skill matrix by domain |
-| `/projects` | Project listing with skill-based filtering |
-| `/projects/[id]` | Project detail page |
+| Route            | Description                                |
+| ---------------- | ------------------------------------------ |
+| `/`              | Home with hero section and contact form    |
+| `/about`         | About me                                   |
+| `/experience`    | Work experience timeline                   |
+| `/skills`        | Filterable skill matrix by domain          |
+| `/projects`      | Project listing with skill-based filtering |
+| `/projects/[id]` | Project detail page                        |
 
 ## Project Structure
 

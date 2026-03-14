@@ -49,21 +49,21 @@ export default function CurrentTechStack() {
               )}
               title={`View ${tech.name} projects`}
             >
-            <TechIcon
-              src={tech.icon}
-              className={clsx(
-                'w-21.5 h-20 sm:w-32 sm:h-32 rounded-base p-2 sm:p-4 transition duration-500 ease-base',
-                'md:group-hover:opacity-10',
-                tech.color,
-                `md:text-current ${tech.hoverColor}`
-              )}
-            />
-            <p className='pb-2.5 text-center text-xs font-bold md:hidden'>{tech.name}</p>
-            <p className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full hidden md:flex justify-center transition duration-500 ease-base opacity-0 group-hover:opacity-100 font-bold text-lg'>
-              {tech.name}
-            </p>
-          </Link>
-        ))}
+              <TechIcon
+                src={tech.icon}
+                className={clsx(
+                  'w-21.5 h-20 sm:w-32 sm:h-32 rounded-base p-2 sm:p-4 transition duration-500 ease-base',
+                  'md:group-hover:opacity-10',
+                  tech.color,
+                  `md:text-current ${tech.hoverColor}`
+                )}
+              />
+              <p className='pb-2.5 text-center text-xs font-bold md:hidden'>{tech.name}</p>
+              <p className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full hidden md:flex justify-center transition duration-500 ease-base opacity-0 group-hover:opacity-100 font-bold text-lg'>
+                {tech.name}
+              </p>
+            </Link>
+          ))}
         </ul>
         <Link href='/skills'>
           <Button

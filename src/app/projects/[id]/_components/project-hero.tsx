@@ -104,7 +104,11 @@ export default function ProjectHero({
                 </ExternalLink>
               )}
               {url && (
-                <ExternalLink title='View live application' aria-label='View live application' href={url}>
+                <ExternalLink
+                  title='View live application'
+                  aria-label='View live application'
+                  href={url}
+                >
                   <Icon
                     icon={RiExternalLinkLine}
                     className='text-base md:text-lg hover:text-highlight transition-colors duration-200 ease-base'
