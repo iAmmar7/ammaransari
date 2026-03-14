@@ -44,7 +44,6 @@ const projects: Project[] = [
       'docker',
     ],
     thumbnail: '/images/projects/thumb-dpflow.png',
-    code: 'https://github.com/muhammadPro4-2061/PDFlow',
     spotlight: true,
   },
   {
