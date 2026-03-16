@@ -24,11 +24,8 @@ export const getSkillNameBySkillId = (skillId: string): string | undefined => {
 };
 
 export const sortSkillsByUsage = () => {
-  const seen = new Set<string>();
   return [...skills]
     .filter((skill) => {
-      if (seen.has(skill.id)) return false;
-      seen.add(skill.id);
       return getSkillProjectCount(skill.id) >= MIN_PROJECTS_FOR_FILTER;
     })
     .sort((a, b) => {

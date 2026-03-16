@@ -3,7 +3,7 @@ import type { Skill } from '@/types/skill';
 const skills: Skill[] = [
   // Domain: WEB
   { id: 'js', name: 'JavaScript', domain: 'web', ratings: 4 },
-  { id: 'ts', name: 'TypeScript', domain: 'web', ratings: 3.5 },
+  { id: 'ts', name: 'TypeScript', domain: 'web', ratings: 4 },
   { id: 'react', name: 'React JS', domain: 'web', ratings: 4 },
   { id: 'next', name: 'Next JS', domain: 'web', ratings: 3.5 },
   { id: 'webrtc', name: 'WebRTC', domain: 'web', ratings: 3 },
@@ -102,7 +102,7 @@ const skills: Skill[] = [
 
   // Domain: LANGUAGES
   { id: 'js-lang', name: 'JavaScript', domain: 'languages', ratings: 4 },
-  { id: 'ts', name: 'TypeScript', domain: 'languages', ratings: 4 },
+  { id: 'ts-lang', name: 'TypeScript', domain: 'languages', ratings: 4 },
   { id: 'cplusplus', name: 'C++', domain: 'languages', ratings: 2 },
   { id: 'ruby', name: 'Ruby', domain: 'languages', ratings: 2 },
   { id: 'python', name: 'Python', domain: 'languages', ratings: 2 },

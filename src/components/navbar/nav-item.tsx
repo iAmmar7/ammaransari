@@ -35,7 +35,7 @@ export default function NavItem({ name, path }: NavItemProps) {
         >
           {isHovered && (
             <motion.span
-              className='absolute -top-3.25 inset-x-0 bg-surface-secondary p-5 rounded-base -z-1'
+              className='hidden sm:block absolute -top-3.25 inset-x-0 bg-surface-secondary p-5 rounded-base -z-1'
               layoutId='nav'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

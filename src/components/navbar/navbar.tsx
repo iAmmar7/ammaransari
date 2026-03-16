@@ -37,7 +37,7 @@ export default function Navbar() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className='flex items-center justify-center text-xs min-h-15 w-full flex-wrap relative pt-1 sm:pt-0 bg-surface/80 backdrop-blur-md'
+        className='flex items-center justify-center text-xs min-h-15 w-full flex-wrap relative pt-1 sm:pt-0 bg-surface/60 backdrop-blur-xl backdrop-saturate-150'
       >
         <Logo />
         <div className='relative flex-1 order-2 basis-full sm:basis-auto overflow-hidden'>
@@ -55,7 +55,7 @@ export default function Navbar() {
             type='button'
             aria-label='Scroll for more'
             onClick={() => navRef.current?.scrollBy({ left: 100, behavior: 'smooth' })}
-            className={`absolute right-0 inset-y-0 flex items-center pl-4 pr-1 bg-linear-to-l from-surface-muted from-60% to-transparent transition-opacity duration-300 md:hidden ${canScrollRight ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+            className={`absolute right-0 inset-y-0 flex items-center pl-4 pr-1 bg-linear-to-l from-surface from-40% to-transparent transition-opacity duration-300 md:hidden ${canScrollRight ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
           >
             <Icon icon={RiArrowRightSLine} className='text-muted text-base' />
           </button>
