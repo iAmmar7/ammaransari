@@ -1,6 +1,6 @@
 export const site = {
   name: 'Ammar Ansari',
-  title: 'Ammar Ansari — Software Engineering Consultant',
+  title: 'Ammar Ansari - Software Engineering Consultant',
   description:
     'Software Engineering Consultant specializing in full stack development, SDK design, and real-time systems. Explore my projects, experience, and technical skills.',
   tagline: 'A constant learner striving for perfection',

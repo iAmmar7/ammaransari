@@ -22,6 +22,6 @@ export const faqItems = [
   {
     question: 'Is Ammar Ansari available for consulting?',
     answer:
-      'Yes — Ammar is available for consulting engagements in full stack development, SDK design, and real-time systems. You can reach him at contact@ammaransari.dev.',
+      'Yes - Ammar is available for consulting engagements in full stack development, SDK design, and real-time systems. You can reach him at contact@ammaransari.dev.',
   },
 ] as const;
