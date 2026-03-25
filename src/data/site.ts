@@ -6,7 +6,7 @@ export const site = {
   tagline: 'A constant learner striving for perfection',
   url: 'https://ammaransari.dev',
   domain: 'ammaransari.dev',
-  ogImage: '/images/home-meta.jpeg',
+  ogImage: '/images/ammar.png',
   jobTitle: 'Software Engineering Consultant',
   email: 'contact@ammaransari.dev',
   personalEmail: 'iammaransari@gmail.com',
