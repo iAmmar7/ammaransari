@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 import { blurryDataProfile } from '@/lib/blurryData';
 import { site } from '@/data/site';
-import ExternalLink from '@/components/ui/external-link';
 import SocialLinks from '@/components/social-links';
 
 export default function AboutMe() {
@@ -25,14 +24,14 @@ export default function AboutMe() {
           <div className='relative flex-1 mb-2 min-h-100 sm:min-h-auto'>
             <Image
               alt='Ammar'
-              src='/images/ammar.jpg'
+              src='/images/ammar.png'
               fill
               sizes='(max-width: 640px) 100vw, 50vw'
               quality={80}
               placeholder='blur'
               blurDataURL={blurryDataProfile}
               priority
-              style={{ objectFit: 'contain' }}
+              style={{ objectFit: 'cover' }}
               className='rounded-md z-10'
             />
           </div>
@@ -46,36 +45,29 @@ export default function AboutMe() {
               {site.name}
             </h2>
             <p className='text-center'>{site.jobTitle}</p>
-            <div className='flex justify-center gap-x-2 leading-6'>
-              <strong>
-                <ExternalLink
-                  color='signalwire'
-                  href={site.employer.url}
-                  underline
-                  title={site.employer.description}
-                >
-                  {site.employer.name}
-                </ExternalLink>
-              </strong>
-            </div>
             <SocialLinks className='justify-center mt-1' />
           </motion.div>
         </div>
         <div className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
           <p>
-            Hi, I&apos;m <strong className='font-normal text-foreground'>Ammar</strong>, currently
-            working as a {site.jobTitle} at {site.employer.name} in the SDK team.
+            Hi, I&apos;m <strong className='font-normal text-foreground'>Ammar</strong> - a{' '}
+            {site.jobTitle} specializing in{' '}
+            <strong className='font-normal text-foreground'>full-stack development</strong>,{' '}
+            <strong className='font-normal text-foreground'>SDK & library design</strong>, and{' '}
+            <strong className='font-normal text-foreground'>real-time communication systems</strong>
+            . I help organizations architect and deliver scalable web, mobile, and desktop
+            applications, SDKs, and developer-friendly tools used by thousands of developers
+            worldwide.
           </p>
           <p className='mt-2'>
-            I am proud to have a unique background that combines system engineering, computer
-            networking, and software development. From{' '}
+            With a unique background that combines system engineering, computer networking, and
+            software development, I help teams ship reliable, production-ready products. From{' '}
             <strong className='font-normal text-foreground'>small-scale startups</strong> to{' '}
             <strong className='font-normal text-foreground'>well-established organizations</strong>,
-            I have worked in various teams using multiple technologies across different domains.
-            Across these roles, I&apos;ve consistently tackled technical challenges, resolved
-            complex issues, and collaborated across teams and projects.{' '}
+            I&apos;ve worked across diverse teams and tech stacks — consistently tackling complex
+            technical challenges and collaborating across projects.{' '}
             <strong className='font-normal text-foreground'>My love of coding</strong> drives me,
-            and I relish every opportunity to tackle deep technical challenges.
+            and I relish every opportunity to solve deep technical problems.
           </p>
           <div className='hidden md:block mt-6'>{funFact}</div>
         </div>
