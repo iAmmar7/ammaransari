@@ -24,10 +24,10 @@ export default function AboutMe() {
           <div className='relative flex-1 mb-2 min-h-100 sm:min-h-auto'>
             <Image
               alt='Ammar'
-              src='/images/ammar.png'
+              src='/images/ammar.jpg'
               fill
               sizes='(max-width: 640px) 100vw, 50vw'
-              quality={80}
+              quality={100}
               placeholder='blur'
               blurDataURL={blurryDataProfile}
               priority
