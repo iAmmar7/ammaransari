@@ -61,7 +61,7 @@ export default function ProjectHero({
           <div className='bg-surface-muted rounded-base shadow-md backdrop-blur-md'>
             <div className='relative overflow-hidden rounded-base flex h-96 w-full'>
               <Image
-                alt={name}
+                alt={`Screenshot of ${name} project`}
                 src={!isEmpty(thumbnail) ? thumbnail! : PLACEHOLDER_200}
                 fill
                 sizes='(max-width: 768px) 100vw, 83vw'

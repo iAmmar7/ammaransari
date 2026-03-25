@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import projects from '@/data/projects';
 import { generatePageMetadata } from '@/lib/metadata';
+import { BreadcrumbJsonLd } from '@/components/json-ld';
 import Footer from '@/components/footer';
 import ProjectDetails from './_components/details';
 import ProjectHero from './_components/project-hero';
@@ -45,6 +46,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
 
   return (
     <div className='flex flex-col min-h-screen relative z-0 text-sm md:text-base'>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Projects', href: '/projects' },
+          { name: name, href: `/projects/${id}` },
+        ]}
+      />
       <div className='absolute inset-0 -z-10 bg-home-gradient opacity-40' />
       <main className='px-0 pt-28 pb-12 sm:pt-20 sm:pb-14 overflow-hidden flex-auto'>
         <ProjectHero

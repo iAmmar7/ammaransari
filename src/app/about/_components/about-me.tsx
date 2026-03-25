@@ -23,7 +23,7 @@ export default function AboutMe() {
         <div className='mt-0 w-auto sm:w-1/2 text-center sm:text-inherit flex flex-col'>
           <div className='relative flex-1 mb-2 min-h-100 sm:min-h-auto'>
             <Image
-              alt='Ammar'
+              alt='Ammar Ansari - Software Engineering Consultant'
               src='/images/ammar.jpg'
               fill
               sizes='(max-width: 640px) 100vw, 50vw'
@@ -48,7 +48,7 @@ export default function AboutMe() {
             <SocialLinks className='justify-center mt-1' />
           </motion.div>
         </div>
-        <div className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
+        <div id='about-bio' className='w-auto sm:w-1/2 mt-3 sm:mt-0 text-center sm:text-left'>
           <p>
             Hi, I&apos;m <strong className='font-normal text-foreground'>Ammar</strong> - a{' '}
             {site.jobTitle} specializing in{' '}
@@ -74,10 +74,12 @@ export default function AboutMe() {
       </div>
       <div className='block md:hidden mt-6'>{funFact}</div>
       <div className='mt-6 text-center sm:text-left'>
-        On the academic side, I graduated with a Bachelor&apos;s degree in{' '}
-        <strong className='font-normal text-foreground'>Computer Systems Engineering</strong>.
-        I&apos;m highly <strong className='font-normal text-foreground'>adaptable</strong>, always
-        eager to learn and share knowledge with others.
+        <p>
+          On the academic side, I graduated with a Bachelor&apos;s degree in{' '}
+          <strong className='font-normal text-foreground'>Computer Systems Engineering</strong>.
+          I&apos;m highly <strong className='font-normal text-foreground'>adaptable</strong>, always
+          eager to learn and share knowledge with others.
+        </p>
       </div>
     </div>
   );

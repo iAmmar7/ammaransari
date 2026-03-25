@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { generatePageMetadata } from '@/lib/metadata';
 import { site } from '@/data/site';
 
+import { SpeakableJsonLd } from '@/components/json-ld';
 import HomeSection from './_components/home-section';
 import CurrentEmployment from './_components/current-employment';
 import CurrentTechStack from './_components/current-tech-stack';
@@ -17,6 +18,7 @@ export const metadata = generatePageMetadata({
 export default function HomePage() {
   return (
     <Fragment>
+      <SpeakableJsonLd url='/' cssSelectors={['#hero-intro']} />
       <HomeSection />
       <CurrentEmployment />
       <CurrentTechStack />

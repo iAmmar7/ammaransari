@@ -39,6 +39,50 @@ export function WebSiteJsonLd() {
   );
 }
 
+export function BreadcrumbJsonLd({
+  items,
+}: {
+  items: { name: string; href: string }[];
+}) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${site.url}${item.href}`,
+    })),
+  };
+
+  return (
+    <script
+      type='application/ld+json'
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+export function SpeakableJsonLd({ url, cssSelectors }: { url: string; cssSelectors: string[] }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: site.name,
+    url: `${site.url}${url}`,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: cssSelectors,
+    },
+  };
+
+  return (
+    <script
+      type='application/ld+json'
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export function FaqJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',

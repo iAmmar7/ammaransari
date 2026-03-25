@@ -7,6 +7,7 @@ import Footer from '@/components/footer';
 interface PageLayoutProps {
   tagline: string;
   summary?: string;
+  lastUpdated?: string;
   maxWidth?: string;
   centerContent?: boolean;
   children: React.ReactNode;
@@ -15,6 +16,7 @@ interface PageLayoutProps {
 export default function PageLayout({
   tagline,
   summary,
+  lastUpdated,
   maxWidth = 'max-w-5xl',
   children,
 }: PageLayoutProps) {
@@ -37,6 +39,11 @@ export default function PageLayout({
                 {tagline}
               </h1>
               {summary && <p className='text-muted text-sm text-center sm:text-left'>{summary}</p>}
+              {lastUpdated && (
+                <p className='text-muted/60 text-xs text-center sm:text-left mt-1'>
+                  <time dateTime={lastUpdated}>Last updated: {lastUpdated}</time>
+                </p>
+              )}
             </div>
             {children}
           </motion.div>

@@ -12,7 +12,7 @@ export const metadata = generatePageMetadata({
 
 export default function ExperiencePage() {
   return (
-    <PageLayout tagline='Work Experience'>
+    <PageLayout tagline='Work Experience' lastUpdated='Dec 2025'>
       <WorkExperience />
     </PageLayout>
   );

@@ -52,7 +52,7 @@ export default function Card({ id, name, summary, image, url, code, domain, tech
             <picture className='box-border block overflow-hidden bg-none opacity-100 border-none m-0 p-0 relative h-60 w-full'>
               <Image
                 src={image || PLACEHOLDER_200}
-                alt={name}
+                alt={`Screenshot of ${name} project`}
                 fill
                 sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
                 quality={80}

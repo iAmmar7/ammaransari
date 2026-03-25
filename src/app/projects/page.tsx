@@ -16,6 +16,7 @@ export default function ProjectsPage() {
   return (
     <PageLayout
       tagline='Projects'
+      lastUpdated='March 2026'
       summary='Filter and discover projects I have worked on by technology stack.'
       maxWidth='max-w-6xl'
     >

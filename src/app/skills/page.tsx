@@ -12,7 +12,7 @@ export const metadata = generatePageMetadata({
 
 export default function SkillsPage() {
   return (
-    <PageLayout tagline='Skills' summary='Technologies I have used throughout my career'>
+    <PageLayout tagline='Skills' summary='Technologies I have used throughout my career' lastUpdated='March 2026'>
       <Skills />
     </PageLayout>
   );
