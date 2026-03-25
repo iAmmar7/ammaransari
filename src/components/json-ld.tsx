@@ -1,4 +1,5 @@
 import { site } from '@/data/site';
+import { faqItems } from '@/data/faq';
 import { socialLinks } from '@/lib/socialMedia';
 
 export function PersonJsonLd() {
@@ -35,5 +36,40 @@ export function WebSiteJsonLd() {
       type='application/ld+json'
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
+  );
+}
+
+export function FaqJsonLd() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer,
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <section className='sr-only' aria-label='Frequently asked questions'>
+        <h2>Frequently Asked Questions</h2>
+        <dl>
+          {faqItems.map(({ question, answer }) => (
+            <div key={question}>
+              <dt>{question}</dt>
+              <dd>{answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    </>
   );
 }

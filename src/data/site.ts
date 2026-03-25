@@ -1,21 +1,22 @@
 export const site = {
   name: 'Ammar Ansari',
-  title: 'Ammar Ansari - Software Engineer',
+  title: 'Ammar Ansari — Software Engineering Consultant',
   description:
-    'Personal portfolio of Ammar Ansari - a Software Engineer with experience across diverse tech stacks, from frontend and backend to mobile and real-time systems.',
+    'Software Engineering Consultant specializing in full stack development, SDK design, and real-time systems. Explore my projects, experience, and technical skills.',
   tagline: 'A constant learner striving for perfection',
   url: 'https://ammaransari.dev',
   domain: 'ammaransari.dev',
   ogImage: '/images/home-meta.jpeg',
-  jobTitle: 'Software Engineer',
+  jobTitle: 'Software Engineering Consultant',
   email: 'contact@ammaransari.dev',
   personalEmail: 'iammaransari@gmail.com',
   resumePath: '/doc/AmmarAnsari_Resume.pdf',
   keywords: [
     'Ammar Ansari',
+    'Software Engineering Consultant',
     'Full Stack Developer',
     'Software Engineer',
-    'Portfolio',
+    'Freelance Developer',
     'Web Developer',
   ],
   employer: {

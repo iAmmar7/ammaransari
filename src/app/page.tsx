@@ -9,8 +9,8 @@ import CurrentProject from './_components/current-project';
 import ContactSection from './_components/contact-section';
 
 export const metadata = generatePageMetadata({
-  title: site.name,
-  description: site.tagline,
+  title: site.title,
+  description: site.description,
   image: site.ogImage,
 });
 

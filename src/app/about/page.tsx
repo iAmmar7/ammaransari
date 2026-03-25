@@ -1,5 +1,6 @@
 import { generatePageMetadata } from '@/lib/metadata';
 import PageLayout from '@/components/page-layout';
+import { FaqJsonLd } from '@/components/json-ld';
 import AboutMe from './_components/about-me';
 
 export const metadata = generatePageMetadata({
@@ -13,6 +14,7 @@ export const metadata = generatePageMetadata({
 export default function AboutPage() {
   return (
     <PageLayout tagline='About me' maxWidth='max-w-4xl'>
+      <FaqJsonLd />
       <AboutMe />
     </PageLayout>
   );
